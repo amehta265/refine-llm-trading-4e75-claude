@@ -1,0 +1,43 @@
+{
+  "daily_vs_weekly": {
+    "test": "paired t-test",
+    "statistic": 2.612041712175522,
+    "p_value": 0.059292666249265415,
+    "p_adjusted_bonferroni": 0.17787799874779625,
+    "mean_diff": -0.9801756124654887,
+    "cohens_d": -1.306020856087761,
+    "daily_mean_SR": 1.1655755553960145,
+    "weekly_mean_SR": 0.18539994293052597,
+    "normality_p": 0.6852651363619922,
+    "significant_005": false
+  },
+  "daily_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": 0.09243477621216001,
+    "p_value": 0.9307970448376198,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": -0.06576890068564722,
+    "cohens_d": -0.046217388106080004,
+    "daily_mean_SR": 1.1655755553960145,
+    "monthly_mean_SR": 1.0998066547103673,
+    "normality_p": 0.64545573456964,
+    "significant_005": false
+  },
+  "weekly_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": -1.8482353024497535,
+    "p_value": 0.13827195909004125,
+    "p_adjusted_bonferroni": 0.41481587727012376,
+    "mean_diff": 0.9144067117798412,
+    "cohens_d": 0.9241176512248768,
+    "weekly_mean_SR": 0.18539994293052597,
+    "monthly_mean_SR": 1.0998066547103673,
+    "normality_p": 0.3668750656969023,
+    "significant_005": false
+  },
+  "cr_means": {
+    "daily": 0.34207684634373847,
+    "weekly": 0.18293784786956577,
+    "monthly": 0.3964511027499597
+  }
+}

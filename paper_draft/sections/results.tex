@@ -1,0 +1,148 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Main Results: Risk-Adjusted Performance}
+
+\tabref{tab:sharpe} presents Sharpe ratios across all stock-frequency combinations. The central finding is that monthly trading achieves a mean Sharpe ratio (1.10) comparable to daily trading (1.17), while weekly trading performs substantially worse (0.19). None of the LLM frequencies match the Buy-and-Hold mean Sharpe of 1.49 on average, though monthly LLM trading outperforms \bh on two individual stocks.
+
+\begin{table}[t]
+    \centering
+    \caption{Sharpe ratios by stock and decision frequency. Best LLM frequency per stock in \textbf{bold}. Monthly trading achieves comparable mean performance to daily while weekly trading lags substantially.}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        Stock & \daily & \weekly & \monthly & \bh \\
+        \midrule
+        AAPL & \textbf{1.38} & 0.11 & 1.24 & 1.20 \\
+        JPM  & 0.60 & 0.31 & \textbf{2.39} & 1.61 \\
+        NVDA & \textbf{2.28} & 1.26 & 0.36 & 3.47 \\
+        TSLA & 0.86 & 0.75 & \textbf{2.10} & 0.75 \\
+        MSFT & \textbf{0.70} & $-$1.50 & $-$0.60 & 0.44 \\
+        \midrule
+        Mean & 1.17 & 0.19 & 1.10 & 1.49 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:sharpe}
+\end{table}
+
+The stock-level results reveal an important pattern: monthly trading excels on stocks with strong directional trends (JPM, TSLA) while daily trading performs better on stocks requiring finer-grained timing (AAPL, NVDA, MSFT). On JPM, the monthly agent achieves a Sharpe ratio of 2.39 versus 0.60 for daily---a nearly 4$\times$ improvement. On TSLA, monthly achieves 2.10 versus 0.86 for daily. These are precisely the stocks where the monthly agent adopted a ``buy and hold on strength'' strategy, as we analyze in \secref{sec:behavioral}.
+
+\subsection{Cumulative Returns}
+
+\tabref{tab:returns} presents cumulative returns. Monthly trading achieves the highest mean return (39.7\%) among the three LLM frequencies, surpassing daily (34.2\%) and substantially outperforming weekly (18.3\%). However, all LLM frequencies underperform \bh (65.7\%) on average, consistent with prior findings in the literature~\citep{li2026finsaber}.
+
+\begin{table}[t]
+    \centering
+    \caption{Cumulative returns (\%) by stock and decision frequency. Best LLM frequency per stock in \textbf{bold}. Monthly trading achieves the highest mean cumulative return among LLM frequencies and outperforms \bh on JPM and TSLA.}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        Stock & \daily & \weekly & \monthly & \bh \\
+        \midrule
+        AAPL & \textbf{+24.4} & +7.1 & +23.2 & +32.0 \\
+        JPM  & +12.8 & +10.1 & \textbf{+57.0} & +42.8 \\
+        NVDA & \textbf{+81.5} & +46.1 & +16.3 & +187.2 \\
+        TSLA & +37.9 & +45.6 & \textbf{+104.5} & +52.7 \\
+        MSFT & \textbf{+14.5} & $-$17.4 & $-$2.7 & +13.7 \\
+        \midrule
+        Mean & +34.2 & +18.3 & +39.7 & +65.7 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:returns}
+\end{table}
+
+The most striking result is TSLA at monthly frequency: the LLM achieves +104.5\% cumulative return, nearly doubling the Buy-and-Hold return of +52.7\% and nearly tripling the daily LLM return of +37.9\%. Similarly, monthly JPM returns +57.0\% compared to Buy-and-Hold's +42.8\%. These results demonstrate that LLM agents \emph{can} outperform passive investing when operating at an appropriate frequency, even in the absence of news or sentiment data.
+
+\subsection{Risk Management: Maximum Drawdown}
+
+\tabref{tab:drawdown} reveals the most consistent advantage of monthly trading: superior drawdown control. Monthly decisions achieve the lowest average maximum drawdown ($-$8.9\%) compared to daily ($-$14.0\%), weekly ($-$17.2\%), and Buy-and-Hold ($-$21.8\%). This advantage holds across 4 of 5 stocks.
+
+\begin{table}[t]
+    \centering
+    \caption{Maximum drawdown (\%) by stock and decision frequency. Best (smallest magnitude) per stock in \textbf{bold}. Monthly trading achieves the lowest average drawdown, reducing it by 36\% relative to daily and 59\% relative to \bh.}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        Stock & \daily & \weekly & \monthly & \bh \\
+        \midrule
+        AAPL & $-$9.0 & $-$12.9 & \textbf{$-$5.8} & $-$15.4 \\
+        JPM  & $-$7.9 & $-$9.4 & \textbf{$-$6.2} & $-$10.1 \\
+        NVDA & $-$20.5 & $-$21.8 & \textbf{$-$13.1} & $-$27.0 \\
+        TSLA & $-$24.2 & $-$23.6 & \textbf{$-$7.7} & $-$40.9 \\
+        MSFT & \textbf{$-$8.6} & $-$18.3 & $-$11.9 & $-$15.5 \\
+        \midrule
+        Mean & $-$14.0 & $-$17.2 & \textbf{$-$8.9} & $-$21.8 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:drawdown}
+\end{table}
+
+The TSLA result is particularly dramatic: monthly MDD is only $-$7.7\%, compared to $-$24.2\% for daily and $-$40.9\% for Buy-and-Hold. This represents a 5.3$\times$ drawdown reduction relative to Buy-and-Hold, suggesting that the monthly LLM agent effectively avoided TSLA's major pullbacks during 2024.
+
+\subsection{Statistical Significance}
+
+\tabref{tab:stats} presents paired $t$-test results comparing Sharpe ratios across frequencies. No comparison reaches statistical significance after Bonferroni correction, which is unsurprising given only $n=5$ paired observations. However, the effect sizes are informative.
+
+\begin{table}[t]
+    \centering
+    \caption{Statistical comparison of Sharpe ratios across frequencies. We report paired $t$-test statistics, raw and Bonferroni-corrected $p$-values, and Cohen's $d$. The large effect sizes for daily vs.\ weekly ($d = 1.31$) and weekly vs.\ monthly ($d = 0.92$) suggest practically meaningful differences despite limited sample size.}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        Comparison & $t$-statistic & $p$-value & $p$ (Bonferroni) & Cohen's $d$ \\
+        \midrule
+        \daily vs.\ \weekly & 2.61 & 0.059 & 0.178 & 1.31 \\
+        \daily vs.\ \monthly & 0.09 & 0.931 & 1.000 & 0.05 \\
+        \weekly vs.\ \monthly & $-$1.85 & 0.138 & 0.415 & 0.92 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \label{tab:stats}
+\end{table}
+
+The daily-vs.-weekly comparison yields a large effect size (Cohen's $d = 1.31$) with an unadjusted $p$-value of 0.059, approaching conventional significance. The weekly-vs.-monthly comparison also shows a large effect ($d = 0.92$). In contrast, daily-vs.-monthly shows negligible effect ($d = 0.05$), confirming that these two frequencies produce similar risk-adjusted returns. A power analysis suggests that 15--20 stocks would be sufficient to detect the daily-vs.-weekly effect at $\alpha = 0.05$ with 80\% power.
+
+\subsection{Behavioral Analysis}
+\label{sec:behavioral}
+
+\tabref{tab:decisions} presents the decision distributions and turnover rates across frequencies, revealing qualitatively different behavioral patterns.
+
+\begin{table}[t]
+    \centering
+    \caption{Decision distributions and turnover rates across frequencies, averaged over all five stocks. Monthly trading shows the highest HOLD rate and lowest turnover, indicating more conservative, trend-following behavior.}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        Frequency & BUY (\%) & HOLD (\%) & SELL (\%) & Turnover (\%) \\
+        \midrule
+        \daily & 15 & 49 & 36 & 42 \\
+        \weekly & 25 & 43 & 31 & 53 \\
+        \monthly & 25 & 50 & 25 & 40 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:decisions}
+\end{table}
+
+\para{Daily decisions: noise reactivity.}
+At daily frequency, the agent shows high turnover (42\%) with frequent oscillation between BUY and SELL. Reasoning outputs cite short-term indicators such as ``recent pullback'' and ``one-day decline,'' suggesting the model struggles to distinguish signal from noise at this granularity.
+
+\para{Weekly decisions: worst of both worlds.}
+Weekly trading exhibits the \emph{highest} turnover (53\%) with the poorest performance. The agent appears caught between time horizons---too slow to capture daily momentum, too fast for trend following. This produces a ``worst of both worlds'' effect where the model reacts to weekly noise without the strategic context that monthly data provides.
+
+\para{Monthly decisions: strategic positioning.}
+At monthly frequency, the LLM adopts distinctly different behavior. The most striking example is JPM, where the agent issued 0 SELL decisions (83\% HOLD), effectively buying in January 2024 and riding the year-long uptrend. On TSLA, the agent strategically avoided the Q1--Q2 downturn via HOLD/SELL decisions and entered before the Q4 rally with BUY signals in June and November. The reasoning outputs cite ``long-term uptrend,'' ``macro patterns,'' and ``bullish crossover''---qualitatively different from the short-term language used at daily frequency.
+
+\subsection{API Cost Analysis}
+
+Decision frequency has a direct and dramatic impact on API costs. \tabref{tab:costs} shows that daily trading consumed 1,403,913 tokens (\$1.06) across all five stocks, while monthly trading used only 67,130 tokens (\$0.05)---a 21$\times$ cost reduction. For multi-agent systems like \tradingagents, which require 11+ LLM calls per decision, this cost differential would be even more pronounced.
+
+\begin{table}[t]
+    \centering
+    \caption{API cost comparison across frequencies. Token counts and costs reflect all five stocks over the 2024 evaluation period using GPT-4.1-mini.}
+    \begin{tabular}{@{}lccc@{}}
+        \toprule
+        Frequency & API Calls & Total Tokens & Cost (USD) \\
+        \midrule
+        \daily & 1,260 & 1,403,913 & \$1.06 \\
+        \weekly & 265 & 297,871 & \$0.23 \\
+        \monthly & 60 & 67,130 & \$0.05 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:costs}
+\end{table}

@@ -1,0 +1,9 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We present the first systematic study of decision frequency effects on LLM trading agent performance. By comparing daily, weekly, and monthly trading with GPT-4.1-mini across five stocks during 2024, we find that monthly decisions achieve comparable risk-adjusted returns to daily trading (mean Sharpe 1.10 vs.\ 1.17) while reducing maximum drawdowns by 36\% and API costs by 95\%. Weekly trading performs worst, revealing a non-monotonic frequency--performance relationship. At monthly frequency, the LLM exhibits qualitatively different strategic behavior---adopting trend-following approaches with lower turnover---and outperforms Buy-and-Hold on 2 of 5 stocks.
+
+These results suggest that the widely reported underperformance of daily LLM trading may partly be a frequency mismatch rather than a fundamental capability limitation. The research community's universal default to daily decision-making deserves reconsideration, and future work on LLM trading agents should explore frequency as a first-class design variable alongside model architecture and information sources.
+
+\para{Future work.}
+Three directions are most pressing: (1) scaling to 15--20 stocks across multiple years, including bear markets, to achieve statistical significance and test regime-specific hypotheses; (2) adding a biweekly frequency to map the ``valley'' between weekly and monthly performance; and (3) testing whether more capable LLMs and richer information sources (\eg news, earnings) amplify or diminish the frequency effect.

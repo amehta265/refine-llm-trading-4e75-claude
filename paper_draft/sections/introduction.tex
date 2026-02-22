@@ -1,0 +1,21 @@
+\section{Introduction}
+\label{sec:introduction}
+
+LLM-based trading agents represent one of the most actively studied applications of large language models, with over 70 papers published since 2023~\citep{ding2024survey}. These systems use LLMs to process financial news, price data, and technical indicators to generate autonomous trading decisions. Yet despite this rapid growth, a striking pattern has emerged: when subjected to rigorous, long-term evaluation, daily LLM trading agents \emph{consistently underperform} simple passive benchmarks such as Buy-and-Hold~\citep{li2026finsaber,deepfund2025}.
+
+This underperformance has been attributed to several factors, including regime miscalibration~\citep{li2026finsaber}, data leakage in backtesting~\citep{deepfund2025}, and overfitting to short evaluation windows~\citep{ding2024survey}. However, one variable has been entirely overlooked: \textbf{decision frequency}. Every published LLM trading system we surveyed---across 23 papers in our literature review---operates exclusively at daily frequency. No prior work has systematically tested whether LLMs might perform better when making less frequent, more strategic decisions.
+
+{\bf Why might frequency matter?} LLMs excel at synthesizing information, identifying patterns, and reasoning about complex scenarios. These capabilities align naturally with strategic, longer-horizon decisions where fundamental trends dominate over noise. Daily trading, by contrast, demands rapid pattern recognition in noisy data---a task where traditional quantitative methods have well-established advantages. If LLMs are better suited to strategic reasoning than tactical execution, the universal default to daily trading may represent a fundamental frequency mismatch.
+
+Evidence supports this intuition. \citet{deepfund2025} found that the only profitable LLM strategy in live trading used conservative, low-frequency positioning. \citet{li2026finsaber} diagnosed \emph{regime miscalibration} as a key failure mode---LLMs are overly conservative in bull markets and overly aggressive in bear markets---suggesting that daily noise may overwhelm their ability to identify market regimes. \citet{li2024investorbench} found that ETF trading (the most strategic, long-term task) was the hardest for LLMs yet improved most with capable models, hinting that longer-horizon reasoning requires and rewards stronger capabilities.
+
+We present the first systematic comparison of LLM trading performance across three decision frequencies: daily, weekly, and monthly. Using GPT-4.1-mini on five stocks (AAPL, JPM, NVDA, TSLA, MSFT) during 2024, we control for stock selection, time period, model, and information structure, isolating decision frequency as the sole independent variable. Our results reveal that:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item Monthly LLM trading achieves a mean Sharpe ratio of 1.10, comparable to daily trading (1.17), while reducing average maximum drawdowns by 36\% (8.9\% vs.\ 14.0\%) and API costs by 95\%.
+    \item Weekly trading performs worst (mean Sharpe 0.19), revealing an intermediate-frequency ``valley'' where LLMs lack both daily momentum signals and monthly strategic context.
+    \item At monthly frequency, the LLM exhibits qualitatively different behavior---adopting trend-following strategies with lower turnover---and outperforms Buy-and-Hold on 2 of 5 stocks, a rare result in the literature.
+\end{itemize}
+
+These findings suggest that the widely reported underperformance of LLM trading agents may partly be a frequency problem, not a capability problem. We discuss limitations of our study---including a small sample of 5 stocks and a single evaluation year---and outline directions for larger-scale validation.
+
+The remainder of this paper is organized as follows. \Secref{sec:related_work} reviews related work on LLM trading agents. \Secref{sec:methodology} describes our experimental methodology. \Secref{sec:results} presents results and analysis. \Secref{sec:discussion} discusses implications and limitations, and \secref{sec:conclusion} concludes.

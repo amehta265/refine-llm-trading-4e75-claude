@@ -1,0 +1,8 @@
+Large language model (LLM) trading agents have attracted significant research attention, yet virtually all published systems operate at daily decision frequency---and recent rigorous evaluations show they consistently underperform passive benchmarks over longer horizons.
+We ask a fundamental question: is the problem the LLM approach itself, or the daily frequency?
+We present the first systematic comparison of LLM trading agent performance across three decision frequencies---daily, weekly, and monthly---using GPT-4.1-mini on five stocks over 2024.
+Our key finding is that monthly LLM trading achieves comparable risk-adjusted returns to daily trading (mean Sharpe ratio 1.10 vs.\ 1.17) while reducing maximum drawdowns by 36\% (8.9\% vs.\ 14.0\%) and API costs by 95\%.
+Surprisingly, weekly trading performs worst (mean Sharpe 0.19), suggesting an intermediate-frequency ``valley'' where LLMs lose both daily momentum signals and monthly strategic context.
+At the monthly horizon, the LLM exhibits qualitatively different behavior: it adopts conservative, trend-following strategies that capture major moves while avoiding whipsaws.
+On two of five stocks, monthly LLM trading outperforms Buy-and-Hold (JPM: +57.0\% vs.\ +42.8\%; TSLA: +104.5\% vs.\ +52.7\%).
+These results suggest that the widely reported failure of daily LLM trading may partly reflect a frequency mismatch rather than a fundamental capability limitation, and that less frequent decision-making deserves greater attention from the research community.

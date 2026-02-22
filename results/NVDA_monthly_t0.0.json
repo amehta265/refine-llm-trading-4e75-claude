@@ -1,0 +1,157 @@
+{
+  "ticker": "NVDA",
+  "frequency": "monthly",
+  "model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "start_date": "2024-01-01",
+  "end_date": "2024-12-31",
+  "llm_metrics": {
+    "cumulative_return": 0.16298430908619865,
+    "sharpe_ratio": 0.3560150632409812,
+    "max_drawdown": -0.13144109620016065,
+    "sortino_ratio": 0.5975998122864139,
+    "win_rate": 0.16666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.16298430908619865,
+    "annualized_volatility": 0.3173582265245931
+  },
+  "bh_metrics": {
+    "cumulative_return": 0.9520543267092647,
+    "sharpe_ratio": 2.0986878688411483,
+    "max_drawdown": -0.13144109620016065,
+    "sortino_ratio": 7.756514579314754,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.9520543267092647,
+    "annualized_volatility": 0.42981824029285515
+  },
+  "sma_metrics": {
+    "cumulative_return": 0.9520543267092647,
+    "sharpe_ratio": 2.0986878688411483,
+    "max_drawdown": -0.13144109620016065,
+    "sortino_ratio": 7.756514579314754,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.9520543267092647,
+    "annualized_volatility": 0.42981824029285515
+  },
+  "decisions": [
+    {
+      "date": "2024-01-01",
+      "close": 61.49274063110352,
+      "decision": "BUY",
+      "reasoning": "Strong upward momentum with SMA10 well above SMA20 and RSI consistently high indicating bullish trend and potential for further gains.",
+      "position": "LONG",
+      "period_return": 0.28580958021403635,
+      "tokens": 1098
+    },
+    {
+      "date": "2024-02-01",
+      "close": 79.06795501708984,
+      "decision": "SELL",
+      "reasoning": "Despite strong recent gains, extremely high RSI indicates overbought conditions and recent price volatility suggests a potential pullback in the long term.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1102
+    },
+    {
+      "date": "2024-03-01",
+      "close": 90.30569458007812,
+      "decision": "SELL",
+      "reasoning": "Despite strong recent gains, extremely high RSI above 89 indicates overbought conditions and recent price pullbacks suggest a likely near-term correction.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1103
+    },
+    {
+      "date": "2024-04-01",
+      "close": 86.35794830322266,
+      "decision": "SELL",
+      "reasoning": "Despite strong long-term gains, the recent price drop with high RSI above 85 and negative monthly returns suggests overbought conditions and potential short-term pullback risk.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-05-01",
+      "close": 109.57709503173828,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains, the RSI is extremely overbought above 88 and price has shown signs of weakening momentum with a recent dip, suggesting a potential pullback or sideways movement ahead.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-06-01",
+      "close": 123.4770050048828,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, extremely high RSI near 90 suggests overbought conditions, warranting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-07-01",
+      "close": 116.9699249267578,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, the high RSI near 84 and recent price decline suggest overbought conditions and potential short-term pullback, advising caution before buying.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-08-01",
+      "close": 119.31893920898438,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, the very high RSI near 84 and recent negative return momentum suggest caution before entering a new position now.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-09-01",
+      "close": 121.3880615234375,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, the very high RSI above 80 and recent slowing momentum suggest caution before entering a new position now.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-10-01",
+      "close": 132.7145538330078,
+      "decision": "BUY",
+      "reasoning": "Strong long-term uptrend with SMA10 well above SMA20, consistent positive returns, and high RSI indicating strong momentum despite being overbought.",
+      "position": "LONG",
+      "period_return": 0.04135287731151904,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-11-01",
+      "close": 138.2026824951172,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term SMA uptrends and positive returns, the very high RSI near 89 suggests overbought conditions, warranting caution and no immediate buy.",
+      "position": "LONG",
+      "period_return": -0.028643790483448006,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-12-01",
+      "close": 134.24403381347656,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, extremely high RSI above 80 and recent slight price decline suggest overbought conditions and potential short-term pullback.",
+      "position": "LONG",
+      "period_return": -0.1058286390817178,
+      "tokens": 1121
+    }
+  ],
+  "decision_counts": {
+    "BUY": 2,
+    "HOLD": 6,
+    "SELL": 4
+  },
+  "turnover_rate": 0.36363636363636365,
+  "total_tokens": 13330,
+  "num_decisions": 12,
+  "timestamp": "2026-02-22T02:27:55.447828"
+}

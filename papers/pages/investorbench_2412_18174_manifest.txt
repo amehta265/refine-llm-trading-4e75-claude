@@ -1,0 +1,11 @@
+PDF: /data/hypogenicai/workspaces/refine-llm-trading-4e75-claude/papers/investorbench_2412_18174.pdf
+Total pages: 16
+Pages per chunk: 3
+
+Chunks:
+  investorbench_2412_18174_chunk_001.pdf: pages 1-3
+  investorbench_2412_18174_chunk_002.pdf: pages 4-6
+  investorbench_2412_18174_chunk_003.pdf: pages 7-9
+  investorbench_2412_18174_chunk_004.pdf: pages 10-12
+  investorbench_2412_18174_chunk_005.pdf: pages 13-15
+  investorbench_2412_18174_chunk_006.pdf: page 16

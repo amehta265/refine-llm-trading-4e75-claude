@@ -1,0 +1,659 @@
+[
+  {
+    "title": "FinMem: A Performance-Enhanced LLM Trading Agent With Layered Memory and Character Design",
+    "year": 2023,
+    "authors": "Yangyang Yu, Haohang Li, Zhi Chen, Yuechen Jiang, Yang Li, Jordan W. Suchow, Denghui Zhang, K. Khashanah",
+    "url": "https://api.semanticscholar.org/CorpusId:265445755",
+    "relevance": 3,
+    "abstract": "We introduce FinMem, a novel Large Language Models (LLM)-based agent framework for financial trading, designed to address the need for automated systems that can transform real-time data into executable decisions. FinMem comprises three core modules: Profile for customizing agent characteristics, Memory for hierarchical financial data assimilation, and Decision-making for converting insights into investment choices. The Memory module, which mimics human traders\u2019 cognitive structure, offers interpretability and real-time tuning while handling the critical timing of various information types. It employs a layered approach to process and prioritize data based on its timeliness and relevance, ensuring that the most recent and impactful information is given appropriate weight in decision-making. FinMem\u2019s adjustable cognitive span allows retention of critical information beyond human limits, enabling it to balance historical patterns with current market dynamics. This framework facilitates self-evolution of professional knowledge, agile reactions to investment cues, and continuous refinement of trading decisions in financial environments. When compared against advanced algorithmic agents using a large-scale real-world financial dataset, FinMem demonstrates superior performance across classic metrics like Cumulative Return and Sharpe ratio. Further tuning of the agent\u2019s perceptual span and character setting enhances its trading performance, positioning FinMem as a cutting-edge solution for automated trading.",
+    "citations": 148
+  },
+  {
+    "title": "A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist",
+    "year": 2024,
+    "authors": "Wentao Zhang, Lingxuan Zhao, Haochong Xia, Shuo Sun, Jiaze Sun, Molei Qin, Xinyi Li, Yuqing Zhao, Yilei Zhao, Xinyu Cai, Longtao Zheng, Xinrun Wang, Bo An",
+    "url": "https://api.semanticscholar.org/CorpusId:268041696",
+    "relevance": 3,
+    "abstract": "Financial trading is a crucial component of the markets, informed by a multimodal information landscape encompassing news, prices, and Kline charts, and encompasses diverse tasks such as quantitative trading and high-frequency trading with various assets. While advanced AI techniques like deep learning and reinforcement learning are extensively utilized in finance, their application in financial trading tasks often faces challenges due to inadequate handling of multimodal data and limited generalizability across various tasks. To address these challenges, we present FinAgent, a multimodal foundational agent with tool augmentation for financial trading. FinAgent's market intelligence module processes a diverse range of data-numerical, textual, and visual-to accurately analyze the financial market. Its unique dual-level reflection module not only enables rapid adaptation to market dynamics but also incorporates a diversified memory retrieval system, enhancing the agent's ability to learn from historical data and improve decision-making processes. The agent's emphasis on reasoning for actions fosters trust in its financial decisions. Moreover, FinAgent integrates established trading strategies and expert insights, ensuring that its trading approaches are both data-driven and rooted in sound financial principles. With comprehensive experiments on 6 financial datasets, including stocks and Crypto, FinAgent significantly outperforms 12 state-of-the-art baselines in terms of 6 financial metrics with over 36% average improvement on profit. Specifically, a 92.27% return (a 84.39% relative improvement) is achieved on one dataset. Notably, FinAgent is the first advanced multimodal foundation agent designed for financial trading tasks.",
+    "citations": 126
+  },
+  {
+    "title": "A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",
+    "year": 2024,
+    "authors": "Yuqi Nie, Yaxuan Kong, Xiaowen Dong, John M. Mulvey, H. Poor, Qingsong Wen, Stefan Zohren",
+    "url": "https://api.semanticscholar.org/CorpusId:270562262",
+    "relevance": 3,
+    "abstract": "Recent advances in large language models (LLMs) have unlocked novel opportunities for machine learning applications in the financial domain. These models have demonstrated remarkable capabilities in understanding context, processing vast amounts of data, and generating human-preferred contents. In this survey, we explore the application of LLMs on various financial tasks, focusing on their potential to transform traditional practices and drive innovation. We provide a discussion of the progress and advantages of LLMs in financial contexts, analyzing their advanced technologies as well as prospective capabilities in contextual understanding, transfer learning flexibility, complex emotion detection, etc. We then highlight this survey for categorizing the existing literature into key application areas, including linguistic tasks, sentiment analysis, financial time series, financial reasoning, agent-based modeling, and other applications. For each application area, we delve into specific methodologies, such as textual analysis, knowledge-based analysis, forecasting, data augmentation, planning, decision support, and simulations. Furthermore, a comprehensive collection of datasets, model assets, and useful codes associated with mainstream applications are presented as resources for the researchers and practitioners. Finally, we outline the challenges and opportunities for future research, particularly emphasizing a number of distinctive aspects in this field. We hope our work can help facilitate the adoption and further development of LLMs in the financial sector.",
+    "citations": 126
+  },
+  {
+    "title": "FinCon: A Synthesized LLM Multi-Agent System with Conceptual Verbal Reinforcement for Enhanced Financial Decision Making",
+    "year": 2024,
+    "authors": "Yangyang Yu, Zhiyuan Yao, Haohang Li, Zhiyang Deng, Yupeng Cao, Zhi Chen, Jordan W. Suchow, Rong Liu, Zhenyu Cui, Denghui Zhang, K. Subbalakshmi, Guojun Xiong, Yueru He, Jimin Huang, Dong Li, Qianqian Xie",
+    "url": "https://api.semanticscholar.org/CorpusId:271064881",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) have demonstrated notable potential in conducting complex tasks and are increasingly utilized in various financial applications. However, high-quality sequential financial investment decision-making remains challenging. These tasks require multiple interactions with a volatile environment for every decision, demanding sufficient intelligence to maximize returns and manage risks. Although LLMs have been used to develop agent systems that surpass human teams and yield impressive investment returns, opportunities to enhance multi-sourced information synthesis and optimize decision-making outcomes through timely experience refinement remain unexplored. Here, we introduce the FinCon, an LLM-based multi-agent framework with CONceptual verbal reinforcement tailored for diverse FINancial tasks. Inspired by effective real-world investment firm organizational structures, FinCon utilizes a manager-analyst communication hierarchy. This structure allows for synchronized cross-functional agent collaboration towards unified goals through natural language interactions and equips each agent with greater memory capacity than humans. Additionally, a risk-control component in FinCon enhances decision quality by episodically initiating a self-critiquing mechanism to update systematic investment beliefs. The conceptualized beliefs serve as verbal reinforcement for the future agent's behavior and can be selectively propagated to the appropriate node that requires knowledge updates. This feature significantly improves performance while reducing unnecessary peer-to-peer communication costs. Moreover, FinCon demonstrates strong generalization capabilities in various financial tasks, including single stock trading and portfolio management.",
+    "citations": 97
+  },
+  {
+    "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+    "year": 2024,
+    "authors": "Yijia Xiao, Edward Sun, Di Luo, Wei Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:275133732",
+    "relevance": 3,
+    "abstract": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents assessing market conditions, a risk management team monitoring exposure, and traders synthesizing insights from debates and historical data to make informed decisions. By simulating a dynamic, collaborative trading environment, this framework aims to improve trading performance. Detailed architecture and extensive experiments reveal its superiority over baseline models, with notable improvements in cumulative returns, Sharpe ratio, and maximum drawdown, highlighting the potential of multi-agent LLM frameworks in financial trading. TradingAgents is available at https://github.com/TauricResearch/TradingAgents.",
+    "citations": 92
+  },
+  {
+    "title": "TradingGPT: Multi-Agent System with Layered Memory and Distinct Characters for Enhanced Financial Trading Performance",
+    "year": 2023,
+    "authors": "Yang Li, Yangyang Yu, Haohang Li, Z. Chen, K. Khashanah",
+    "url": "https://api.semanticscholar.org/CorpusId:261582775",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs), prominently highlighted by the recent evolution in the Generative Pre-trained Transformers (GPT) series, have displayed significant prowess across various domains, such as aiding in healthcare diagnostics and curating analytical business reports. The efficacy of GPTs lies in their ability to decode human instructions, achieved through comprehensively processing historical inputs as an entirety within their memory system. Yet, the memory processing of GPTs does not precisely emulate the hierarchical nature of human memory. This can result in LLMs struggling to prioritize immediate and critical tasks efficiently. To bridge this gap, we introduce an innovative LLM multi-agent framework endowed with layered memories. We assert that this framework is well-suited for stock and fund trading, where the extraction of highly relevant insights from hierarchical financial data is imperative to inform trading decisions. Within this framework, one agent organizes memory into three distinct layers, each governed by a custom decay mechanism, aligning more closely with human cognitive processes. Agents can also engage in inter-agent debate. In financial trading contexts, LLMs serve as the decision core for trading agents, leveraging their layered memory system to integrate multi-source historical actions and market insights. This equips them to navigate financial changes, formulate strategies, and debate with peer agents about investment decisions. Another standout feature of our approach is to equip agents with individualized trading traits, enhancing memory diversity and decision robustness. These sophisticated designs boost the system's responsiveness to historical trades and real-time market signals, ensuring superior automated trading accuracy.",
+    "citations": 86
+  },
+  {
+    "title": "Large Language Model Agent in Financial Trading: A Survey",
+    "year": 2024,
+    "authors": "Han Ding, Yinheng Li, Junhao Wang, Hang Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:271860230",
+    "relevance": 3,
+    "abstract": "Trading is a highly competitive task that requires a combination of strategy, knowledge, and psychological fortitude. With the recent success of large language models(LLMs), it is appealing to apply the emerging intelligence of LLM agents in this competitive arena and understanding if they can outperform professional traders. In this survey, we provide a comprehensive review of the current research on using LLMs as agents in financial trading. We summarize the common architecture used in the agent, the data inputs, and the performance of LLM trading agents in backtesting as well as the challenges presented in these research. This survey aims to provide insights into the current state of LLM-based financial trading agents and outline future research directions in this field.",
+    "citations": 53
+  },
+  {
+    "title": "Simulating Financial Market via Large Language Model based Agents",
+    "year": 2024,
+    "authors": "Shen Gao, Yuntao Wen, Minghang Zhu, Jianing Wei, Yuhan Cheng, Qunzi Zhang, Shuo Shang",
+    "url": "https://www.semanticscholar.org/paper/7150e17eac46cfdfc303ceef882d115e0232de46",
+    "relevance": 3,
+    "abstract": "Most economic theories typically assume that financial market participants are fully rational individuals and use mathematical models to simulate human behavior in financial markets. However, human behavior is often not entirely rational and is challenging to predict accurately with mathematical models. In this paper, we propose \\textbf{A}gent-based \\textbf{S}imulated \\textbf{F}inancial \\textbf{M}arket (ASFM), which first constructs a simulated stock market with a real order matching system. Then, we propose a large language model based agent as the stock trader, which contains the profile, observation, and tool-learning based action module. The trading agent can comprehensively understand current market dynamics and financial policy information, and make decisions that align with their trading strategy. In the experiments, we first verify that the reactions of our ASFM are consistent with the real stock market in two controllable scenarios. In addition, we also conduct experiments in two popular economics research directions, and we find that conclusions drawn in our \\model align with the preliminary findings in economics research. Based on these observations, we believe our proposed ASFM provides a new paradigm for economic research.",
+    "citations": 29
+  },
+  {
+    "title": "INVESTORBENCH: A Benchmark for Financial Decision-Making Tasks with LLM-based Agent",
+    "year": 2024,
+    "authors": "Haohang Li, Yupeng Cao, Yangyang Yu, Shashidhar Reddy Javaji, Zhiyang Deng, Yueru He, Yuechen Jiang, Zining Zhu, K. Subbalakshmi, Guojun Xiong, Jimin Huang, Lingfei Qian, Xueqing Peng, Qianqian Xie, Jordan W. Suchow",
+    "url": "https://api.semanticscholar.org/CorpusId:274992211",
+    "relevance": 3,
+    "abstract": "Recent advancements have underscored the potential of large language model (LLM)-based agents in financial decision-making. Despite this progress, the field currently encounters two main challenges: (1) the lack of a comprehensive LLM agent framework adaptable to a variety of financial tasks, and (2) the absence of standardized benchmarks and consistent datasets for assessing agent performance. To tackle these issues, we introduce \\textsc{InvestorBench}, the first benchmark specifically designed for evaluating LLM-based agents in diverse financial decision-making contexts. InvestorBench enhances the versatility of LLM-enabled agents by providing a comprehensive suite of tasks applicable to different financial products, including single equities like stocks, cryptocurrencies and exchange-traded funds (ETFs). Additionally, we assess the reasoning and decision-making capabilities of our agent framework using thirteen different LLMs as backbone models, across various market environments and tasks. Furthermore, we have curated a diverse collection of open-source, multi-modal datasets and developed a comprehensive suite of environments for financial decision-making. This establishes a highly accessible platform for evaluating financial agents' performance across various scenarios.",
+    "citations": 26
+  },
+  {
+    "title": "Automate Strategy Finding with LLM in Quant investment",
+    "year": 2024,
+    "authors": "Zhizhuo Kou, Holam Yu, Jingshu Peng, Lei Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:272550540",
+    "relevance": 3,
+    "abstract": "We present a novel three-stage framework leveraging Large Language Models (LLMs) within a risk-aware multi-agent system for automate strategy finding in quantitative finance. Our approach addresses the brittleness of traditional deep learning models in financial applications by: employing prompt-engineered LLMs to generate executable alpha factor candidates across diverse financial data, implementing multimodal agent-based evaluation that filters factors based on market status, predictive quality while maintaining category balance, and deploying dynamic weight optimization that adapts to market conditions. Experimental results demonstrate the robust performance of the strategy in Chinese&US market regimes compared to established benchmarks. Our work extends LLMs capabilities to quantitative trading, providing a scalable architecture for financial signal extraction and portfolio construction. The overall framework significantly outperforms all benchmarks with 53.17% cumulative return on SSE50 (Jan 2023 to Jan 2024), demonstrating superior risk-adjusted performance and downside protection on the market.",
+    "citations": 24
+  },
+  {
+    "title": "When AI Meets Finance (StockAgent): Large Language Model-based Stock Trading in Simulated Real-world Environments",
+    "year": 2024,
+    "authors": "Chong Zhang, Xinyi Liu, Mingyu Jin, Zhongmou Zhang, Lingyao Li, Zhengting Wang, Wenyue Hua, Dong Shu, Suiyuan Zhu, Xiaobo Jin, Sujian Li, Mengnan Du, Yongfeng Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:271533952",
+    "relevance": 3,
+    "abstract": "Can AI Agents simulate real-world trading environments to investigate the impact of external factors on stock trading activities (e.g., macroeconomics, policy changes, company fundamentals, and global events)? These factors, which frequently influence trading behaviors, are critical elements in the quest for maximizing investors' profits. Our work attempts to solve this problem through large language model based agents. We have developed a multi-agent AI system called StockAgent, driven by LLMs, designed to simulate investors' trading behaviors in response to the real stock market. The StockAgent allows users to evaluate the impact of different external factors on investor trading and to analyze trading behavior and profitability effects. Additionally, StockAgent avoids the test set leakage issue present in existing trading simulation systems based on AI Agents. Specifically, it prevents the model from leveraging prior knowledge it may have acquired related to the test data. We evaluate different LLMs under the framework of StockAgent in a stock trading environment that closely resembles real-world conditions. The experimental results demonstrate the impact of key external factors on stock market trading, including trading behavior and stock price fluctuation rules. This research explores the study of agents' free trading gaps in the context of no prior knowledge related to market data. The patterns identified through StockAgent simulations provide valuable insights for LLM-based investment advice and stock recommendation. The code is available at https://github.com/MingyuJ666/Stockagent.",
+    "citations": 23
+  },
+  {
+    "title": "FinVision: A Multi-Agent Framework for Stock Market Prediction",
+    "year": 2024,
+    "authors": "Sorouralsadat Fatemi, Yuheng Hu",
+    "url": "https://api.semanticscholar.org/CorpusId:274023255",
+    "relevance": 3,
+    "abstract": "Financial trading has been a challenging task, as it requires the integration of vast amounts of data from various modalities. Traditional deep learning and reinforcement learning methods require large training data and often involve encoding various data types into numerical formats for model input, which limits the explainability of model behavior. Recently, LLM-based agents have demonstrated remarkable advancements in handling multi-modal data, enabling them to execute complex, multi-step decision-making tasks while providing insights into their thought processes. This research introduces a multi-modal multi-agent system designed specifically for financial trading tasks. Our framework employs a team of specialized LLM-based agents, each adept at processing and interpreting various forms of financial data, such as textual news reports, candlestick charts, and trading signal charts. A key feature of our approach is the integration of a reflection module, which conducts analyses of historical trading signals and their outcomes. This reflective process is instrumental in enhancing the decision-making capabilities of the system for future trading scenarios. Furthermore, the ablation studies indicate that the visual reflection module plays a crucial role in enhancing the decision-making capabilities of our framework.",
+    "citations": 19
+  },
+  {
+    "title": "FLAG-Trader: Fusion LLM-Agent with Gradient-based Reinforcement Learning for Financial Trading",
+    "year": 2025,
+    "authors": "Guojun Xiong, Zhiyang Deng, Keyi Wang, Yupeng Cao, Haohang Li, Yangyang Yu, Xueqing Peng, Mingquan Lin, Kaleb E Smith, Xiao-Yang Liu, Jimin Huang, Sophia Ananiadou, Qianqian Xie",
+    "url": "https://api.semanticscholar.org/CorpusId:276408244",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) fine-tuned on multimodal financial data have demonstrated impressive reasoning capabilities in various financial tasks. However, they often struggle with multi-step, goal-oriented scenarios in interactive financial markets, such as trading, where complex agentic approaches are required to improve decision-making. To address this, we propose \\textsc{FLAG-Trader}, a unified architecture integrating linguistic processing (via LLMs) with gradient-driven reinforcement learning (RL) policy optimization, in which a partially fine-tuned LLM acts as the policy network, leveraging pre-trained knowledge while adapting to the financial domain through parameter-efficient fine-tuning. Through policy gradient optimization driven by trading rewards, our framework not only enhances LLM performance in trading but also improves results on other financial-domain tasks. We present extensive empirical evidence to validate these enhancements.",
+    "citations": 17
+  },
+  {
+    "title": "From Deep Learning to LLMs: A survey of AI in Quantitative Investment",
+    "year": 2025,
+    "authors": "Bokai Cao, Sai Wang, Xinyi Lin, Xiaojun Wu, Haohan Zhang, Lionel M. Ni, Jian Guo",
+    "url": "https://api.semanticscholar.org/CorpusId:277349765",
+    "relevance": 3,
+    "abstract": "Quantitative investment (quant) is an emerging, technology-driven approach in asset management, increasingy shaped by advancements in artificial intelligence. Recent advances in deep learning and large language models (LLMs) for quant finance have improved predictive modeling and enabled agent-based automation, suggesting a potential paradigm shift in this field. In this survey, taking alpha strategy as a representative example, we explore how AI contributes to the quantitative investment pipeline. We first examine the early stage of quant research, centered on human-crafted features and traditional statistical models with an established alpha pipeline. We then discuss the rise of deep learning, which enabled scalable modeling across the entire pipeline from data processing to order execution. Building on this, we highlight the emerging role of LLMs in extending AI beyond prediction, empowering autonomous agents to process unstructured data, generate alphas, and support self-iterative workflows.",
+    "citations": 12
+  },
+  {
+    "title": "MarketSenseAI 2.0: Enhancing Stock Analysis through LLM Agents",
+    "year": 2025,
+    "authors": "George Fatouros, Kostas C. Metaxas, John Soldatos, Manos Karathanassis",
+    "url": "https://api.semanticscholar.org/CorpusId:276094208",
+    "relevance": 3,
+    "abstract": "MarketSenseAI is a novel framework for holistic stock analysis which leverages Large Language Models (LLMs) to process financial news, historical prices, company fundamentals and the macroeconomic environment to support decision making in stock analysis and selection. In this paper, we present the latest advancements on MarketSenseAI, driven by rapid technological expansion in LLMs. Through a novel architecture combining Retrieval-Augmented Generation and LLM agents, the framework processes SEC filings and earnings calls, while enriching macroeconomic analysis through systematic processing of diverse institutional reports. We demonstrate a significant improvement in fundamental analysis accuracy over the previous version. Empirical evaluation on S\\&P 100 stocks over two years (2023-2024) shows MarketSenseAI achieving cumulative returns of 125.9% compared to the index return of 73.5%, while maintaining comparable risk profiles. Further validation on S\\&P 500 stocks during 2024 demonstrates the framework's scalability, delivering a 33.8% higher Sortino ratio than the market. This work marks a significant advancement in applying LLM technology to financial analysis, offering insights into the robustness of LLM-driven investment strategies.",
+    "citations": 11
+  },
+  {
+    "title": "Large Language Models in equity markets: applications, techniques, and insights",
+    "year": 2025,
+    "authors": "Aakanksha Jadhav, Vishal Mirza",
+    "url": "https://api.semanticscholar.org/CorpusId:280955402",
+    "relevance": 3,
+    "abstract": "Recent breakthroughs in Large Language Models (LLMs) have the potential to disrupt equity investing by enabling sophisticated data analysis, market prediction, and automated trading. This paper presents a comprehensive review of 84 research studies conducted between 2022 and early 2025, synthesizing the state of LLM applications in stock investing. We provide a dual-layered categorization: first, by financial applications such as stock price forecasting, sentiment analysis, portfolio management, and algorithmic trading; second, by technical methodologies, including prompting, fine-tuning, multi-agent frameworks, reinforcement learning, and custom architectures. Additionally, we consolidate findings on the datasets used, ranging from financial statements to multimodal data (news, market trends, earnings transcripts, social media), and systematically compare general-purpose vs. finance-specialized LLMs used in research. Our analysis identifies key research trends, commonalities, and divergences across studies, evaluating both their empirical contributions and methodological innovations. We highlight the strengths of existing research, such as improved sentiment extraction and the use of reinforcement learning to factor market feedback, alongside critical gaps in scalability, interpretability, and real-world validation. Finally, we propose directions for future research, emphasizing hybrid modeling approaches, architectures that factor reasoning and large context windows, and robust evaluation frameworks to advance AI-driven financial strategies. By mapping the intersection of LLMs and equity markets, this review provides a foundation and roadmap for future research and practical implementation in the financial sector.",
+    "citations": 10
+  },
+  {
+    "title": "TradExpert: Revolutionizing Trading with Mixture of Expert LLMs",
+    "year": 2024,
+    "authors": "Qianggang Ding, Haochen Shi, Bang Liu",
+    "url": "https://api.semanticscholar.org/CorpusId:273811282",
+    "relevance": 3,
+    "abstract": "The integration of Artificial Intelligence (AI) in the financial domain has opened new avenues for quantitative trading, particularly through the use of Large Language Models (LLMs). However, the challenge of effectively synthesizing insights from diverse data sources and integrating both structured and unstructured data persists. This paper presents TradeExpert, a novel framework that employs a mix of experts (MoE) approach, using four specialized LLMs, each analyzing distinct sources of financial data, including news articles, market data, alpha factors, and fundamental data. The insights of these expert LLMs are further synthesized by a General Expert LLM to make a final prediction or decision. With specific prompts, TradeExpert can be switched between the prediction mode and the ranking mode for stock movement prediction and quantitative stock trading, respectively. In addition to existing benchmarks, we also release a large-scale financial dataset to comprehensively evaluate TradeExpert's effectiveness. Our experimental results demonstrate TradeExpert's superior performance across all trading scenarios.",
+    "citations": 10
+  },
+  {
+    "title": "Can Large Language Models Trade? Testing Financial Theories with LLM Agents in Market Simulations",
+    "year": 2025,
+    "authors": "Alejandro Lopez-Lira",
+    "url": "https://api.semanticscholar.org/CorpusId:277787336",
+    "relevance": 3,
+    "abstract": "This paper presents a realistic simulated stock market where large language models (LLMs) act as heterogeneous competing trading agents. The open-source framework incorporates a persistent order book with market and limit orders, partial fills, dividends, and equilibrium clearing alongside agents with varied strategies, information sets, and endowments. Agents submit standardized decisions using structured outputs and function calls while expressing their reasoning in natural language. Three findings emerge: First, LLMs demonstrate consistent strategy adherence and can function as value investors, momentum traders, or market makers per their instructions. Second, market dynamics exhibit features of real financial markets, including price discovery, bubbles, underreaction, and strategic liquidity provision. Third, the framework enables analysis of LLMs' responses to varying market conditions, similar to partial dependence plots in machine-learning interpretability. The framework allows simulating financial theories without closed-form solutions, creating experimental designs that would be costly with human participants, and establishing how prompts can generate correlated behaviors affecting market stability.",
+    "citations": 9
+  },
+  {
+    "title": "Trading-R1: Financial Trading with LLM Reasoning via Reinforcement Learning",
+    "year": 2025,
+    "authors": "Yijia Xiao, Edward Sun, Tong Chen, Fang Wu, Di Luo, Wei Wang",
+    "url": "https://www.semanticscholar.org/paper/d9cb5bb3ef2a2f352ac571b7ead452a4256da192",
+    "relevance": 3,
+    "abstract": "Developing professional, structured reasoning on par with human financial analysts and traders remains a central challenge in AI for finance, where markets demand interpretability and trust. Traditional time-series models lack explainability, while LLMs face challenges in turning natural-language analysis into disciplined, executable trades. Although reasoning LLMs have advanced in step-by-step planning and verification, their application to risk-sensitive financial decisions is underexplored. We present Trading-R1, a financially-aware model that incorporates strategic thinking and planning for comprehensive thesis composition, facts-grounded analysis, and volatility-adjusted decision making. Trading-R1 aligns reasoning with trading principles through supervised fine-tuning and reinforcement learning with a three-stage easy-to-hard curriculum. Training uses Tauric-TR1-DB, a 100k-sample corpus spanning 18 months, 14 equities, and five heterogeneous financial data sources. Evaluated on six major equities and ETFs, Trading-R1 demonstrates improved risk-adjusted returns and lower drawdowns compared to both open-source and proprietary instruction-following models as well as reasoning models. The system generates structured, evidence-based investment theses that support disciplined and interpretable trading decisions. Trading-R1 Terminal will be released at https://github.com/TauricResearch/Trading-R1.",
+    "citations": 9
+  },
+  {
+    "title": "Can LLM-based Financial Investing Strategies Outperform the Market in Long Run?",
+    "year": 2025,
+    "authors": "Weixian Waylon Li, Hyeonjun Kim, Mihai Cucuringu, Tiejun Ma",
+    "url": "https://api.semanticscholar.org/CorpusId:278501425",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs) have recently been leveraged for asset pricing tasks and stock trading applications, enabling AI agents to generate investment decisions from unstructured financial data. However, most evaluations of LLM timing-based investing strategies are conducted on narrow timeframes and limited stock universes, overstating effectiveness due to survivorship and data-snooping biases. We critically assess their generalizability and robustness by proposing FINSABER, a backtesting framework evaluating timing-based strategies across longer periods and a larger universe of symbols. Systematic backtests over two decades and 100+ symbols reveal that previously reported LLM advantages deteriorate significantly under broader cross-section and over a longer-term evaluation. Our market regime analysis further demonstrates that LLM strategies are overly conservative in bull markets, underperforming passive benchmarks, and overly aggressive in bear markets, incurring heavy losses. These findings highlight the need to develop LLM strategies that are able to prioritise trend detection and regime-aware risk controls over mere scaling of framework complexity.",
+    "citations": 8
+  },
+  {
+    "title": "MASS: Multi-Agent Simulation Scaling for Portfolio Construction",
+    "year": 2025,
+    "authors": "Taian Guo, Haiyang Shen, Jinsheng Huang, Zhengyan Mao, Junyu Luo, Zhuorui Chen, Xuhui Liu, Bingyu Xia, Luchen Liu, Yun Ma, Ming Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:278636281",
+    "relevance": 3,
+    "abstract": "The application of LLM-based agents in financial investment has shown significant promise, yet existing approaches often require intermediate steps like predicting individual stock movements or rely on predefined, static workflows. These limitations restrict their adaptability and effectiveness in constructing optimal portfolios. In this paper, we introduce the Multi-Agent Scaling Simulation (MASS), a novel framework that leverages multi-agent simulation for direct, end-to-end portfolio construction. At its core, MASS employs a backward optimization process to dynamically learn the optimal distribution of heterogeneous agents, enabling the system to adapt to evolving market regimes. A key finding enabled by our framework is the exploration of the scaling effect for portfolio construction: we demonstrate that as the number of agents increases exponentially (up to 512), the aggregated decisions yield progressively higher excess returns. Extensive experiments on a challenging, self-collected dataset from the 2023 Chinese A-share market show that MASS consistently outperforms seven state-of-the-art baselines. Further backtesting, stability analyses and the experiment on data leakage concerns validate its enhanced profitability and robustness. We have open-sourced our code, dataset, and training snapshots at https://github.com/gta0804/MASS/ to foster further research.",
+    "citations": 8
+  },
+  {
+    "title": "Adaptive and Explainable Margin Trading via Large Language Models on Portfolio Management",
+    "year": 2024,
+    "authors": "Jingyi Gu, J. Ye, Guiling Wang, Wenpeng Yin",
+    "url": "https://api.semanticscholar.org/CorpusId:274086023",
+    "relevance": 3,
+    "abstract": "Recent strategies for portfolio management often lack flexibility to adjust funds between long and short positions throughout trading periods. This prevents adapting portfolios to the market, which mitigates risks and seizes opportunities. To address these gaps, we propose an adaptive and explainable framework that integrates Large Language Models (LLMs) with Reinforcement Learning (RL) for dynamic long-short position adjustment in response to evolving market conditions. This approach leverages the recent advancements in LLMs for processing unstructured data and their capacity for explainable reasoning. The framework includes two stages: an Explainable Market Forecasting/Reasoning Pipeline, and a Position Reallocation stage. The Market Forecasting/Reasoning Pipeline allows various LLMs to learn market trends from diverse external data sources and determine optimal adjustment ratios with a clear reasoning path. The Portfolio Reallocation stage interacts with the sequential trading process from a pre-trained RL model to enhance decision-making and transparency. Our framework is flexible to accommodate various external data sources from microeconomics to macroeconomics data, diverse data types including time series and news text, along with multiple LLMs. Experiments demonstrate that our framework effectively achieves three times the return and doubles the Sharpe ratio compared to benchmarks. All the data and code are publicly available under NJIT FinTech Lab\u2019s GitHub1.",
+    "citations": 8
+  },
+  {
+    "title": "StockBench: Can LLM Agents Trade Stocks Profitably In Real-world Markets?",
+    "year": 2025,
+    "authors": "Yanxu Chen, Zijun Yao, Yantao Liu, Jin Ye, Jianing Yu, Lei Hou, Juanzi Li",
+    "url": "https://api.semanticscholar.org/CorpusId:281724665",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) have recently demonstrated strong capabilities as autonomous agents, showing promise in reasoning, tool use, and sequential decision-making. While prior benchmarks have evaluated LLM agents in domains such as software engineering and scientific discovery, the finance domain remains underexplored, despite its direct relevance to economic value and high-stakes decision-making. Existing financial benchmarks primarily test static knowledge through question answering, but they fall short of capturing the dynamic and iterative nature of trading. To address this gap, we introduce StockBench, a contamination-free benchmark designed to evaluate LLM agents in realistic, multi-month stock trading environments. Agents receive daily market signals -- including prices, fundamentals, and news -- and must make sequential buy, sell, or hold decisions. Performance is assessed using financial metrics such as cumulative return, maximum drawdown, and the Sortino ratio. Our evaluation of state-of-the-art proprietary (e.g., GPT-5, Claude-4) and open-weight (e.g., Qwen3, Kimi-K2, GLM-4.5) models shows that while most LLM agents struggle to outperform the simple buy-and-hold baseline, several models demonstrate the potential to deliver higher returns and manage risk more effectively. These findings highlight both the challenges and opportunities in developing LLM-powered financial agents, showing that excelling at static financial knowledge tasks does not necessarily translate into successful trading strategies. We release StockBench as an open-source resource to support reproducibility and advance future research in this domain.",
+    "citations": 7
+  },
+  {
+    "title": "FinArena: A Human-Agent Collaboration Framework for Financial Market Analysis and Forecasting",
+    "year": 2025,
+    "authors": "Congluo Xu, Zhaobin Liu, Ziyang Li",
+    "url": "https://api.semanticscholar.org/CorpusId:276776379",
+    "relevance": 3,
+    "abstract": "To improve stock trend predictions and support personalized investment decisions, this paper proposes FinArena, a novel Human-Agent collaboration framework. Inspired by the mixture of experts (MoE) approach, FinArena combines multimodal financial data analysis with user interaction. The human module features an interactive interface that captures individual risk preferences, allowing personalized investment strategies. The machine module utilizes a Large Language Model-based (LLM-based) multi-agent system to integrate diverse data sources, such as stock prices, news articles, and financial statements. To address hallucinations in LLMs, FinArena employs the adaptive Retrieval-Augmented Generative (RAG) method for processing unstructured news data. Finally, a universal expert agent makes investment decisions based on the features extracted from multimodal data and investors' individual risk preferences. Extensive experiments show that FinArena surpasses both traditional and state-of-the-art benchmarks in stock trend prediction and yields promising results in trading simulations across various risk profiles. These findings highlight FinArena's potential to enhance investment outcomes by aligning strategic insights with personalized risk considerations.",
+    "citations": 7
+  },
+  {
+    "title": "Time Travel is Cheating: Going Live with DeepFund for Real-Time Fund Investment Benchmarking",
+    "year": 2025,
+    "authors": "Changlun Li, Yao Shi, Chen Wang, Qiqi Duan, Runke Ruan, Weijie Huang, Haonan Long, Lijun Huang, Yuyu Luo, Nan Tang",
+    "url": "https://api.semanticscholar.org/CorpusId:278715123",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs) have demonstrated notable capabilities across financial tasks, including financial report summarization, earnings call transcript analysis, and asset classification. However, their real-world effectiveness in managing complex fund investment remains inadequately assessed. A fundamental limitation of existing benchmarks for evaluating LLM-driven trading strategies is their reliance on historical back-testing, inadvertently enabling LLMs to\"time travel\"-leveraging future information embedded in their training corpora, thus resulting in possible information leakage and overly optimistic performance estimates. To address this issue, we introduce DeepFund, a live fund benchmark tool designed to rigorously evaluate LLM in real-time market conditions. Utilizing a multi-agent architecture, DeepFund connects directly with real-time stock market data-specifically data published after each model pretraining cutoff-to ensure fair and leakage-free evaluations. Empirical tests on nine flagship LLMs from leading global institutions across multiple investment dimensions-including ticker-level analysis, investment decision-making, portfolio management, and risk control-reveal significant practical challenges. Notably, even cutting-edge models such as DeepSeek-V3 and Claude-3.7-Sonnet incur net trading losses within DeepFund real-time evaluation environment, underscoring the present limitations of LLMs for active fund management. Our code is available at https://github.com/HKUSTDial/DeepFund.",
+    "citations": 6
+  },
+  {
+    "title": "Integrating Large Language Models in Financial Investments and Market Analysis: A Survey",
+    "year": 2025,
+    "authors": "Sedigheh Mahdavi, Jiating Chen, Pradeep Kumar Joshi, L. H. Guativa, Upmanyu Singh",
+    "url": "https://api.semanticscholar.org/CorpusId:278900379",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs) have been employed in financial decision making, enhancing analytical capabilities for investment strategies. Traditional investment strategies often utilize quantitative models, fundamental analysis, and technical indicators. However, LLMs have introduced new capabilities to process and analyze large volumes of structured and unstructured data, extract meaningful insights, and enhance decision-making in real-time. This survey provides a structured overview of recent research on LLMs within the financial domain, categorizing research contributions into four main frameworks: LLM-based Frameworks and Pipelines, Hybrid Integration Methods, Fine-Tuning and Adaptation Approaches, and Agent-Based Architectures. This study provides a structured review of recent LLMs research on applications in stock selection, risk assessment, sentiment analysis, trading, and financial forecasting. By reviewing the existing literature, this study highlights the capabilities, challenges, and potential directions of LLMs in financial markets.",
+    "citations": 5
+  },
+  {
+    "title": "StockSim: A Dual-Mode Order-Level Simulator for Evaluating Multi-Agent LLMs in Financial Markets",
+    "year": 2025,
+    "authors": "Charidimos Papadakis, Giorgos Filandrianos, Angeliki Dimitriou, Maria Lymperaiou, Konstantinos Thomas, G. Stamou",
+    "url": "https://api.semanticscholar.org/CorpusId:280265856",
+    "relevance": 3,
+    "abstract": "We present StockSim, an open-source simulation platform for systematic evaluation of large language models (LLMs) in realistic financial decision-making scenarios. Unlike previous toolkits that offer limited scope, StockSim delivers a comprehensive system that fully models market dynamics and supports diverse simulation modes of varying granularity. It incorporates critical real-world factors, such as latency, slippage, and order-book microstructure, that were previously neglected, enabling more faithful and insightful assessment of LLM-based trading agents. An extensible, role-based agent framework supports heterogeneous trading strategies and multi-agent coordination, making StockSim a uniquely capable testbed for NLP research on reasoning under uncertainty and sequential decision-making. We open-source all our code at https: //github.com/harrypapa2002/StockSim.",
+    "citations": 5
+  },
+  {
+    "title": "AlphaAgents: Large Language Model based Multi-Agents for Equity Portfolio Constructions",
+    "year": 2025,
+    "authors": "Tianjiao Zhao, Jingrao Lyu, Stokes Jones, Harrison Garber, Stefano Pasquali, Dhagash Mehta",
+    "url": "https://api.semanticscholar.org/CorpusId:280671159",
+    "relevance": 3,
+    "abstract": "The field of artificial intelligence (AI) agents is evolving rapidly, driven by the capabilities of Large Language Models (LLMs) to autonomously perform and refine tasks with human-like efficiency and adaptability. In this context, multi-agent collaboration has emerged as a promising approach, enabling multiple AI agents to work together to solve complex challenges. This study investigates the application of role-based multi-agent systems to support stock selection in equity research and portfolio management. We present a comprehensive analysis performed by a team of specialized agents and evaluate their stock-picking performance against established benchmarks under varying levels of risk tolerance. Furthermore, we examine the advantages and limitations of employing multi-agent frameworks in equity analysis, offering critical insights into their practical efficacy and implementation challenges.",
+    "citations": 5
+  },
+  {
+    "title": "QuantAgents: Towards Multi-agent Financial System via Simulated Trading",
+    "year": 2025,
+    "authors": "Xiangyu Li, Yawen Zeng, Xiaofen Xing, Jin Xu, Xiangmin Xu",
+    "url": "https://api.semanticscholar.org/CorpusId:281843943",
+    "relevance": 3,
+    "abstract": "In this paper, our objective is to develop a multi-agent financial system that incorporates simulated trading, a technique extensively utilized by financial professionals. While current LLM-based agent models demonstrate competitive performance, they still exhibit significant deviations from real-world fund companies. A critical distinction lies in the agents'reliance on ``post-reflection'', particularly in response to adverse outcomes, but lack a distinctly human capability: long-term prediction of future trends. Therefore, we introduce QuantAgents, a multi-agent system integrating simulated trading, to comprehensively evaluate various investment strategies and market scenarios without assuming actual risks. Specifically, QuantAgents comprises four agents: a simulated trading analyst, a risk control analyst, a market news analyst, and a manager, who collaborate through several meetings. Moreover, our system incentivizes agents to receive feedback on two fronts: performance in real-world markets and predictive accuracy in simulated trading. Extensive experiments demonstrate that our framework excels across all metrics, yielding an overall return of nearly 300% over the three years (https://quantagents.github.io/).",
+    "citations": 4
+  },
+  {
+    "title": "LiveTradeBench: Seeking Real-World Alpha with Large Language Models",
+    "year": 2025,
+    "authors": "Haofei Yu, Fenghai Li, Jiaxuan You",
+    "url": "https://api.semanticscholar.org/CorpusId:282758249",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) achieve strong performance across benchmarks--from knowledge quizzes and math reasoning to web-agent tasks--but these tests occur in static settings, lacking real dynamics and uncertainty. Consequently, they evaluate isolated reasoning or problem-solving rather than decision-making under uncertainty. To address this, we introduce LiveTradeBench, a live trading environment for evaluating LLM agents in realistic and evolving markets. LiveTradeBench follows three design principles: (i) Live data streaming of market prices and news, eliminating dependence on offline backtesting and preventing information leakage while capturing real-time uncertainty; (ii) a portfolio-management abstraction that extends control from single-asset actions to multi-asset allocation, integrating risk management and cross-asset reasoning; and (iii) multi-market evaluation across structurally distinct environments--U.S. stocks and Polymarket prediction markets--differing in volatility, liquidity, and information flow. At each step, an agent observes prices, news, and its portfolio, then outputs percentage allocations that balance risk and return. Using LiveTradeBench, we run 50-day live evaluations of 21 LLMs across families. Results show that (1) high LMArena scores do not imply superior trading outcomes; (2) models display distinct portfolio styles reflecting risk appetite and reasoning dynamics; and (3) some LLMs effectively leverage live signals to adapt decisions. These findings expose a gap between static evaluation and real-world competence, motivating benchmarks that test sequential decision making and consistency under live uncertainty.",
+    "citations": 3
+  },
+  {
+    "title": "ContestTrade: A Multi-Agent Trading System Based on Internal Contest Mechanism",
+    "year": 2025,
+    "authors": "Li Zhao, Rui Sun, Zuoyou Jiang, Bo Yang, Yuxiao Bai, Mengting Chen, Xinyang Wang, Jing Li, Zuo Bai",
+    "url": "https://api.semanticscholar.org/CorpusId:280416769",
+    "relevance": 3,
+    "abstract": "In financial trading, large language model (LLM)-based agents demonstrate significant potential. However, the high sensitivity to market noise undermines the performance of LLM-based trading systems. To address this limitation, we propose a novel multi-agent system featuring an internal competitive mechanism inspired by modern corporate management structures. The system consists of two specialized teams: (1) Data Team - responsible for processing and condensing massive market data into diversified text factors, ensuring they fit the model's constrained context. (2) Research Team - tasked with making parallelized multipath trading decisions based on deep research methods. The core innovation lies in implementing a real-time evaluation and ranking mechanism within each team, driven by authentic market feedback. Each agent's performance undergoes continuous scoring and ranking, with only outputs from top-performing agents being adopted. The design enables the system to adaptively adjust to dynamic environment, enhances robustness against market noise and ultimately delivers superior trading performance. Experimental results demonstrate that our proposed system significantly outperforms prevailing multi-agent systems and traditional quantitative investment methods across diverse evaluation metrics. ContestTrade is open-sourced on GitHub at https://github.com/FinStep-AI/ContestTrade.",
+    "citations": 3
+  },
+  {
+    "title": "TradingGroup: A Multi-Agent Trading System with Self-Reflection and Data-Synthesis",
+    "year": 2025,
+    "authors": "Feng Tian, Flora D. Salim, Hao Xue",
+    "url": "https://api.semanticscholar.org/CorpusId:280711571",
+    "relevance": 3,
+    "abstract": "Recent advancements in large language models (LLMs) have enabled powerful agent-based applications in finance, particularly for sentiment analysis, financial report comprehension, and stock forecasting. However, existing systems often lack inter-agent coordination, structured self-reflection, and access to high-quality, domain-specific post-training data such as data from trading activities including both market conditions and agent decisions. These data are crucial for agents to understand the market dynamics, improve the quality of decision-making and promote effective coordination. We introduce TradingGroup, a multi-agent trading system designed to address these limitations through a self-reflective architecture and an end-to-end data-synthesis pipeline. TradingGroup consists of specialized agents for news sentiment analysis, financial report interpretation, stock trend forecasting, trading style adaptation, and a trading decision making agent that merges all signals and style preferences to produce buy, sell or hold decisions. Specifically, we design self-reflection mechanisms for the stock forecasting, style, and decision-making agents to distill past successes and failures for similar reasoning in analogous future scenarios and a dynamic risk-management model to offer configurable dynamic stop-loss and take-profit mechanisms. In addition, TradingGroup embeds an automated data-synthesis and annotation pipeline that generates high-quality post-training data for further improving the agent performance through post-training. Our backtesting experiments across five real-world stock datasets demonstrate TradingGroup's superior performance over rule-based, machine learning, reinforcement learning, and existing LLM-based trading strategies.",
+    "citations": 3
+  },
+  {
+    "title": "Agent Trading Arena: A Study on Numerical Understanding in LLM-Based Agents",
+    "year": 2025,
+    "authors": "Tianmi Ma, Jiawei Du, Wenxin Huang, Wenjie Wang, Liang Xie, Xian Zhong, Joey Tianyi Zhou",
+    "url": "https://api.semanticscholar.org/CorpusId:276580341",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in natural language tasks, yet their performance in dynamic, real-world financial environments remains underexplored. Existing approaches are limited to historical backtesting, where trading actions cannot influence market prices and agents train only on static data. To address this limitation, we present the Agent Trading Arena, a virtual zero-sum stock market in which LLM-based agents engage in competitive multi-agent trading and directly impact price dynamics. By simulating realistic bid-ask interactions, our platform enables training in scenarios that closely mirror live markets, thereby narrowing the gap between training and evaluation. Experiments reveal that LLMs struggle with numerical reasoning when given plain-text data, often overfitting to local patterns and recent values. In contrast, chart-based visualizations significantly enhance both numerical reasoning and trading performance. Furthermore, incorporating a reflection module yields additional improvements, especially with visual inputs. Evaluations on NASDAQ and CSI datasets demonstrate the superiority of our method, particularly under high volatility. All code and data are available at https://github.com/wekjsdvnm/Agent-Trading-Arena.",
+    "citations": 3
+  },
+  {
+    "title": "3S-Trader: A Multi-LLM Framework for Adaptive Stock Scoring, Strategy, and Selection in Portfolio Optimization",
+    "year": 2025,
+    "authors": "Kefan Chen, Hussain Ahmad, Diksha Goel, Claudia Szabo",
+    "url": "https://api.semanticscholar.org/CorpusId:282210119",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs) have recently gained popularity in stock trading for their ability to process multimodal financial data. However, most existing methods focus on single-stock trading and lack the capacity to reason over multiple candidates for portfolio construction. Moreover, they typically lack the flexibility to revise their strategies in response to market shifts, limiting their adaptability in real-world trading. To address these challenges, we propose 3S-Trader, a training-free framework that incorporates scoring, strategy, and selection modules for stock portfolio construction. The scoring module summarizes each stock's recent signals into a concise report covering multiple scoring dimensions, enabling efficient comparison across candidates. The strategy module analyzes historical strategies and overall market conditions to iteratively generate an optimized selection strategy. Based on this strategy, the selection module identifies and assembles a portfolio by choosing stocks with higher scores in relevant dimensions. We evaluate our framework across four distinct stock universes, including the Dow Jones Industrial Average (DJIA) constituents and three sector-specific stock sets. Compared with existing multi-LLM frameworks and time-series-based baselines, 3S-Trader achieves the highest accumulated return of 131.83% on DJIA constituents with a Sharpe ratio of 0.31 and Calmar ratio of 11.84, while also delivering consistently strong results across other sectors.",
+    "citations": 3
+  },
+  {
+    "title": "Enhancing LLM Trading Performance with Fact-Subjectivity Aware Reasoning",
+    "year": 2024,
+    "authors": "Qian Wang, Yuchen Gao, Zhenheng Tang, B. Luo, Bingsheng He",
+    "url": "https://www.semanticscholar.org/paper/e40dbeea4123e49ec7cf19f6430a935bebdf8a25",
+    "relevance": 3,
+    "abstract": "",
+    "citations": 3
+  },
+  {
+    "title": "FinPos: A Position-Aware Trading Agent System for Real Financial Markets",
+    "year": 2025,
+    "authors": "Bijia Liu, Ronghao Dang",
+    "url": "https://api.semanticscholar.org/CorpusId:282719341",
+    "relevance": 3,
+    "abstract": "The exceptional potential of large language models (LLMs) in handling text information has garnered significant attention in the field of financial trading. However, most existing trading agents operate under intraday, independent unit-based trading tasks, where decisions are made as isolated directional actions, and thus lack awareness of continuous position management. Therefore, we propose a position-aware trading task designed to simulate a more realistic market. To address this task, we propose FinPos, a position-aware trading agent system designed to explicitly model and manage continuous positions. FinPos enhances position awareness through three key mechanisms: (1) professional-level interpretation of heterogeneous market information; (2) a dual-agent decision structure that separates directional reasoning from risk-aware position adjustment; and (3) multi-timescale reward signals, allowing the agent to internalize position awareness through experiential feedback rather than static instructions alone. Extensive experiments demonstrate that FinPos surpasses state-of-the-art trading agents in the position-aware trading task, which closely mirrors real market conditions. More importantly, our findings reveal that LLM-centered agent systems exhibit a vast, largely unexplored potential in long-term market decision-making.",
+    "citations": 2
+  },
+  {
+    "title": "To Trade or Not to Trade: An Agentic Approach to Estimating Market Risk Improves Trading Decisions",
+    "year": 2025,
+    "authors": "Dimitrios Emmanoulopoulos, Ollie Olby, Justin Lyon, Namid R Stillman",
+    "url": "https://api.semanticscholar.org/CorpusId:280281425",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) are increasingly deployed in agentic frameworks, in which prompts trigger complex tool-based analysis in pursuit of a goal. While these frameworks have shown promise across multiple domains including in finance, they typically lack a principled model-building step, relying instead on sentiment- or trend-based analysis. We address this gap by developing an agentic system that uses LLMs to iteratively discover stochastic differential equations for financial time series. These models generate risk metrics which inform daily trading decisions. We evaluate our system in both traditional backtests and using a market simulator, which introduces synthetic but causally plausible price paths and news events. We find that model-informed trading strategies outperform standard LLM-based agents, improving Sharpe ratios across multiple equities. Our results show that combining LLMs with agentic model discovery enhances market risk estimation and enables more profitable trading decisions.",
+    "citations": 2
+  },
+  {
+    "title": "AI-Trader: Benchmarking Autonomous Agents in Real-Time Financial Markets",
+    "year": 2025,
+    "authors": "Tianyu Fan, Yuhao Yang, Ya Jiang, Yifei Zhang, Yuxuan Chen, Chao Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:283883436",
+    "relevance": 3,
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable potential as autonomous agents, approaching human-expert performance through advanced reasoning and tool orchestration. However, decision-making in fully dynamic and live environments remains highly challenging, requiring real-time information integration and adaptive responses. While existing efforts have explored live evaluation mechanisms in structured tasks, a critical gap remains in systematic benchmarking for real-world applications, particularly in finance where stringent requirements exist for live strategic responsiveness. To address this gap, we introduce AI-Trader, the first fully-automated, live, and data-uncontaminated evaluation benchmark for LLM agents in financial decision-making. AI-Trader spans three major financial markets: U.S. stocks, A-shares, and cryptocurrencies, with multiple trading granularities to simulate live financial environments. Our benchmark implements a revolutionary fully autonomous minimal information paradigm where agents receive only essential context and must independently search, verify, and synthesize live market information without human intervention. We evaluate six mainstream LLMs across three markets and multiple trading frequencies. Our analysis reveals striking findings: general intelligence does not automatically translate to effective trading capability, with most agents exhibiting poor returns and weak risk management. We demonstrate that risk control capability determines cross-market robustness, and that AI trading strategies achieve excess returns more readily in highly liquid markets than policy-driven environments. These findings expose critical limitations in current autonomous agents and provide clear directions for future improvements. The code and evaluation data are open-sourced to foster community research: https://github.com/HKUDS/AI-Trader.",
+    "citations": 2
+  },
+  {
+    "title": "FinWorld: An All-in-One Open-Source Platform for End-to-End Financial AI Research and Deployment",
+    "year": 2025,
+    "authors": "Wentao Zhang, Yilei Zhao, Chuqiao Zong, Xinrun Wang, Bo An",
+    "url": "https://api.semanticscholar.org/CorpusId:280421572",
+    "relevance": 3,
+    "abstract": "Financial AI holds great promise for transforming modern finance, with the potential to support a wide range of tasks such as market forecasting, portfolio management, quantitative trading, and automated analysis. However, existing platforms remain limited in task coverage, lack robust multimodal data integration, and offer insufficient support for the training and deployment of large language models (LLMs). In response to these limitations, we present FinWorld, an all-in-one open-source platform that provides end-to-end support for the entire financial AI workflow, from data acquisition to experimentation and deployment. FinWorld distinguishes itself through native integration of heterogeneous financial data, unified support for diverse AI paradigms, and advanced agent automation, enabling seamless development and deployment. Leveraging data from 2 representative markets, 4 stock pools, and over 800 million financial data points, we conduct comprehensive experiments on 4 key financial AI tasks. These experiments systematically evaluate deep learning and reinforcement learning algorithms, with particular emphasis on RL-based finetuning for LLMs and LLM Agents. The empirical results demonstrate that FinWorld significantly enhances reproducibility, supports transparent benchmarking, and streamlines deployment, thereby providing a strong foundation for future research and real-world applications. Code is available at Github~\\footnote{https://github.com/DVampire/FinWorld}.",
+    "citations": 2
+  },
+  {
+    "title": "When Agents Trade: Live Multi-Market Trading Benchmark for LLM Agents",
+    "year": 2025,
+    "authors": "Lingfei Qian, Xueqing Peng, Yan Wang, Vincent J. Zhang, Huan He, Hanley Smith, Yi Han, Yueru He, Haohang Li, Yupeng Cao, Yangyang Yu, Alejandro Lopez-Lira, Peng Lu, Jian-yun Nie, Guojun Xiong, Jimin Huang, Sophia Ananiadou",
+    "url": "https://api.semanticscholar.org/CorpusId:282057127",
+    "relevance": 3,
+    "abstract": "Although Large Language Model (LLM)-based agents are increasingly used in financial trading, it remains unclear whether they can reason and adapt in live markets, as most studies test models instead of agents, cover limited periods and assets, and rely on unverified data. To address these gaps, we introduce Agent Market Arena (AMA), the first lifelong, real-time benchmark for evaluating LLM-based trading agents across multiple markets. AMA integrates verified trading data, expert-checked news, and diverse agent architectures within a unified trading framework, enabling fair and continuous comparison under real conditions. It implements four agents, including InvestorAgent as a single-agent baseline, TradeAgent and HedgeFundAgent with different risk styles, and DeepFundAgent with memory-based reasoning, and evaluates them across GPT-4o, GPT-4.1, Claude-3.5-haiku, Claude-sonnet-4, and Gemini-2.0-flash. Live experiments on both cryptocurrency and stock markets demonstrate that agent frameworks display markedly distinct behavioral patterns, spanning from aggressive risk-taking to conservative decision-making, whereas model backbones contribute less to outcome variation. AMA thus establishes a foundation for rigorous, reproducible, and continuously evolving evaluation of financial reasoning and trading intelligence in LLM-based agents.",
+    "citations": 1
+  },
+  {
+    "title": "Trade in Minutes! Rationality-Driven Agentic System for Quantitative Financial Trading",
+    "year": 2025,
+    "authors": "Zifan Song, Kaitao Song, Guosheng Hu, Ding Qi, Junyao Gao, Xiaohua Wang, Dongsheng Li, Cairong Zhao",
+    "url": "https://api.semanticscholar.org/CorpusId:281842508",
+    "relevance": 3,
+    "abstract": "Recent advancements in large language models (LLMs) and agentic systems have shown exceptional decision-making capabilities, revealing significant potential for autonomic finance. Current financial trading agents predominantly simulate anthropomorphic roles that inadvertently introduce emotional biases and rely on peripheral information, while being constrained by the necessity for continuous inference during deployment. In this paper, we pioneer the harmonization of strategic depth in agents with the mechanical rationality essential for quantitative trading. Consequently, we present TiMi (Trade in Minutes), a rationality-driven multi-agent system that architecturally decouples strategy development from minute-level deployment. TiMi leverages specialized LLM capabilities of semantic analysis, code programming, and mathematical reasoning within a comprehensive policy-optimization-deployment chain. Specifically, we propose a two-tier analytical paradigm from macro patterns to micro customization, layered programming design for trading bot implementation, and closed-loop optimization driven by mathematical reflection. Extensive evaluations across 200+ trading pairs in stock and cryptocurrency markets empirically validate the efficacy of TiMi in stable profitability, action efficiency, and risk control under volatile market dynamics.",
+    "citations": 1
+  },
+  {
+    "title": "TradeTrap: Are LLM-based Trading Agents Truly Reliable and Faithful?",
+    "year": 2025,
+    "authors": "Lewen Yan, Jilin Mei, Tianyi Zhou, Lige Huang, Jie Zhang, Dongrui Liu, Jing Shao",
+    "url": "https://api.semanticscholar.org/CorpusId:283458569",
+    "relevance": 3,
+    "abstract": "LLM-based trading agents are increasingly deployed in real-world financial markets to perform autonomous analysis and execution. However, their reliability and robustness under adversarial or faulty conditions remain largely unexamined, despite operating in high-risk, irreversible financial environments. We propose TradeTrap, a unified evaluation framework for systematically stress-testing both adaptive and procedural autonomous trading agents. TradeTrap targets four core components of autonomous trading agents: market intelligence, strategy formulation, portfolio and ledger handling, and trade execution, and evaluates their robustness under controlled system-level perturbations. All evaluations are conducted in a closed-loop historical backtesting setting on real US equity market data with identical initial conditions, enabling fair and reproducible comparisons across agents and attacks. Extensive experiments show that small perturbations at a single component can propagate through the agent decision loop and induce extreme concentration, runaway exposure, and large portfolio drawdowns across both agent types, demonstrating that current autonomous trading agents can be systematically misled at the system level. Our code is available at https://github.com/Yanlewen/TradeTrap.",
+    "citations": 1
+  },
+  {
+    "title": "ATLAS: Adaptive Trading with LLM AgentS Through Dynamic Prompt Optimization and Multi-Agent Coordination",
+    "year": 2025,
+    "authors": "Charidimos Papadakis, Angeliki Dimitriou, Giorgos Filandrianos, Maria Lymperaiou, Konstantinos Thomas, G. Stamou",
+    "url": "https://api.semanticscholar.org/CorpusId:282209036",
+    "relevance": 3,
+    "abstract": "Large language models show promise for financial decision-making, yet deploying them as autonomous trading agents raises fundamental challenges: how to adapt instructions when rewards arrive late and obscured by market noise, how to synthesize heterogeneous information streams into coherent decisions, and how to bridge the gap between model outputs and executable market actions. We present ATLAS (Adaptive Trading with LLM AgentS), a unified multi-agent framework that integrates structured information from markets, news, and corporate fundamentals to support robust trading decisions. Within ATLAS, the central trading agent operates in an order-aware action space, ensuring that outputs correspond to executable market orders rather than abstract signals. The agent can incorporate feedback while trading using Adaptive-OPRO, a novel prompt-optimization technique that dynamically adapts the prompt by incorporating real-time, stochastic feedback, leading to increasing performance over time. Across regime-specific equity studies and multiple LLM families, Adaptive-OPRO consistently outperforms fixed prompts, while reflection-based feedback fails to provide systematic gains.",
+    "citations": 1
+  },
+  {
+    "title": "Agent-Based Simulation of a Financial Market with Large Language Models",
+    "year": 2025,
+    "authors": "Ryuji Hashimoto, Takehiro Takayanagi, Masahiro Suzuki, Kiyoshi Izumi",
+    "url": "https://api.semanticscholar.org/CorpusId:282064483",
+    "relevance": 3,
+    "abstract": "In real-world stock markets, certain chart patterns -- such as price declines near historical highs -- cannot be fully explained by fundamentals alone. These phenomena suggest the presence of path dependence in price formation, where investor decisions are influenced not only by current market conditions but also by the trajectory of prices leading up to the present. Path dependence has drawn attention in behavioral finance as a key mechanism behind such anomalies. One plausible driver of path dependence is human loss aversion, anchored to individual reference points like purchase prices or past peaks, which vary with personal context. However, capturing such subtle behavioral tendencies in traditional agent-based market simulations has remained a challenge. We propose the Fundamental-Chartist-LLM-Agent (FCLAgent), which uses large language models (LLMs) to emulate human-like trading decisions. In this framework, (1) buy/sell decisions are made by LLMs based on individual situations, while (2) order price and volume follow standard rule-based methods. Simulations show that FCLAgents reproduce path-dependent patterns that conventional agents fail to capture. Furthermore, an analysis of FCLAgents'behavior reveals that the reference points guiding loss aversion vary with market trajectories, highlighting the potential of LLM-based agents to model nuanced investor behavior.",
+    "citations": 1
+  },
+  {
+    "title": "MM-DREX: Multimodal-Driven Dynamic Routing of LLM Experts for Financial Trading",
+    "year": 2025,
+    "authors": "Yang Chen, Yueheng Jiang, Zhaozhao Ma, Yuchen Cao Jacky Keung, Kun Kuang, Leilei Gan, Yiquan Wu, Fei Wu",
+    "url": "https://api.semanticscholar.org/CorpusId:281194722",
+    "relevance": 3,
+    "abstract": "The inherent non-stationarity of financial markets and the complexity of multi-modal information pose significant challenges to existing quantitative trading models. Traditional methods relying on fixed structures and unimodal data struggle to adapt to market regime shifts, while large language model (LLM)-driven solutions - despite their multi-modal comprehension - suffer from static strategies and homogeneous expert designs, lacking dynamic adjustment and fine-grained decision mechanisms. To address these limitations, we propose MM-DREX: a Multimodal-driven, Dynamically-Routed EXpert framework based on large language models. MM-DREX explicitly decouples market state perception from strategy execution to enable adaptive sequential decision-making in non-stationary environments. Specifically, it (1) introduces a vision-language model (VLM)-powered dynamic router that jointly analyzes candlestick chart patterns and long-term temporal features to allocate real-time expert weights; (2) designs four heterogeneous trading experts (trend, reversal, breakout, positioning) generating specialized fine-grained sub-strategies; and (3) proposes an SFT-RL hybrid training paradigm to synergistically optimize the router's market classification capability and experts'risk-adjusted decision-making. Extensive experiments on multi-modal datasets spanning stocks, futures, and cryptocurrencies demonstrate that MM-DREX significantly outperforms 15 baselines (including state-of-the-art financial LLMs and deep reinforcement learning models) across key metrics: total return, Sharpe ratio, and maximum drawdown, validating its robustness and generalization. Additionally, an interpretability module traces routing logic and expert behavior in real time, providing an audit trail for strategy transparency.",
+    "citations": 1
+  },
+  {
+    "title": "Language Model Guided Reinforcement Learning in Quantitative Trading",
+    "year": 2025,
+    "authors": "Adam Darmanin, Vince Vella",
+    "url": "https://api.semanticscholar.org/CorpusId:280421329",
+    "relevance": 3,
+    "abstract": "Algorithmic trading requires short-term tactical decisions consistent with long-term financial objectives. Reinforcement Learning (RL) has been applied to such problems, but adoption is limited by myopic behaviour and opaque policies. Large Language Models (LLMs) offer complementary strategic reasoning and multi-modal signal interpretation when guided by well-structured prompts. This paper proposes a hybrid framework in which LLMs generate high-level trading strategies to guide RL agents. We evaluate (i) the economic rationale of LLM-generated strategies through expert review, and (ii) the performance of LLM-guided agents against unguided RL baselines using Sharpe Ratio (SR) and Maximum Drawdown (MDD). Empirical results indicate that LLM guidance improves both return and risk metrics relative to standard RL.",
+    "citations": 1
+  },
+  {
+    "title": "AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning Framework for Stock Trading",
+    "year": 2025,
+    "authors": "Zheye Deng, Jiashu Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:282139067",
+    "relevance": 3,
+    "abstract": "While Large Language Model (LLM) agents show promise in automated trading, they still face critical limitations. Prominent multi-agent frameworks often suffer from inefficiency, produce inconsistent signals, and lack the end-to-end optimization required to learn a coherent strategy from market feedback. To address this, we introduce AlphaQuanter, a single-agent framework that uses reinforcement learning (RL) to learn a dynamic policy over a transparent, tool-augmented decision workflow, which empowers a single agent to autonomously orchestrate tools and proactively acquire information on demand, establishing a transparent and auditable reasoning process. Extensive experiments demonstrate that AlphaQuanter achieves state-of-the-art performance on key financial metrics. Moreover, its interpretable reasoning reveals sophisticated strategies, offering novel and valuable insights for human traders. Our code for data acquisition and agent training is publicly available at: https://github.com/AlphaQuanter/AlphaQuanter",
+    "citations": 1
+  },
+  {
+    "title": "The New Quant: A Survey of Large Language Models in Financial Prediction and Trading",
+    "year": 2025,
+    "authors": "Weilong Fu",
+    "url": "https://api.semanticscholar.org/CorpusId:281886275",
+    "relevance": 3,
+    "abstract": "Large language models are reshaping quantitative investing by turning unstructured financial information into evidence-grounded signals and executable decisions. This survey synthesizes research with a focus on equity return prediction and trading, consolidating insights from domain surveys and more than fifty primary studies. We propose a task-centered taxonomy that spans sentiment and event extraction, numerical and economic reasoning, multimodal understanding, retrieval-augmented generation, time series prompting, and agentic systems that coordinate tools for research, backtesting, and execution. We review empirical evidence for predictability, highlight design patterns that improve faithfulness such as retrieval first prompting and tool-verified numerics, and explain how signals feed portfolio construction under exposure, turnover, and capacity controls. We assess benchmarks and datasets for prediction and trading and outline desiderata-for time safe and economically meaningful evaluation that reports costs, latency, and capacity. We analyze challenges that matter in production, including temporal leakage, hallucination, data coverage and structure, deployment economics, interpretability, governance, and safety. The survey closes with recommendations for standardizing evaluation, building auditable pipelines, and advancing multilingual and cross-market research so that language-driven systems deliver robust and risk-controlled performance in practice.",
+    "citations": 1
+  },
+  {
+    "title": "Look-Ahead-Bench: a Standardized Benchmark of Look-ahead Bias in Point-in-Time LLMs for Finance",
+    "year": 2026,
+    "authors": "Mostapha Benhenda",
+    "url": "https://api.semanticscholar.org/CorpusId:284911867",
+    "relevance": 3,
+    "abstract": "We introduce Look-Ahead-Bench, a standardized benchmark measuring look-ahead bias in Point-in-Time (PiT) Large Language Models (LLMs) within realistic and practical financial workflows. Unlike most existing approaches that primarily test inner lookahead knowledge via Q\\\\&A, our benchmark evaluates model behavior in practical scenarios. To distinguish genuine predictive capability from memorization-based performance, we analyze performance decay across temporally distinct market regimes, incorporating several quantitative baselines to establish performance thresholds. We evaluate prominent open-source LLMs -- Llama 3.1 (8B and 70B) and DeepSeek 3.2 -- against a family of Point-in-Time LLMs (Pitinf-Small, Pitinf-Medium, and frontier-level model Pitinf-Large) from PiT-Inference. Results reveal significant lookahead bias in standard LLMs, as measured with alpha decay, unlike Pitinf models, which demonstrate improved generalization and reasoning abilities as they scale in size. This work establishes a foundation for the standardized evaluation of temporal bias in financial LLMs and provides a practical framework for identifying models suitable for real-world deployment. Code is available on GitHub: https://github.com/benstaf/lookaheadbench",
+    "citations": 0
+  },
+  {
+    "title": "P1GPT: a multi-agent LLM workflow module for multi-modal financial information analysis",
+    "year": 2025,
+    "authors": "Chen-Che Lu, Yun-Cheng Chou, Teng-Ruei Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:282389311",
+    "relevance": 3,
+    "abstract": "Recent advances in large language models (LLMs) have enabled multi-agent reasoning systems capable of collaborative decision-making. However, in financial analysis, most frameworks remain narrowly focused on either isolated single-agent predictors or loosely connected analyst ensembles, and they lack a coherent reasoning workflow that unifies diverse data modalities. We introduce P1GPT, a layered multi-agent LLM framework for multi-modal financial information analysis and interpretable trading decision support. Unlike prior systems that emulate trading teams through role simulation, P1GPT implements a structured reasoning pipeline that systematically fuses technical, fundamental, and news-based insights through coordinated agent communication and integration-time synthesis. Backtesting on multi-modal datasets across major U.S. equities demonstrates that P1GPT achieves superior cumulative and risk-adjusted returns, maintains low drawdowns, and provides transparent causal rationales. These findings suggest that structured reasoning workflows, rather than agent role imitation, offer a scalable path toward explainable and trustworthy financial AI systems.",
+    "citations": 0
+  },
+  {
+    "title": "Autonomous Market Intelligence: Agentic AI Nowcasting Predicts Stock Returns",
+    "year": 2026,
+    "authors": "Darcy Pu, Zefeng Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:284910537",
+    "relevance": 3,
+    "abstract": "Can fully agentic AI nowcast stock returns? We deploy a state-of-the-art Large Language Model to evaluate the attractiveness of each Russell 1000 stock daily, starting from April 2025 when AI web interfaces enabled real-time search. Our data contribution is unique along three dimensions. First, the nowcasting framework is completely out-of-sample and free of look-ahead bias by construction: predictions are collected at the current edge of time, ensuring the AI has no knowledge of future outcomes. Second, this temporal design is irreproducible-once the information environment passes, it can never be recreated. Third, our framework is 100% agentic: we do not feed the model news, disclosures, or curated text; it autonomously searches the web, filters sources, and synthesises information into quantitative predictions. We find that AI possesses genuine stock selection ability, but only for identifying top winners. Longing the 20 highest-ranked stocks generates a daily Fama-French five-factor plus momentum alpha of 18.5 basis points and an annualised Sharpe ratio of 2.43. Critically, these returns derive from an implementable strategy trading highly liquid Russell 1000 constituents, with transaction costs representing less than 10% of gross alpha. However, this predictability is highly concentrated: expanding beyond the top tier rapidly dilutes alpha, and bottom-ranked stocks exhibit returns statistically indistinguishable from the market. We hypothesise that this asymmetry reflects online information structure: genuinely positive news generates coherent signals, while negative news is contaminated by strategic corporate obfuscation and social media noise.",
+    "citations": 0
+  },
+  {
+    "title": "Reimagining Agent-based Modeling with Large Language Model Agents via Shachi",
+    "year": 2025,
+    "authors": "So Kuroki, Yingtao Tian, Kou Misaki, Takashi Ikegami, Takuya Akiba, Yujin Tang",
+    "url": "https://api.semanticscholar.org/CorpusId:281659024",
+    "relevance": 3,
+    "abstract": "The study of emergent behaviors in large language model (LLM)-driven multi-agent systems is a critical research challenge, yet progress is limited by a lack of principled methodologies for controlled experimentation. To address this, we introduce Shachi, a formal methodology and modular framework that decomposes an agent's policy into core cognitive components: Configuration for intrinsic traits, Memory for contextual persistence, and Tools for expanded capabilities, all orchestrated by an LLM reasoning engine. This principled architecture moves beyond brittle, ad-hoc agent designs and enables the systematic analysis of how specific architectural choices influence collective behavior. We validate our methodology on a comprehensive 10-task benchmark and demonstrate its power through novel scientific inquiries. Critically, we establish the external validity of our approach by modeling a real-world U.S. tariff shock, showing that agent behaviors align with observed market reactions only when their cognitive architecture is appropriately configured with memory and tools. Our work provides a rigorous, open-source foundation for building and evaluating LLM agents, aimed at fostering more cumulative and scientifically grounded research.",
+    "citations": 0
+  },
+  {
+    "title": "Behavioral Consistency Validation for LLM Agents: An Analysis of Trading-Style Switching through Stock-Market Simulation",
+    "year": 2026,
+    "authors": "Zeping Li, Guancheng Wan, Keyang Chen, Yu Chen, Yiwen Zhao, Philip Torr, Guangnan Ye, Zhenfei Yin, Hongfeng Chai",
+    "url": "https://www.semanticscholar.org/paper/7550169d076668ede36673525ad2b96baa54fe0a",
+    "relevance": 3,
+    "abstract": "Recent works have increasingly applied Large Language Models (LLMs) as agents in financial stock market simulations to test if micro-level behaviors aggregate into macro-level phenomena. However, a crucial question arises: Do LLM agents'behaviors align with real market participants? This alignment is key to the validity of simulation results. To explore this, we select a financial stock market scenario to test behavioral consistency. Investors are typically classified as fundamental or technical traders, but most simulations fix strategies at initialization, failing to reflect real-world trading dynamics. In this work, we assess whether agents'strategy switching aligns with financial theory, providing a framework for this evaluation. We operationalize four behavioral-finance drivers-loss aversion, herding, wealth differentiation, and price misalignment-as personality traits set via prompting and stored long-term. In year-long simulations, agents process daily price-volume data, trade under a designated style, and reassess their strategy every 10 trading days. We introduce four alignment metrics and use Mann-Whitney U tests to compare agents'style-switching behavior with financial theory. Our results show that recent LLMs'switching behavior is only partially consistent with behavioral-finance theories, highlighting the need for further refinement in aligning agent behavior with financial theory.",
+    "citations": 0
+  },
+  {
+    "title": "FINRS: A Risk-Sensitive Trading Framework for Real Financial Markets",
+    "year": 2025,
+    "authors": "Bijia Liu, Ronghao Dang",
+    "url": "https://api.semanticscholar.org/CorpusId:283072776",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) have shown strong reasoning capabilities and are increasingly explored for financial trading. Existing LLM-based trading agents, however, largely focus on single-step prediction and lack integrated mechanisms for risk management, which reduces their effectiveness in volatile markets. We introduce FinRS, a risk-sensitive trading framework that combines hierarchical market analysis, dual-decision agents, and multi-timescale reward reflection to align trading actions with both return objectives and downside risk constraints. Experiments on multiple stocks and market conditions show that FinRS achieves superior profitability and stability compared to state-of-the-art methods.",
+    "citations": 0
+  },
+  {
+    "title": "Market-Dependent Communication in Multi-Agent Alpha Generation",
+    "year": 2025,
+    "authors": "Jerick Shi, Burton Hollifield",
+    "url": "https://www.semanticscholar.org/paper/4258cc2fae45b46a80d8a0d836f88d99bef5166b",
+    "relevance": 3,
+    "abstract": "Multi-strategy hedge funds face a fundamental organizational choice: should analysts generating trading strategies communicate, and if so, how? We investigate this using 5-agent LLM-based trading systems across 450 experiments spanning 21 months, comparing five organizational structures from isolated baseline to collaborative and competitive conversation. We show that communication improves performance, but optimal communication design depends on market characteristics. Competitive conversation excels in volatile technology stocks, while collaborative conversation dominates stable general stocks. Finance stocks resist all communication interventions. Surprisingly, all structures, including isolated agents, converge to similar strategy alignments, challenging assumptions that transparency causes harmful diversity loss. Performance differences stem from behavioral mechanisms: competitive agents focus on stock-level allocation while collaborative agents develop technical frameworks. Conversation quality scores show zero correlation with returns. These findings demonstrate that optimal communication design must match market volatility characteristics, and sophisticated discussions don't guarantee better performance.",
+    "citations": 0
+  },
+  {
+    "title": "BizFinBench.v2: A Unified Dual-Mode Bilingual Benchmark for Expert-Level Financial Capability Alignment",
+    "year": 2026,
+    "authors": "Xin Guo, Rongjunchen Zhang, Guilong Lu, Xuntao Guo, Shuai Jia, Zhi Yang, Liwen Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:284647956",
+    "relevance": 3,
+    "abstract": "Large language models have undergone rapid evolution, emerging as a pivotal technology for intelligence in financial operations. However, existing benchmarks are often constrained by pitfalls such as reliance on simulated or general-purpose samples and a focus on singular, offline static scenarios. Consequently, they fail to align with the requirements for authenticity and real-time responsiveness in financial services, leading to a significant discrepancy between benchmark performance and actual operational efficacy. To address this, we introduce BizFinBench.v2, the first large-scale evaluation benchmark grounded in authentic business data from both Chinese and U.S. equity markets, integrating online assessment. We performed clustering analysis on authentic user queries from financial platforms, resulting in eight fundamental tasks and two online tasks across four core business scenarios, totaling 29,578 expert-level Q&A pairs. Experimental results demonstrate that ChatGPT-5 achieves a prominent 61.5% accuracy in main tasks, though a substantial gap relative to financial experts persists; in online tasks, DeepSeek-R1 outperforms all other commercial LLMs. Error analysis further identifies the specific capability deficiencies of existing models within practical financial business contexts. BizFinBench.v2 transcends the limitations of current benchmarks, achieving a business-level deconstruction of LLM financial capabilities and providing a precise basis for evaluating efficacy in the widespread deployment of LLMs within the financial domain. The data and code are available at https://github.com/HiThink-Research/BizFinBench.v2.",
+    "citations": 0
+  },
+  {
+    "title": "A Self-Improving Multi-Agent Framework for Dynamic Portfolio Management",
+    "year": 2025,
+    "authors": "Wanjie Zhan, Chao Yu, Chengdong Xu, XiaWei Wu, Yuhe Wang",
+    "url": "https://www.semanticscholar.org/paper/b8fa846e1044c1a05729ee76ecb1b800098274c2",
+    "relevance": 3,
+    "abstract": "Portfolio management (PM) is a dynamic asset allocation process aimed at maximizing returns while controlling risks. Recently, LLM-based agents have shown significant application potentials in PM. However, existing approaches often lack a complete modeling of the whole PM process and rely on fixed rule-based methods, limiting their adaptability and effectiveness. To address these limitations, we propose SIMA-DPM, a self-improving multi-agent framework for dynamic PM. SIMA-DPM simulates the end-to-end PM workflow, including stock screening, portfolio construction and risk control, with specialized agents for each stage. Additionally, SIMA-DPM employs a self-improving dynamic stock selection mechanism to iteratively refine selection strategies, so as to adapt to changing market. Experiments on a stock pool of about 680 stocks show that, under controlled risk, SIMA-DPM significantly outperforms baselines.",
+    "citations": 0
+  },
+  {
+    "title": "QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining",
+    "year": 2026,
+    "authors": "Jun Han, Shuo Zhang, Wei Li, Zhi Yang, Yifan Dong, Tu Hu, Jialuo Yuan, Xiaomin Yu, Yumo Zhu, Fangqi Lou, Xin Guo, Zhaowei Liu, Tianyi Jiang, Ruichuan An, Jingping Liu, Biao Wu, Rongze Chen, Kunyi Wang, Yifan Wang, Sen Hu, Xinbing Kong, Liwen Zhang, Ronghao Chen, Huacan Wang",
+    "url": "https://www.semanticscholar.org/paper/3821672c3b0665b1250e1fffabb20283f1d8cda6",
+    "relevance": 3,
+    "abstract": "Financial markets are noisy and non-stationary, making alpha mining highly sensitive to noise in backtesting results and sudden market regime shifts. While recent agentic frameworks improve alpha mining automation, they often lack controllable multi-round search and reliable reuse of validated experience. To address these challenges, we propose QuantaAlpha, an evolutionary alpha mining framework that treats each end-to-end mining run as a trajectory and improves factors through trajectory-level mutation and crossover operations. QuantaAlpha localizes suboptimal steps in each trajectory for targeted revision and recombines complementary high-reward segments to reuse effective patterns, enabling structured exploration and refinement across mining iterations. During factor generation, QuantaAlpha enforces semantic consistency across the hypothesis, factor expression, and executable code, while constraining the complexity and redundancy of the generated factor to mitigate crowding. Extensive experiments on the China Securities Index 300 (CSI 300) demonstrate consistent gains over strong baseline models and prior agentic systems. When utilizing GPT-5.2, QuantaAlpha achieves an Information Coefficient (IC) of 0.1501, with an Annualized Rate of Return (ARR) of 27.75% and a Maximum Drawdown (MDD) of 7.98%. Moreover, factors mined on CSI 300 transfer effectively to the China Securities Index 500 (CSI 500) and the Standard&Poor's 500 Index (S&P 500), delivering 160% and 137% cumulative excess return over four years, respectively, which indicates strong robustness of QuantaAlpha under market distribution shifts.",
+    "citations": 0
+  },
+  {
+    "title": "Regret-Driven Portfolios: LLM-Guided Smart Clustering for Optimal Allocation",
+    "year": 2026,
+    "authors": "Muhammad Abro, Hassan Jaleel",
+    "url": "https://api.semanticscholar.org/CorpusId:285050040",
+    "relevance": 3,
+    "abstract": "We attempt to mitigate the persistent tradeoff between risk and return in medium- to long-term portfolio management. This paper proposes a novel LLM-guided no-regret portfolio allocation framework that integrates online learning dynamics, market sentiment indicators, and large language model (LLM)-based hedging to construct high-Sharpe ratio portfolios tailored for risk-averse investors and institutional fund managers. Our approach builds on a follow-the-leader approach, enriched with sentiment-based trade filtering and LLM-driven downside protection. Empirical results demonstrate that our method outperforms a SPY buy-and-hold baseline by 69% in annualized returns and 119% in Sharpe ratio.",
+    "citations": 0
+  },
+  {
+    "title": "HedgeAgents: A Balanced-aware Multi-agent Financial Trading System",
+    "year": 2025,
+    "authors": "Xiangyu Li, Yawen Zeng, Xiaofen Xing, Jin Xu, Xiangmin Xu",
+    "url": "https://api.semanticscholar.org/CorpusId:276449781",
+    "relevance": 2,
+    "abstract": "As automated trading gains traction in the financial market, algorithmic investment strategies are increasingly prominent. While Large Language Models (LLMs) and Agent-based models exhibit promising potential in real-time market analysis and trading decisions, they still experience a significant -20% loss when confronted with rapid declines or frequent fluctuations, impeding their practical application. Hence, there is an imperative to explore a more robust and resilient framework. This paper introduces an innovative multi-agent system, HedgeAgents, aimed at bolstering system robustness via ''hedging'' strategies. In this well-balanced system, an array of hedging agents has been tailored, where HedgeAgents consist of a central fund manager and multiple hedging experts specializing in various financial asset classes. These agents leverage LLMs' cognitive capabilities to make decisions and coordinate through three types of conferences. Benefiting from the powerful understanding of LLMs, our HedgeAgents attained a 70% annualized return and a 400% total return over a period of 3 years. Moreover, we have observed with delight that HedgeAgents can even formulate investment experience comparable to those of human experts (https://hedgeagents.github.io/).",
+    "citations": 23
+  },
+  {
+    "title": "LLM-Powered AI Agent Systems and Their Applications in Industry",
+    "year": 2025,
+    "authors": "Guannan Liang, Qianqian Tong",
+    "url": "https://api.semanticscholar.org/CorpusId:278789054",
+    "relevance": 2,
+    "abstract": "The emergence of Large Language Models (LLMs) has reshaped agent systems. Unlike traditional rule-based agents with limited task scope, LLM-powered agents offer greater flexibility, cross-domain reasoning, and natural language interaction. Moreover, with the integration of multi-modal LLMs, current agent systems are highly capable of processing diverse data modalities, including text, images, audio, and structured tabular data, enabling richer and more adaptive real-world behavior. This paper comprehensively examines the evolution of agent systems from the pre-LLM era to current LLM-powered architectures. We categorize agent systems into software-based, physical, and adaptive hybrid systems, highlighting applications across customer service, software development, manufacturing automation, personalized education, financial trading, and healthcare. We further discuss the primary challenges posed by LLM-powered agents, including high inference latency, output uncertainty, lack of evaluation metrics, and security vulnerabilities, and propose potential solutions to mitigate these concerns.",
+    "citations": 18
+  },
+  {
+    "title": "Multimodal Financial Foundation Models (MFFMs): Progress, Prospects, and Challenges",
+    "year": 2025,
+    "authors": "Xiao-Yang Liu Yanglet, Yupeng Cao, Li Deng",
+    "url": "https://www.semanticscholar.org/paper/290fe5dfb5d33902c9311aaead75201747acc4d8",
+    "relevance": 2,
+    "abstract": "Financial Large Language Models (FinLLMs), such as open FinGPT and proprietary BloombergGPT, have demonstrated great potential in select areas of financial services. Beyond this earlier language-centric approach, Multimodal Financial Foundation Models (MFFMs) can digest interleaved multimodal financial data, including fundamental data, market data, data analytics, macroeconomic, and alternative data (e.g., natural language, audio, images, and video). In this position paper, presented at the MFFM Workshop joined with ACM International Conference on AI in Finance (ICAIF) 2024, we describe the progress, prospects, and challenges of MFFMs. This paper also highlights ongoing research on FinAgents in the \\textbf{SecureFinAI Lab}\\footnote{\\https://openfin.engineering.columbia.edu/} at Columbia University. We believe that MFFMs will enable a deeper understanding of the underlying complexity associated with numerous financial tasks and data, streamlining the operation of financial services and investment processes. Github Repo https://github.com/Open-Finance-Lab/Awesome-MFFMs/.",
+    "citations": 5
+  },
+  {
+    "title": "QuantAgent: Price-Driven Multi-Agent LLMs for High-Frequency Trading",
+    "year": 2025,
+    "authors": "Fei Xiong, Xiang Zhang, Aosong Feng, Siqi Sun, Chenyu You",
+    "url": "https://api.semanticscholar.org/CorpusId:281309960",
+    "relevance": 2,
+    "abstract": "Recent advances in Large Language Models (LLMs) have shown remarkable capabilities in financial reasoning and market understanding. Multi-agent LLM frameworks such as TradingAgent and FINMEM augment these models to long-horizon investment tasks by leveraging fundamental and sentiment-based inputs for strategic decision-making. However, these approaches are ill-suited for the high-speed, precision-critical demands of High-Frequency Trading (HFT). HFT typically requires rapid, risk-aware decisions driven by structured, short-horizon signals, such as technical indicators, chart patterns, and trend features. These signals stand in sharp contrast to the long-horizon, text-driven reasoning that characterizes most existing LLM-based systems in finance. To bridge this gap, we introduce QuantAgent, the first multi-agent LLM framework explicitly designed for high-frequency algorithmic trading. The system decomposes trading into four specialized agents--Indicator, Pattern, Trend, and Risk--each equipped with domain-specific tools and structured reasoning capabilities to capture distinct aspects of market dynamics over short temporal windows. Extensive experiments across nine financial instruments, including Bitcoin and Nasdaq futures, demonstrate that QuantAgent consistently outperforms baseline methods, achieving higher predictive accuracy at both 1-hour and 4-hour trading intervals across multiple evaluation metrics. Our findings suggest that coupling structured trading signals with LLM-based reasoning provides a viable path for traceable, real-time decision systems in high-frequency financial markets.",
+    "citations": 5
+  },
+  {
+    "title": "LLM Agents Do Not Replicate Human Market Traders: Evidence From Experimental Finance",
+    "year": 2025,
+    "authors": "Thomas Henning, Siddhartha Ojha, Ross Spoon, Jiatong Han, C. F. Camerer",
+    "url": "https://api.semanticscholar.org/CorpusId:276575185",
+    "relevance": 2,
+    "abstract": "This paper explores how Large Language Models (LLMs) behave in a classic experimental finance paradigm widely known for eliciting bubbles and crashes in human participants. We adapt an established trading design, where traders buy and sell a risky asset with a known fundamental value, and introduce several LLM-based agents, both in single-model markets (all traders are instances of the same LLM) and in mixed-model\"battle royale\"settings (multiple LLMs competing in the same market). Our findings reveal that LLMs generally exhibit a\"textbook-rational\"approach, pricing the asset near its fundamental value, and show only a muted tendency toward bubble formation. Further analyses indicate that LLM-based agents display less trading strategy variance in contrast to humans. Taken together, these results highlight the risk of relying on LLM-only data to replicate human-driven market phenomena, as key behavioral features, such as large emergent bubbles, were not robustly reproduced. While LLMs clearly possess the capacity for strategic decision-making, their relative consistency and rationality suggest that they do not accurately mimic human market dynamics.",
+    "citations": 4
+  },
+  {
+    "title": "TraderTalk: An LLM Behavioural ABM applied to Simulating Human Bilateral Trading Interactions",
+    "year": 2024,
+    "authors": "Alicia Vidler, Toby Walsh",
+    "url": "https://api.semanticscholar.org/CorpusId:273661563",
+    "relevance": 2,
+    "abstract": "We introduce a novel hybrid approach that augments Agent-Based Models (ABMs) with behaviours generated by Large Language Models (LLMs) to simulate human trading interactions. We call our model TraderTalk. Leveraging LLMs trained on extensive human-authored text, we capture detailed and nuanced representations of bilateral conversations in financial trading. Applying this Generative Agent-Based Model (GABM) to government bond markets, we replicate trading decisions between two stylised virtual humans. Our method addresses both structural challenges\u2014such as coordinating turn-taking between realistic LLM-based agents\u2014and design challenges, including the interpretation of LLM outputs by the agent model. By exploring prompt design opportunistically rather than systematically, we enhance the realism of agent interactions without exhaustive overfitting or model reliance. Our approach successfully replicates trade-to-order volume ratios observed in related asset markets, demonstrating the potential of LLM-augmented ABMs in financial simulations.",
+    "citations": 3
+  },
+  {
+    "title": "Advancing Financial Engineering with Foundation Models: Progress, Applications, and Challenges",
+    "year": 2025,
+    "authors": "Liyuan Chen, Shuoling Liu, Jiangpeng Yan, Xiaoyu Wang, Henglin Liu, Chuang Li, Kechen Jiao, Jixuan Ying, Yang Liu, Qiang Yang, Xiu Li",
+    "url": "https://api.semanticscholar.org/CorpusId:280017319",
+    "relevance": 2,
+    "abstract": "",
+    "citations": 2
+  },
+  {
+    "title": "Will LLMs be Professional at Fund Investment? DeepFund: A Live Arena Perspective",
+    "year": 2025,
+    "authors": "Changlun Li, Yao Shi, Yuyu Luo, Nan Tang",
+    "url": "https://api.semanticscholar.org/CorpusId:277272186",
+    "relevance": 2,
+    "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities across various domains, but their effectiveness in financial decision-making remains inadequately evaluated. Current benchmarks primarily assess LLMs'understanding on financial documents rather than the ability to manage assets or dig out trading opportunities in dynamic market conditions. Despite the release of new benchmarks for evaluating diversified tasks on the financial domain, we identified four major problems in these benchmarks, which are data leakage, navel-gazing, over-intervention, and maintenance-hard. To pave the research gap, we introduce DeepFund, a comprehensive arena platform for evaluating LLM-based trading strategies in a live environment. Our approach implements a multi-agent framework where they serve as multiple key roles that realize the real-world investment decision processes. Moreover, we provide a web interface that visualizes LLMs'performance with fund investment metrics across different market conditions, enabling detailed comparative analysis. Through DeepFund, we aim to provide a more realistic and fair assessment on LLM's capabilities in fund investment, offering diversified insights and revealing their potential applications in real-world financial markets. Our code is publicly available at https://github.com/HKUSTDial/DeepFund.",
+    "citations": 2
+  },
+  {
+    "title": "Large Language Model Agents for Investment Management: Foundations, Benchmarks, and Research Frontiers",
+    "year": 2025,
+    "authors": "Preetha Saha, Jasmine Lyu, Arnav Saxena, Tianjiao Zhao, Dhagash Mehta",
+    "url": "https://www.semanticscholar.org/paper/a5a80a83cf865a0f854332b02ec26353d436c036",
+    "relevance": 2,
+    "abstract": "Recent advances in Large Language Models (LLMs) have triggered a new wave of intelligent financial agents capable of complex reasoning, tool use, and autonomous decision-making. This survey presents a comprehensive review of LLM-based agents in the context of investment and trading, focusing on applications such as portfolio optimization, risk management, information retrieval, and automated strategy generation. We systematically categorize the literature by use case and architectural innovations including multi-agent collaborations, reflection mechanisms, and tool-augmented pipelines. Additionally, we review emerging evaluation frameworks and benchmark datasets tailored to finance-specific agent tasks. The survey identifies current trends, technical limitations, and open challenges related to robustness, explainability, and real-world deployment. We conclude with emerging directions for building more capable, adaptive, and trustworthy financial AI agents aligned with the demands of modern investment ecosystems.",
+    "citations": 2
+  },
+  {
+    "title": "Profit Mirage: Revisiting Information Leakage in LLM-based Financial Agents",
+    "year": 2025,
+    "authors": "Xiangyu Li, Yawen Zeng, Xiaofen Xing, Jin Xu, Xiangmin Xu",
+    "url": "https://www.semanticscholar.org/paper/b31220689481b2b5433956655e93cdf476256d6b",
+    "relevance": 2,
+    "abstract": "LLM-based financial agents have attracted widespread excitement for their ability to trade like human experts. However, most systems exhibit a\"profit mirage\": dazzling back-tested returns evaporate once the model's knowledge window ends, because of the inherent information leakage in LLMs. In this paper, we systematically quantify this leakage issue across four dimensions and release FinLake-Bench, a leakage-robust evaluation benchmark. Furthermore, to mitigate this issue, we introduce FactFin, a framework that applies counterfactual perturbations to compel LLM-based agents to learn causal drivers instead of memorized outcomes. FactFin integrates four core components: Strategy Code Generator, Retrieval-Augmented Generation, Monte Carlo Tree Search, and Counterfactual Simulator. Extensive experiments show that our method surpasses all baselines in out-of-sample generalization, delivering superior risk-adjusted performance.",
+    "citations": 2
+  },
+  {
+    "title": "Trade-R1: Bridging Verifiable Rewards to Stochastic Environments via Process-Level Reasoning Verification",
+    "year": 2026,
+    "authors": "Rui Sun, Yifan Sun, Sheng Xu, Li Zhao, Jing Li, Daxin Jiang, Cheng Hua, Zuo Bai",
+    "url": "https://www.semanticscholar.org/paper/ca96ba4a274fb5e686db99e69bf437b42fee560d",
+    "relevance": 2,
+    "abstract": "Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to achieve remarkable reasoning in domains like mathematics and coding, where verifiable rewards provide clear signals. However, extending this paradigm to financial decision is challenged by the market's stochastic nature: rewards are verifiable but inherently noisy, causing standard RL to degenerate into reward hacking. To address this, we propose Trade-R1, a model training framework that bridges verifiable rewards to stochastic environments via process-level reasoning verification. Our key innovation is a verification method that transforms the problem of evaluating reasoning over lengthy financial documents into a structured Retrieval-Augmented Generation (RAG) task. We construct a triangular consistency metric, assessing pairwise alignment between retrieved evidence, reasoning chains, and decisions to serve as a validity filter for noisy market returns. We explore two reward integration strategies: Fixed-effect Semantic Reward (FSR) for stable alignment signals, and Dynamic-effect Semantic Reward (DSR) for coupled magnitude optimization. Experiments on different country asset selection demonstrate that our paradigm reduces reward hacking, with DSR achieving superior cross-market generalization while maintaining the highest reasoning consistency.",
+    "citations": 0
+  },
+  {
+    "title": "FinEvo: From Isolated Backtests to Ecological Market Games for Multi-Agent Financial Strategy Evolution",
+    "year": 2026,
+    "authors": "Mingxi Zou, Jiaxiang Chen, Aotian Luo, Jingyi Dai, Chi Zhang, Dongning Sun, Zenglin Xu",
+    "url": "https://api.semanticscholar.org/CorpusId:285270243",
+    "relevance": 2,
+    "abstract": "Conventional financial strategy evaluation relies on isolated backtests in static environments. Such evaluations assess each policy independently, overlook correlations and interactions, and fail to explain why strategies ultimately persist or vanish in evolving markets. We shift to an ecological perspective, where trading strategies are modeled as adaptive agents that interact and learn within a shared market. Instead of proposing a new strategy, we present FinEvo, an ecological game formalism for studying the evolutionary dynamics of multi-agent financial strategies. At the individual level, heterogeneous ML-based traders-rule-based, deep learning, reinforcement learning, and large language model (LLM) agents-adapt using signals such as historical prices and external news. At the population level, strategy distributions evolve through three designed mechanisms-selection, innovation, and environmental perturbation-capturing the dynamic forces of real markets. Together, these two layers of adaptation link evolutionary game theory with modern learning dynamics, providing a principled environment for studying strategic behavior. Experiments with external shocks and real-world news streams show that FinEvo is both stable for reproducibility and expressive in revealing context-dependent outcomes. Strategies may dominate, collapse, or form coalitions depending on their competitors-patterns invisible to static backtests. By reframing strategy evaluation as an ecological game formalism, FinEvo provides a unified, mechanism-level protocol for analyzing robustness, adaptation, and emergent dynamics in multi-agent financial markets, and may offer a means to explore the potential impact of macroeconomic policies and financial regulations on price evolution and equilibrium.",
+    "citations": 0
+  },
+  {
+    "title": "GWise: A Graph-Structured Multi-Agent Framework for Service-Oriented and Generative-AI-Enabled Financial Trading Analytics",
+    "year": 2025,
+    "authors": "H. Rezaei, F. Rabhi, Amin Beheshti",
+    "url": "https://www.semanticscholar.org/paper/df3f8969756cff6e49662ba7a69ad5b9ba99b2c6",
+    "relevance": 2,
+    "abstract": "Financial trading analytics increasingly demands modular, explainable, and adaptive intelligence systems capable of handling volatile market conditions and multimodal data streams. Recent advances in generative Artificial Intelligence (AI), Large Language Models (LLMs), and graph-based representations have enabled the creation of intelligent agents that can reason over complex, interconnected financial data. We introduce GWise, a graph-structured, generative AI-enabled multi-agent framework for real-time financial trading analytics delivered via secure web services. GWise models financial decision making as a directed computational graph of specialized analytical agents, including technical, fundamental, sentiment, and risk analysis crews, whose outputs are orchestrated through a memory-augmented LLM. This graph-structured design enables transparent, adaptive, and explainable trade recommendations that evolve over time. We demonstrate how the framework's agent orchestration forms a dynamic service graph, facilitating composability, fault isolation, and scalable deployment through cloud-native APIs. Extensive back-testing and simulated market conditions show that GWise outperforms traditional strategies in risk-adjusted returns while offering improved interpretability and service robustness. Our work illustrates how graph-based multiagent coordination and generative reasoning can advance real-time financial analytics as a service.",
+    "citations": 0
+  },
+  {
+    "title": "Design and Empirical Study of a Large Language Model-Based Multi-Agent Investment System for Chinese Public REITs",
+    "year": 2026,
+    "authors": "Zheng Li",
+    "url": "https://www.semanticscholar.org/paper/4f1188a5073c4d475eb959e1a667ad5bc7cb2f1e",
+    "relevance": 2,
+    "abstract": "This study addresses the low-volatility Chinese Public Real Estate Investment Trusts (REITs) market, proposing a large language model (LLM)-driven trading framework based on multi-agent collaboration. The system constructs four types of analytical agents-announcement, event, price momentum, and market-each conducting analysis from different dimensions; then the prediction agent integrates these multi-source signals to output directional probability distributions across multiple time horizons, then the decision agent generates discrete position adjustment signals based on the prediction results and risk control constraints, thereby forming a closed loop of analysis-prediction-decision-execution. This study further compares two prediction model pathways: for the prediction agent, directly calling the general-purpose large model DeepSeek-R1 versus using a specialized small model Qwen3-8B fine-tuned via supervised fine-tuning and reinforcement learning alignment. In the backtest from October 2024 to October 2025, both agent-based strategies significantly outperformed the buy-and-hold benchmark in terms of cumulative return, Sharpe ratio, and maximum drawdown. The results indicate that the multi-agent framework can effectively enhance the risk-adjusted return of REITs trading, and the fine-tuned small model performs close to or even better than the general-purpose large model in some scenarios.",
+    "citations": 0
+  }
+]

@@ -1,0 +1,70 @@
+\section{Methodology}
+\label{sec:methodology}
+
+We design a controlled experiment that isolates decision frequency as the sole independent variable while holding constant the LLM backbone, stock universe, evaluation period, and information structure.
+
+\subsection{Problem Formulation}
+
+At each decision point $t$, the LLM agent receives a context window $\vc_t$ containing recent price history, technical indicators, and the current portfolio position. It outputs a discrete action $a_t \in \{\text{BUY}, \text{HOLD}, \text{SELL}\}$. The portfolio follows binary positioning: 100\% long or 100\% cash (no shorting, no partial positions). A BUY action enters a full long position, SELL exits to cash, and HOLD maintains the current state. The starting position is cash for all experiments.
+
+We evaluate three decision frequencies $f \in \{\text{daily}, \text{weekly}, \text{monthly}\}$, where the number of decision points per stock varies accordingly: 252 (daily), 53 (weekly), and 12 (monthly) during the evaluation year.
+
+\subsection{Data}
+
+\para{Source and coverage.}
+We use daily, weekly, and monthly OHLCV (Open, High, Low, Close, Volume) data from Yahoo Finance via the \texttt{yfinance} library, spanning February 2016 to December 2024. The first eight years (2016--2023) provide historical context for technical indicator computation, while 2024 serves as the evaluation period.
+
+\para{Stock universe.}
+We select five stocks spanning diverse sectors and volatility profiles: AAPL (technology), JPM (finance), NVDA (semiconductors), TSLA (automotive/energy), and MSFT (technology). This selection balances sector diversity with coverage of both high-volatility (TSLA, NVDA) and lower-volatility (AAPL, JPM, MSFT) equities. During 2024, SPY returned approximately 25\%, making this a generally bullish evaluation period with sector-specific pullbacks.
+
+\para{Technical indicators.}
+At each frequency, we compute the following indicators over the corresponding period granularity:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{SMA-10 and SMA-20}: 10-period and 20-period simple moving averages, providing trend signals.
+    \item \textbf{RSI-14}: 14-period relative strength index, indicating overbought/oversold conditions.
+    \item \textbf{Returns}: 1-period and 5-period percentage returns.
+\end{itemize}
+
+\para{Information window.}
+At each decision point, the LLM receives the most recent 15 periods of data at the corresponding frequency. This means daily agents see 15 trading days ($\sim$3 weeks), weekly agents see 15 weeks ($\sim$3.5 months), and monthly agents see 15 months ($\sim$1.25 years). The information window naturally scales with frequency, mirroring how human investors adjust their analysis horizon to their trading horizon.
+
+\subsection{LLM Agent Design}
+
+\para{Model.}
+We use OpenAI's GPT-4.1-mini as the LLM backbone for all experiments. This model balances capability with cost-effectiveness, enabling the 1,585 total API calls required across all conditions within a budget of \$1.34.
+
+\para{Prompt design.}
+The agent receives a standardized system prompt instructing it to act as a stock trading analyst and output a JSON object with two fields: \texttt{decision} (BUY, HOLD, or SELL) and \texttt{reasoning} (a brief explanation). The user prompt contains:
+\begin{enumerate}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item The stock ticker and decision frequency context (\eg ``You are making a \emph{monthly} trading decision'').
+    \item The current position (LONG or OUT).
+    \item A frequency-specific instruction (\eg ``Your next decision will be in one month'').
+    \item A table of recent price history with Close, Volume, SMA-10, SMA-20, RSI-14, 1-period return, and 5-period return.
+\end{enumerate}
+The prompt is identical across frequencies except for the frequency context, the instruction about time until next decision, and the data granularity. This ensures that any performance differences are attributable to frequency rather than prompt variation.
+
+\para{Inference configuration.}
+We use temperature 0.0 for deterministic outputs, with a maximum of 150 output tokens. Each experiment constitutes a single run per condition, producing one trajectory per stock-frequency pair.
+
+\subsection{Baselines}
+
+\para{Buy-and-Hold (\bh).}
+The passive benchmark that buys at the start of the evaluation period and holds throughout. This is the most commonly used baseline in LLM trading research~\citep{ding2024survey}.
+
+\para{SMA Crossover (\smacross).}
+A simple technical strategy that buys when the 10-period SMA crosses above the 20-period SMA and sells on the reverse crossover. This provides a non-LLM active trading baseline.
+
+\subsection{Evaluation Metrics}
+
+We evaluate performance using three standard metrics:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Cumulative Return (CR)}: Total percentage gain or loss over the evaluation period.
+    \item \textbf{Sharpe Ratio (SR)}: Annualized risk-adjusted return, computed as the mean return divided by its standard deviation, scaled by $\sqrt{N}$ where $N$ is the annualization factor (252 for daily, 52 for weekly, 12 for monthly).
+    \item \textbf{Maximum Drawdown (MDD)}: The largest peak-to-trough decline, measuring worst-case downside risk.
+\end{itemize}
+
+We additionally report decision distributions (percentage of BUY, HOLD, and SELL actions) and turnover rates (percentage of periods with position changes) to characterize agent behavior.
+
+\subsection{Statistical Analysis}
+
+We use paired $t$-tests to compare Sharpe ratios across frequencies, with each stock providing one paired observation. We apply Bonferroni correction for three pairwise comparisons (daily vs.\ weekly, daily vs.\ monthly, weekly vs.\ monthly) at $\alpha = 0.05$. We report Cohen's $d$ as a measure of effect size. With only $n=5$ paired observations, we acknowledge limited statistical power and emphasize effect sizes alongside $p$-values.

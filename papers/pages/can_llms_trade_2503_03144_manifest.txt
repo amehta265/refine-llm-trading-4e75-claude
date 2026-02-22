@@ -1,0 +1,9 @@
+PDF: /data/hypogenicai/workspaces/refine-llm-trading-4e75-claude/papers/can_llms_trade_2503_03144.pdf
+Total pages: 12
+Pages per chunk: 3
+
+Chunks:
+  can_llms_trade_2503_03144_chunk_001.pdf: pages 1-3
+  can_llms_trade_2503_03144_chunk_002.pdf: pages 4-6
+  can_llms_trade_2503_03144_chunk_003.pdf: pages 7-9
+  can_llms_trade_2503_03144_chunk_004.pdf: pages 10-12

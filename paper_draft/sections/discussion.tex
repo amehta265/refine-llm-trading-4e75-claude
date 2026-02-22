@@ -1,0 +1,55 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Interpretation of Results}
+
+\para{The frequency--performance relationship is non-monotonic.}
+Our results challenge the intuitive expectation that performance improves monotonically as decision frequency decreases. Instead, we observe a U-shaped pattern: daily and monthly trading perform comparably (mean Sharpe 1.17 and 1.10), while weekly trading performs substantially worse (0.19). This suggests that intermediate frequencies may represent a ``valley of indecision'' where LLMs lose the benefits of both high-frequency momentum signals and low-frequency strategic context.
+
+\para{Monthly trading enables qualitatively different strategies.}
+The behavioral analysis reveals that the monthly LLM does not simply make fewer of the same decisions---it makes \emph{different kinds} of decisions. At monthly frequency, the agent demonstrates strategic patience (83\% HOLD on JPM), selective market timing (avoiding TSLA's Q1--Q2 drawdown), and trend-following logic in its reasoning. This qualitative shift suggests that longer decision horizons allow LLMs to leverage their strength in strategic reasoning rather than forcing them into a tactical role where they are disadvantaged.
+
+\para{Risk management is the most consistent advantage.}
+While the Sharpe ratio comparison between daily and monthly is approximately equal, the drawdown advantage of monthly trading is consistent across 4 of 5 stocks. The mean MDD improvement from $-$14.0\% (daily) to $-$8.9\% (monthly) represents a 36\% reduction, and the improvement relative to Buy-and-Hold ($-$21.8\%) is 59\%. For practitioners concerned with downside risk, this consistent advantage may be more important than marginal Sharpe ratio differences.
+
+\subsection{Why Does Weekly Trading Fail?}
+
+The poor performance of weekly trading is one of our most surprising findings. We hypothesize three potential explanations:
+
+First, weekly data may occupy an informationally ``thin'' regime. Daily data captures short-term momentum and mean-reversion patterns; monthly data reveals macro trends and regime changes. Weekly data may be too noisy for trend identification yet too coarse for momentum capture.
+
+Second, the weekly agent exhibits the highest turnover rate (53\%), suggesting it overreacts to weekly fluctuations. Unlike daily noise---which may average out over many rapid decisions---weekly overreaction leads to poorly timed trades with fewer opportunities for correction.
+
+Third, prompt design may inadvertently disadvantage weekly decisions. The instruction ``Your next decision will be in one week'' may create urgency without providing sufficient context for confident positioning. Future work should investigate whether prompt engineering or richer information (such as news) can improve weekly performance.
+
+\subsection{Comparison to Prior Work}
+
+Our finding that LLM trading underperforms Buy-and-Hold on average (best LLM mean: 39.7\% vs.\ \bh 65.7\%) is consistent with \finsaber~\citep{li2026finsaber} and \deepfund~\citep{deepfund2025}. However, our result that monthly LLM trading \emph{outperforms} \bh on 2 of 5 stocks (JPM: +57.0\% vs.\ +42.8\%; TSLA: +104.5\% vs.\ +52.7\%) is rare in the literature. This suggests that frequency optimization may be a viable path to competitive LLM trading strategies, particularly for stocks with strong directional trends or high volatility.
+
+The ``buy and hold on strength'' behavior exhibited by the monthly JPM agent echoes the finding from \deepfund~\citep{deepfund2025} that conservative strategies with high cash reserves were the only profitable approach in live trading. Both results point to the same conclusion: LLMs may add the most value when they trade infrequently and focus on high-conviction decisions.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+We identify seven limitations that should guide interpretation of our results and design of follow-up studies:
+
+\para{Small sample size.}
+With only 5 stocks, we lack statistical power to detect moderate effect sizes. The large Cohen's $d$ values (1.31 for daily vs.\ weekly) suggest real effects, but validation on 15--20 stocks is needed for robust conclusions.
+
+\para{Single evaluation year.}
+Our results are limited to 2024, a generally bullish year. The hypothesis that monthly trading excels at regime detection is most interesting in bear or mixed markets, which we do not evaluate. Extended evaluation across multiple market regimes is a critical next step.
+
+\para{Price-only information.}
+We deliberately exclude news and sentiment data to isolate the frequency effect. In practice, LLM trading agents typically process textual information, which could interact differently with decision frequency. News-augmented experiments would test whether the frequency effect persists with richer information.
+
+\para{Single model.}
+We use only GPT-4.1-mini. More capable models (\eg GPT-4.1, Claude 4.5 Sonnet) might show different frequency effects, particularly if their stronger reasoning capabilities benefit more from longer-horizon strategic decisions.
+
+\para{No transaction costs.}
+We do not model transaction costs, which would further favor monthly trading due to its lower turnover. Including realistic transaction costs would strengthen the case for less frequent trading.
+
+\para{Deterministic inference.}
+Using temperature 0.0 produces a single trajectory per condition, preventing estimation of variance. Stochastic evaluation with temperature 0.3 and multiple runs per condition would provide confidence intervals and strengthen statistical analysis.
+
+\para{Limited monthly data points.}
+With only 12 monthly decision points per stock, the statistical reliability of monthly performance metrics is inherently limited. This is a structural challenge for any study of low-frequency trading strategies.

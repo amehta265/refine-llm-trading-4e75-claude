@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "compiled_date": "2026-02-22",
+    "num_papers": 10,
+    "purpose": "Structured summary of LLM trading agent papers for research on whether LLM agents perform better with longer-term trading decisions"
+  },
+  "papers": [
+    {
+      "title": "FINSABER: Can LLM-based Financial Investing Strategies Outperform the Market in Long Run?",
+      "arxiv_id": "2505.07078",
+      "year": 2026,
+      "key_contribution": "Introduces a comprehensive, bias-mitigated backtesting framework (FINSABER) that addresses survivorship bias, look-ahead bias, and data-snooping bias in LLM trading evaluations. Demonstrates that previously reported LLM trading advantages vanish under rigorous, extended evaluation.",
+      "methodology": "Three-module framework: multi-source data module (7,000+ US equities, 2000-2024), modular strategy base, and bias-aware two-step backtesting pipeline with rolling windows. Evaluates LLM timing-based strategies (FinMem, FinAgent) against traditional, ML, and RL baselines over 20-year periods with historically accurate constituent lists including delisted stocks.",
+      "datasets_used": [
+        "7,000+ US equity daily prices (2000-2024)",
+        "FNSPID financial news dataset (15.7M records, 4,775 S&P 500 companies, 1999-2023)",
+        "SEC 10-K and 10-Q filings for Russell 3000",
+        "Historical S&P 500 constituent lists (including delisted symbols)"
+      ],
+      "llms_tested": [
+        "GPT-4o-mini (via FinMem and FinAgent)",
+        "GPT-4o (supplementary comparison)"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "SMA Crossover",
+        "WMA Crossover",
+        "ATR Band",
+        "Bollinger Bands",
+        "Trend Following",
+        "Turn of the Month",
+        "ARIMA",
+        "XGBoost",
+        "A2C",
+        "PPO",
+        "SAC",
+        "TD3",
+        "DDPG"
+      ],
+      "metrics": [
+        "Annualized Return (AR)",
+        "Cumulative Return (CR)",
+        "Annualized Volatility (AV)",
+        "Maximum Drawdown (MDD)",
+        "Sharpe Ratio (SPR)",
+        "Sortino Ratio (STR)",
+        "CAPM Alpha/Beta decomposition",
+        "Paired t-tests"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "LLM strategies (FinMem, FinAgent) that appeared profitable in short-term evaluations (6 months, 4-8 hand-picked stocks) consistently underperform Buy and Hold and traditional strategies when tested over 20 years with 100+ stocks in a bias-mitigated setup. Neither generates statistically significant alpha (all p-values > 0.34). LLM agents are pathologically miscalibrated: overly conservative in bull markets (FinMem Sharpe -0.19) and overly aggressive in bear markets (FinMem Sharpe -0.97, worst of any strategy tested).",
+      "long_term_findings": "Central finding: extending evaluation from 6 months to 20 years causes LLM advantages to vanish entirely. Even a 2-month extension beyond the originally reported period caused MSFT cumulative return to flip from +23% to -22%. Over long horizons, LLMs fail to match even passive Buy and Hold due to regime miscalibration -- they cannot detect bull/bear market transitions. ARIMA consistently outperforms LLMs across all time horizons.",
+      "code_url": "https://github.com/waylonli/FINSABER",
+      "relevance_to_hypothesis": "Directly challenges the hypothesis at the evaluation-horizon level: LLM daily trading strategies degrade over longer evaluation periods. However, the paper only tests daily decision frequency, not weekly/monthly. The diagnosed failure mode (regime miscalibration, inability to detect trends) actually supports testing longer decision horizons where LLMs would have more context for macro reasoning. The paper notes LLMs' primary strength may be 'exploiting strong, pre-existing market trends' -- which aligns with longer holding periods."
+    },
+    {
+      "title": "InvestorBench: A Benchmark for Financial Decision-Making Tasks with LLM-based Agent",
+      "arxiv_id": "2412.18174",
+      "year": 2024,
+      "key_contribution": "First comprehensive benchmark for evaluating LLM-based agents across diverse financial decision-making contexts (stocks, crypto, ETFs), testing 13 LLMs within a standardized agent framework with layered memory architecture.",
+      "methodology": "Extends the FinMem framework with Brain/Perception/Profile/Memory/Action modules. Models financial decision-making as an infinite-horizon POMDP. Evaluates 13 LLMs (3 proprietary, 9 open-source, 1 financial domain) on three single-asset daily trading tasks. Reports median metrics from 5 repeated epochs with temperature 0.6.",
+      "datasets_used": [
+        "Yahoo Finance daily OHLCV for 7 stocks",
+        "SEC EDGAR 10-Q and 10-K filings",
+        "Daily financial news (open-access + Refinitiv Real-Time News/Reuters)",
+        "CoinMarketCap crypto data (BTC, ETH)",
+        "NIFTY dataset for ETF trading",
+        "GPT-3.5-turbo generated sentiment labels"
+      ],
+      "llms_tested": [
+        "GPT-4",
+        "GPT-4o",
+        "GPT-o1-preview",
+        "DeepSeek-v2 (15B)",
+        "DeepSeek-llm (67B)",
+        "Yi-1.5-9b",
+        "Yi-1.5-34b",
+        "Qwen2.5-7b",
+        "Qwen2.5-32b",
+        "Qwen2.5-72b",
+        "Llama3.1-8b",
+        "Llama3.1-70b",
+        "Palmyra-Fin-70B"
+      ],
+      "baselines": [
+        "Buy and Hold"
+      ],
+      "metrics": [
+        "Cumulative Return (CR)",
+        "Sharpe Ratio (SR)",
+        "Annualized Volatility (AV)",
+        "Maximum Drawdown (MDD)"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "Proprietary models (GPT-4o, GPT-o1-preview) consistently outperform open-source models in stock trading. Model size matters: 67B+ open-source models significantly outperform smaller ones. Financial domain fine-tuning (Palmyra-Fin) failed at stock trading but excelled at ETF trading. ETF trading (most strategic/long-term) was the hardest task for most models, requiring proprietary-level reasoning.",
+      "long_term_findings": "ETF trading, which requires longer-term strategic reasoning, proved the most challenging for open-source LLMs -- only proprietary models and the financial-domain Palmyra-Fin performed well. This suggests LLMs struggle more with long-term strategic reasoning than short-term reactive trading. The layered memory architecture explicitly models different time horizons (shallow=14 days, intermediate=90 days, deep=365 days) with distinct decay rates.",
+      "code_url": null,
+      "relevance_to_hypothesis": "Mixed evidence. ETF trading (longest-term, most strategic) was the hardest for most LLMs, suggesting longer-term decisions require stronger reasoning capabilities that only top models possess. However, proprietary models showed strong performance on ETFs, suggesting that sufficiently capable LLMs might indeed excel at longer-term strategic decisions. The layered memory architecture with different time-horizon decay rates is a key design pattern for multi-horizon trading."
+    },
+    {
+      "title": "FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design",
+      "arxiv_id": "2311.13743",
+      "year": 2023,
+      "key_contribution": "Introduces a layered memory architecture inspired by human cognitive systems (Craik & Lockhart's levels of processing) for LLM trading agents, with shallow/intermediate/deep memory layers mapping to different financial data timeliness, plus a self-adaptive risk character that dynamically switches between risk-seeking and risk-averse modes.",
+      "methodology": "Three-module framework (Profiling, Memory, Decision-making) with GPT-4-Turbo backbone. Memory module uses FAISS vector database for retrieval with scoring based on recency (Ebbinghaus forgetting curve), relevancy (cosine similarity via OpenAI embeddings), and importance (layer-specific decay). Self-adaptive risk preference switches based on recent cumulative return. Evaluated on 5 single stocks over ~6 months.",
+      "datasets_used": [
+        "Alpaca News API (Benzinga) for financial news",
+        "SEC 10-Q and 10-K filings",
+        "Yahoo Finance (yfinance) daily OHLCV",
+        "OpenAI text-embedding-ada-002 for memory embeddings"
+      ],
+      "llms_tested": [
+        "GPT-4",
+        "GPT-4-Turbo",
+        "GPT-3.5-Turbo",
+        "davinci-003",
+        "Llama2-70b-chat"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "PPO",
+        "DQN",
+        "A2C",
+        "Generative Agents (GA)",
+        "FinGPT"
+      ],
+      "metrics": [
+        "Cumulative Return",
+        "Sharpe Ratio",
+        "Annualized Volatility",
+        "Daily Volatility",
+        "Maximum Drawdown",
+        "Wilcoxon signed-rank test"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "FinMem outperforms all baselines on Cumulative Return and Sharpe Ratio across all 5 stocks in the original 6-month test period. TSLA achieved 61.78% CR with 2.68 Sharpe. GPT-4-Turbo provided the best risk-adjusted backbone (2.496 Sharpe). Self-adaptive risk mode vastly outperformed fixed risk-seeking or risk-averse modes. Llama2-70b-chat performed very poorly (-52.72% CR).",
+      "long_term_findings": "The paper only evaluates a ~6-month testing window. The memory architecture explicitly separates short-term (daily news, 14-day decay), medium-term (quarterly reports, 90-day decay), and long-term (annual reports + reflections, 365-day decay) information. The access counter mechanism promotes important short-term events to deeper layers for persistent long-term influence. However, FINSABER later showed these results collapse over longer evaluation periods.",
+      "code_url": "https://github.com/pipiku915/FinMem-LLM-StockTrading",
+      "relevance_to_hypothesis": "The layered memory architecture is a foundational design for multi-horizon trading. The separation of data by timeliness (news vs quarterly vs annual) directly encodes the intuition that different time horizons require different information. However, the 6-month evaluation is too short to validate long-term effectiveness, and FINSABER demonstrated these results do not hold over extended periods."
+    },
+    {
+      "title": "FinCon: A Synthesized LLM Multi-Agent System with Conceptual Verbal Reinforcement for Enhanced Financial Decision Making",
+      "arxiv_id": "2407.06567",
+      "year": 2024,
+      "key_contribution": "Introduces a manager-analyst hierarchical multi-agent system with Conceptual Verbal Reinforcement (CVRF) -- a novel prompt optimization method analogous to textual gradient descent -- that updates investment beliefs across training episodes. First LLM agent system to address portfolio management.",
+      "methodology": "Manager-analyst hierarchy with 7 specialized analyst agents (3 textual, 1 audio, 1 data analysis, 1 stock selection, 1 report analyst) and a manager agent. Dual-level risk control: within-episode CVaR monitoring and over-episode CVRF belief updates. Uses GPT-4-Turbo exclusively. POMDP formulation with verbal reinforcement instead of gradient descent. Only 4 training episodes needed.",
+      "datasets_used": [
+        "Yahoo Finance daily OHLCV",
+        "Refinitiv Real-Time News (Reuters)",
+        "SEC EDGAR 10-Q and 10-K filings",
+        "Earnings Conference Call (ECC) audio recordings",
+        "Zacks Equity Research reports and ranks",
+        "Capital IQ data"
+      ],
+      "llms_tested": [
+        "GPT-4-Turbo"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "Generative Agent (GA)",
+        "FinGPT",
+        "FinMem",
+        "FinAgent",
+        "A2C",
+        "PPO",
+        "DQN",
+        "Markowitz Mean-Variance",
+        "FinRL-A2C",
+        "Equal-Weighted ETF"
+      ],
+      "metrics": [
+        "Cumulative Return (CR)",
+        "Sharpe Ratio (SR)",
+        "Maximum Drawdown (MDD)",
+        "Daily PnL",
+        "CVaR",
+        "Wilcoxon signed-rank test"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "FinCon significantly outperforms all LLM and DRL baselines across 8 stocks and 2 portfolios. TSLA achieved 82.87% CR and 1.972 SR. Portfolio 1 achieved 113.84% CR and 3.269 SR. Excelled in bearish markets (NIO: +17.46% while B&H lost -77.21%). Dual-level risk control is essential -- over-episode belief updates (CVRF) are more impactful than within-episode CVaR monitoring.",
+      "long_term_findings": "All experiments use daily decision frequency over ~8 months. Different analyst agents have distinct procedural memory decay rates reflecting data timeliness (annual filings persist longest, daily news decays fastest). The paper does not explore different trading frequencies. Later evaluation by FINSABER on the same stocks showed FinCon's advantages also deteriorate over longer periods.",
+      "code_url": "https://github.com/The-FinAI/FinCon",
+      "relevance_to_hypothesis": "The CVRF mechanism (conceptualized investment beliefs updated across episodes) is a form of longer-term learning that improves trading decisions. The hierarchical multi-agent structure with specialized analysts processing different time-horizon data (daily news vs quarterly reports vs annual filings) is architecturally aligned with multi-horizon reasoning. However, the system only operates at daily frequency and has not been tested at longer decision intervals."
+    },
+    {
+      "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "arxiv_id": "2412.20138",
+      "year": 2025,
+      "key_contribution": "Introduces a multi-agent LLM trading framework that mirrors real-world trading firm organizational structures with specialized roles (analysts, researchers, traders, risk managers, fund manager) and a hybrid communication protocol combining structured reports with natural language debate.",
+      "methodology": "Seven agent roles organized into five teams: Analyst Team (4 concurrent agents: fundamental, sentiment, news, technical), Researcher Team (bullish vs bearish debate), Trader, Risk Management Team (aggressive/neutral/conservative debate), Fund Manager. Uses two-tier LLM strategy: gpt-4o-mini/gpt-4o for fast tasks, o1-preview for deep reasoning. ReAct prompting framework. No GPU required.",
+      "datasets_used": [
+        "Yahoo Finance historical stock prices (Jan-Mar 2024)",
+        "Bloomberg, Yahoo, EODHD, Finnhub news",
+        "Reddit (wallstreetbets, stocks, etc.) and X/Twitter social media",
+        "Finnhub company profiles, financials, insider transactions",
+        "60 technical indicators via stockstats"
+      ],
+      "llms_tested": [
+        "GPT-4o-mini",
+        "GPT-4o",
+        "o1-preview"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "MACD",
+        "KDJ + RSI",
+        "Zero Mean Reversion (ZMR)",
+        "Simple Moving Average (SMA)"
+      ],
+      "metrics": [
+        "Cumulative Return (CR)",
+        "Annualized Return (AR)",
+        "Sharpe Ratio (SR)",
+        "Maximum Drawdown (MDD)"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "TradingAgents achieved 23-27% cumulative returns and Sharpe Ratios of 5.6-8.21 across AAPL, GOOGL, AMZN over a 3-month period. On AAPL (where Buy & Hold returned -5.23%), it achieved +26.62% CR. However, the 3-month evaluation period is very short, and the exceptionally high Sharpe Ratios may be artifacts of few pullbacks during this favorable period.",
+      "long_term_findings": null,
+      "code_url": "https://github.com/TauricResearch/TradingAgents",
+      "relevance_to_hypothesis": "Limited direct evidence due to the very short 3-month evaluation. The multi-agent debate architecture (bullish vs bearish researchers, multi-perspective risk management) represents a form of deliberative reasoning that could be more valuable for longer-term decisions where multiple perspectives need weighing. However, computational cost (11 LLM calls + 20+ tool calls per daily decision) makes longer backtesting prohibitively expensive -- highlighting a key scalability challenge for daily LLM trading."
+    },
+    {
+      "title": "Large Language Model Agent in Financial Trading: A Survey",
+      "arxiv_id": "2408.06361",
+      "year": 2024,
+      "key_contribution": "First comprehensive survey of LLM agents for financial trading, reviewing 27 papers and organizing them along architecture (trader vs alpha miner), data (numerical, textual, visual, simulated), and evaluation axes. Identifies critical gaps in backtesting duration, market coverage, and transaction cost modeling.",
+      "methodology": "Systematic literature review and taxonomy development. Classifies LLM trading approaches into four sub-types (news-driven, reflection-driven, debate-driven, RL-driven) for direct trading, plus alpha mining approaches. Analyzes evaluation practices across the field.",
+      "datasets_used": [
+        "S&P 500 components",
+        "CSI 300 components (Chinese market)",
+        "Individual high-volume stocks (TSLA, AMZN, MSFT, etc.)",
+        "10-Q and 10-K filings",
+        "Bloomberg, WSJ, CNBC, Twitter, StockTwits, Reddit news/social data",
+        "Kline/volume charts (visual, only FinAgent)"
+      ],
+      "llms_tested": [
+        "GPT-3.5 (9 papers)",
+        "GPT-4 (8 papers)",
+        "BERT/FinBERT",
+        "Qwen",
+        "Baichuan",
+        "OPT",
+        "Llama2-70B",
+        "Vicuna-7B",
+        "FinGPT",
+        "BloombergGPT",
+        "Gemini"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "Mean Reversion",
+        "Short-Term Reversal",
+        "Random Forest",
+        "LightGBM",
+        "LSTM",
+        "BERT",
+        "PPO",
+        "DQN"
+      ],
+      "metrics": [
+        "Cumulative Return",
+        "Annualized Return",
+        "Sharpe Ratio",
+        "Maximum Drawdown",
+        "F1 Score",
+        "Accuracy",
+        "Win Rate",
+        "Information Coefficient (IC)"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "LLM agents achieve 15-30% annualized excess returns above strongest baselines in backtesting. Reflection-driven and multimodal architectures show best results. GPT-4 demonstrates strong in-context learning for finance without fine-tuning. Long-short strategies outperform long-only. However, median backtesting period is only 1.3 years, and trading costs are almost universally ignored.",
+      "long_term_findings": "Nearly all agents operate on daily trading frequency. High-frequency trading is explicitly impractical due to LLM inference latency. The median backtesting period across 27 papers is only 1.3 years, with most evaluations set between 2020-2024. Only 4 out of 14 real-data papers cover 5+ years. The survey explicitly flags short backtesting windows as a major credibility concern and recommends longer, more diverse evaluation periods.",
+      "code_url": null,
+      "relevance_to_hypothesis": "The survey reveals a systematic gap: the entire field operates at daily frequency with short backtesting windows (median 1.3 years). No paper systematically compares different trading frequencies. The finding that LLM inference latency rules out HFT but the field defaults to daily trading suggests an unexplored middle ground at weekly/monthly frequencies. The survey recommends longer backtesting and diverse evaluation as critical future directions, directly supporting our research motivation."
+    },
+    {
+      "title": "FLAG-TRADER: Fusion LLM-Agent with Gradient-based Reinforcement Learning for Financial Trading",
+      "arxiv_id": "2502.11433",
+      "year": 2025,
+      "key_contribution": "Demonstrates that a tiny 135M-parameter LLM (SmolLM2-135M) fine-tuned with PPO-based reinforcement learning can outperform much larger proprietary models (GPT-4, GPT-o1-preview) used in agentic prompting frameworks for stock trading, using Sharpe ratio change as the reward signal.",
+      "methodology": "LLM-based actor-critic architecture: frozen lower LLM layers retain pre-trained knowledge, trainable upper layers adapt to finance, with separate policy and value MLP heads. PPO training with reward = change in Sharpe ratio. State represented as structured text prompts with historical prices, account status, and past actions. All-in/all-out discrete action space. Compared against 13 LLMs via InvestorBench framework.",
+      "datasets_used": [
+        "InvestorBench stock price data (MSFT, JNJ, UVV, HON, TSLA)",
+        "InvestorBench BTC crypto data",
+        "Historical prices, account status, rewards, net values, past actions"
+      ],
+      "llms_tested": [
+        "SmolLM2-135M-Instruct (primary, RL fine-tuned)",
+        "GPT-o1-preview",
+        "GPT-4",
+        "GPT-4o",
+        "Palmyra-Fin-70B",
+        "Qwen2.5-72B-Instruct",
+        "Llama-3.1-70B-Instruct",
+        "DeepSeek-67B-Chat",
+        "Yi-1.5-34B-Chat",
+        "Qwen2.5-32B-Instruct",
+        "DeepSeek-V2-Lite (15.7B)",
+        "Yi-1.5-9B-Chat",
+        "Llama-3.1-8B-Instruct",
+        "Qwen-2.5-7B-Instruct"
+      ],
+      "baselines": [
+        "Buy and Hold",
+        "13 LLMs via InvestorBench agentic framework (prompting without RL)"
+      ],
+      "metrics": [
+        "Cumulative Return (CR)",
+        "Sharpe Ratio (SR)",
+        "Annualized Volatility (AV)",
+        "Maximum Drawdown (MDD)"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "SmolLM2-135M fine-tuned with RL achieved JNJ SR of 3.344 (vs 1.343 B&H), BTC SR of 1.734 (vs 0.683 B&H), and TSLA CR of 50.394% (vs 39.244% B&H). A 135M parameter model outperformed GPT-4, GPT-o1, and 72B open-source models in agentic frameworks. RL training allows convergence to stable optimal policy less sensitive to initial prompts.",
+      "long_term_findings": null,
+      "code_url": null,
+      "relevance_to_hypothesis": "Demonstrates that RL-driven policy optimization of LLMs outperforms pure prompting-based approaches for daily trading. This suggests that the failure of LLM agents in longer-term evaluations (as shown by FINSABER) may be addressable through RL fine-tuning rather than just changing decision frequency. However, the paper only tests daily frequency over ~7 months and does not explore longer decision horizons."
+    },
+    {
+      "title": "DeepFund: Time Travel is Cheating -- Going Live with DeepFund for Real-Time Fund Investment Benchmarking",
+      "arxiv_id": "2505.11065",
+      "year": 2025,
+      "key_contribution": "Introduces a live (real-time) fund investment benchmarking tool that evaluates LLMs using market data published exclusively after each model's knowledge cutoff date, eliminating the 'time travel' problem of historical backtesting where LLMs may have seen test data during pretraining.",
+      "methodology": "Multi-agent architecture with Financial Planner, Analyst Team (6 specialists: technical, fundamental, insider, news, macro, policy), and Portfolio Manager. Live market data from Yahoo Finance and Alpha Vantage. Each LLM manages $100K initial capital. Dual memory architecture (short-term operational, long-term historical). Evaluated 9 state-of-the-art LLMs over 24 trading days (March-April 2025) with extended Q2 2025 follow-up.",
+      "datasets_used": [
+        "Real-time stock prices (Yahoo Finance, Alpha Vantage)",
+        "Real-time news and sentiment data",
+        "Berkshire Hathaway top 5 holdings (AAPL, AXP, BAC, KO, CVX)",
+        "Extended sector-specific universes (Gold, Oil & Gas, Crypto, Banking)"
+      ],
+      "llms_tested": [
+        "GPT-4.1 (OpenAI)",
+        "Llama 4 Scout (Meta)",
+        "Gemini 2.5 Flash (Google)",
+        "Claude 3.7 Sonnet (Anthropic)",
+        "Grok 3 mini Beta (xAI)",
+        "DeepSeek-V3",
+        "Qwen2.5-Max (Alibaba)",
+        "Doubao-1.5-pro (ByteDance)",
+        "GLM-4-Air (Zhipu)"
+      ],
+      "baselines": [
+        "Buy and Hold (per-model)",
+        "S&P 500 index",
+        "Risk-free rate (4.29% US Treasury)"
+      ],
+      "metrics": [
+        "Cumulative Return (CR)",
+        "Sharpe Ratio (SR)",
+        "Maximum Drawdown (MDD)",
+        "Win Rate (WR)",
+        "Beta",
+        "Alpha"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "Only 1 of 9 LLMs (Grok 3) achieved positive returns (+1.1%) in live 24-day trading during a volatile market period. All others lost money, with losses ranging from -1.9% to -8.1%. This contrasts sharply with backtesting results where models often appear profitable. Grok 3's success came from conservative cash management (~60% cash reserves), not superior prediction. Most LLMs behaved like retail speculators, not professional fund managers.",
+      "long_term_findings": "Extended Q2 2025 evaluation showed some models (GPT-4.1, Claude 3.7, DeepSeek-V3) eventually achieved net profits over the longer horizon, while others (GLM-4, Qwen Max, Gemini 2.5) remained unprofitable. Conservative strategies with high cash reserves proved more resilient in short-term turbulence. The authors acknowledge the 24-day primary evaluation is short and volatile, suggesting longer horizons may help LLMs demonstrate value -- or that markets simply recovered.",
+      "code_url": "https://github.com/HKUSTDial/DeepFund",
+      "relevance_to_hypothesis": "Strongly relevant. The dramatic gap between backtested and live performance demonstrates that LLM trading evaluations are fundamentally compromised by data leakage. The finding that some models recovered over the extended Q2 period tentatively supports longer evaluation horizons. The success of conservative (low-frequency, high-cash-reserve) strategies over aggressive daily trading suggests that LLMs may be better suited to less frequent, more deliberate decision-making."
+    },
+    {
+      "title": "StockBench: Can LLM Agents Trade Stocks Profitably In Real-world Markets?",
+      "arxiv_id": "2510.02209",
+      "year": 2025,
+      "key_contribution": "Introduces a contamination-free benchmark for evaluating LLM stock trading agents using post-knowledge-cutoff market data (March-June 2025), with a structured 4-stage agent workflow (portfolio overview, in-depth analysis, decision generation, execution validation) across 20 DJIA stocks over 82 trading days.",
+      "methodology": "Back-trading environment with daily market data (prices, fundamentals, news) provided to LLMs through a 4-stage workflow. Contamination prevented by using recent data after model knowledge cutoffs. Tests 14 LLMs on top 20 DJIA stocks across 6 sectors. Each model runs 3 times with different random seeds. Composite ranking via z-scores of return, drawdown, and Sortino ratio.",
+      "datasets_used": [
+        "Polygon API market data (prices, fundamentals) for 20 DJIA stocks",
+        "Finnhub API news (up to 5 articles per stock, previous 48 hours)",
+        "52-week high/low ranges",
+        "Quarterly dividends and fundamental indicators"
+      ],
+      "llms_tested": [
+        "OpenAI O3",
+        "OpenAI GPT-5",
+        "Anthropic Claude-4-Sonnet",
+        "Qwen3-235B-Instruct",
+        "Qwen3-235B-Think",
+        "Qwen3-30B-Think",
+        "Qwen3-4B-Instruct",
+        "DeepSeek-V3",
+        "DeepSeek-V3.1",
+        "Kimi-K2",
+        "GLM-4.5",
+        "GPT-OSS-120B",
+        "GPT-OSS-20B"
+      ],
+      "baselines": [
+        "Equal-weight Buy and Hold"
+      ],
+      "metrics": [
+        "Final Return (%)",
+        "Maximum Drawdown (%)",
+        "Sortino Ratio",
+        "Composite z-score ranking"
+      ],
+      "trading_horizon": "daily",
+      "key_results": "Most LLM agents slightly outperformed the passive buy-and-hold baseline (0.4% return) with returns of 1-3%, while managing downside risk more effectively (drawdowns of 11-14% vs baseline 15.2%). Kimi-K2 topped composite rankings. Reasoning-tuned models did NOT guarantee superior performance. Performance degrades during market downturns -- all LLMs underperformed passive baseline in the Jan-Apr 2025 downturn while exceeding it during the May-Aug upturn.",
+      "long_term_findings": "Model performance rankings shift significantly between downturn and upturn market periods. GPT-OSS-120B ranked last during downturns but topped rankings during upturns. This indicates models may be suited to specific market conditions rather than performing universally. LLM agents struggle to navigate bearish markets -- consistent with FINSABER's regime miscalibration finding.",
+      "code_url": "https://github.com/ChenYXxxx/stockbench",
+      "relevance_to_hypothesis": "The finding that model rankings shift between market regimes reinforces the need for regime-aware strategies. The marginal outperformance over buy-and-hold (1-3% vs 0.4%) in contamination-free evaluation tempers expectations for LLM trading. The regime-dependent performance (struggling in downturns, excelling in upturns) suggests longer decision horizons that allow regime detection could improve results. Only daily frequency tested."
+    },
+    {
+      "title": "Can Large Language Models Trade? Testing Financial Theories with LLM Agents in Market Simulations",
+      "arxiv_id": "2504.10789",
+      "year": 2025,
+      "key_contribution": "Develops an open-source simulated stock market where LLM agents with heterogeneous strategies (value investors, momentum traders, market makers, contrarians) compete in a continuous double-auction environment. Tests whether LLMs can faithfully execute assigned trading strategies and generate realistic market dynamics.",
+      "methodology": "Simulated market with continuous double-auction and discrete rounds. Two-tier prompting (system prompt defines strategy, user prompt provides market state). Structured JSON outputs validated via Pydantic. Tests mixed populations of LLM agents with different assigned strategies. Finite (15-20 rounds) and infinite horizon (up to 100 rounds) scenarios. Only GPT-4o used as LLM backbone.",
+      "datasets_used": [
+        "Simulated market data (no real market data)",
+        "Synthetic dividends with probabilistic structure",
+        "Agent-generated order book data"
+      ],
+      "llms_tested": [
+        "GPT-4o"
+      ],
+      "baselines": [
+        "Always-buy/always-sell/always-hold deterministic agents",
+        "Technical traders (gap trading, mean reversion, momentum)",
+        "Algorithmic market makers (fixed-spread)"
+      ],
+      "metrics": [
+        "Price convergence to fundamental value",
+        "Bid-ask spread dynamics",
+        "Trading volume patterns",
+        "Wealth composition and evolution",
+        "Decision consistency",
+        "Order sizing patterns"
+      ],
+      "trading_horizon": "other",
+      "key_results": "LLMs faithfully execute assigned strategies and maintain strategic consistency. Asymmetric price discovery: undervaluation corrects effectively, but overvaluation persists. Divergent beliefs create substantial trading volume with prices reflecting weighted average of beliefs. Realistic market dynamics emerge: bubbles, liquidity provision, momentum overshooting, and wealth concentration. Critical systemic risk finding: agents sharing the same LLM architecture exhibit correlated responses that could create destabilizing trading patterns.",
+      "long_term_findings": "In extended 100-round simulations, resource advantages enable sustained directional price pressure and long-term market dominance by better-endowed agent types. Initial price biases persist despite corrective trading pressure over extended horizons. Value investors show strong convergence to fundamental values while momentum traders are less sensitive to fundamentals. Finite vs infinite horizon settings produce different convergence dynamics.",
+      "code_url": null,
+      "relevance_to_hypothesis": "Provides foundational evidence that LLMs can faithfully execute diverse trading strategies (value, momentum, contrarian, market-making) in a controlled environment. The asymmetric price discovery finding (undervaluation corrects, overvaluation persists) suggests LLMs may be better at identifying undervalued assets -- a skill more relevant to longer-term value investing. The 100-round extended simulations show that longer horizons reveal strategy dominance patterns not visible in short simulations, supporting the value of longer evaluation windows."
+    }
+  ]
+}

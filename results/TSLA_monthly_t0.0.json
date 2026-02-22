@@ -1,0 +1,157 @@
+{
+  "ticker": "TSLA",
+  "frequency": "monthly",
+  "model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "start_date": "2024-01-01",
+  "end_date": "2024-12-31",
+  "llm_metrics": {
+    "cumulative_return": 1.0446735199098351,
+    "sharpe_ratio": 2.104660957183991,
+    "max_drawdown": -0.0773904690267696,
+    "sortino_ratio": 12.546672313747015,
+    "win_rate": 0.4166666666666667,
+    "num_periods": 12,
+    "annualized_return": 1.0446735199098351,
+    "annualized_volatility": 0.47260510844497033
+  },
+  "bh_metrics": {
+    "cumulative_return": 1.1602862972256442,
+    "sharpe_ratio": 2.207718762124769,
+    "max_drawdown": -0.12923524353897475,
+    "sortino_ratio": 7.215090549658679,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 1.1602862972256442,
+    "annualized_volatility": 0.5029111118107609
+  },
+  "sma_metrics": {
+    "cumulative_return": 0.24142645940422947,
+    "sharpe_ratio": 0.7333801491477079,
+    "max_drawdown": -0.12923524353897475,
+    "sortino_ratio": 0.774805807143716,
+    "win_rate": 0.4166666666666667,
+    "num_periods": 12,
+    "annualized_return": 0.24142645940422947,
+    "annualized_volatility": 0.2610194175922191
+  },
+  "decisions": [
+    {
+      "date": "2024-01-01",
+      "close": 187.2899932861328,
+      "decision": "SELL",
+      "reasoning": "Despite recent SMA10 crossing above SMA20, the sharp price drop in January and negative momentum with RSI below 50 suggest weak long-term trend and high risk.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-02-01",
+      "close": 201.8800048828125,
+      "decision": "HOLD",
+      "reasoning": "TSLA shows mixed signals with recent price below SMA10 but above SMA20, RSI near neutral, and inconsistent momentum, suggesting no strong long-term trend to buy yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-03-01",
+      "close": 175.7899932861328,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with weakening momentum and RSI near neutral, indicating a bearish long-term trend and no strong buy signals.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-04-01",
+      "close": 183.27999877929688,
+      "decision": "SELL",
+      "reasoning": "The stock price is below both SMA10 and SMA20 with no clear bullish crossover, RSI is neutral to slightly bearish, and recent returns show weakness, indicating a downtrend and no strong buy signal for a long-term position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1133
+    },
+    {
+      "date": "2024-05-01",
+      "close": 178.0800018310547,
+      "decision": "SELL",
+      "reasoning": "TSLA shows a consistent downtrend with SMA10 below SMA20, RSI near neutral but no strong momentum, and recent negative returns indicating weak long-term recovery potential.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-06-01",
+      "close": 197.8800048828125,
+      "decision": "BUY",
+      "reasoning": "The SMA10 has just crossed above SMA20 indicating a bullish crossover, RSI is moderate at 54.8 suggesting room to grow, and recent monthly returns show positive momentum after a prolonged downtrend.",
+      "position": "LONG",
+      "period_return": 0.17278149180183244,
+      "tokens": 1130
+    },
+    {
+      "date": "2024-07-01",
+      "close": 232.07000732421875,
+      "decision": "HOLD",
+      "reasoning": "TSLA shows recent price recovery with SMA10 nearing SMA20 and RSI moderate, but mixed momentum and volume suggest caution before increasing exposure.",
+      "position": "LONG",
+      "period_return": -0.0773904690267696,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-08-01",
+      "close": 214.1100006103516,
+      "decision": "HOLD",
+      "reasoning": "TSLA shows mixed signals with recent price pullback after a strong rebound, SMA10 and SMA20 converging, and RSI near neutral, suggesting no clear long-term trend direction yet.",
+      "position": "LONG",
+      "period_return": 0.22194201175563144,
+      "tokens": 1127
+    },
+    {
+      "date": "2024-09-01",
+      "close": 261.6300048828125,
+      "decision": "HOLD",
+      "reasoning": "TSLA shows mixed signals with recent strong price rebound and RSI near neutral, but SMA20 remains above SMA10 indicating no clear long-term uptrend yet.",
+      "position": "LONG",
+      "period_return": -0.045025412068364745,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-10-01",
+      "close": 249.8500061035156,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong monthly gains and a positive short-term momentum, the SMA20 remains above SMA10 indicating no clear bullish crossover, and RSI is neutral, suggesting to maintain the current position without adding or exiting.",
+      "position": "LONG",
+      "period_return": 0.3814688622385136,
+      "tokens": 1132
+    },
+    {
+      "date": "2024-11-01",
+      "close": 345.1600036621094,
+      "decision": "BUY",
+      "reasoning": "Strong recent price surge with SMA10 approaching SMA20, RSI rising above 60, and positive momentum indicate a bullish long-term trend continuation.",
+      "position": "LONG",
+      "period_return": 0.17000808915631316,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-12-01",
+      "close": 403.8399963378906,
+      "decision": "BUY",
+      "reasoning": "Strong recent price surge with SMA10 crossing above SMA20 and RSI rising above 70 indicates bullish momentum and potential for further gains.",
+      "position": "LONG",
+      "period_return": 0.0018819576379678349,
+      "tokens": 1114
+    }
+  ],
+  "decision_counts": {
+    "BUY": 3,
+    "HOLD": 5,
+    "SELL": 4
+  },
+  "turnover_rate": 0.45454545454545453,
+  "total_tokens": 13470,
+  "num_decisions": 12,
+  "timestamp": "2026-02-22T02:32:10.652240"
+}

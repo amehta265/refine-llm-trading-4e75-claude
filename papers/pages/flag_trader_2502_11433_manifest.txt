@@ -1,0 +1,10 @@
+PDF: /data/hypogenicai/workspaces/refine-llm-trading-4e75-claude/papers/flag_trader_2502_11433.pdf
+Total pages: 14
+Pages per chunk: 3
+
+Chunks:
+  flag_trader_2502_11433_chunk_001.pdf: pages 1-3
+  flag_trader_2502_11433_chunk_002.pdf: pages 4-6
+  flag_trader_2502_11433_chunk_003.pdf: pages 7-9
+  flag_trader_2502_11433_chunk_004.pdf: pages 10-12
+  flag_trader_2502_11433_chunk_005.pdf: pages 13-14

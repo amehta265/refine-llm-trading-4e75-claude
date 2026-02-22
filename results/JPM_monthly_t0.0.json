@@ -1,0 +1,157 @@
+{
+  "ticker": "JPM",
+  "frequency": "monthly",
+  "model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "start_date": "2024-01-01",
+  "end_date": "2024-12-31",
+  "llm_metrics": {
+    "cumulative_return": 0.5696427658869674,
+    "sharpe_ratio": 2.389782902496584,
+    "max_drawdown": -0.062010567555119134,
+    "sortino_ratio": 5.953347264866514,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.5696427658869674,
+    "annualized_volatility": 0.21744350306636698
+  },
+  "bh_metrics": {
+    "cumulative_return": 0.5696427658869674,
+    "sharpe_ratio": 2.389782902496584,
+    "max_drawdown": -0.062010567555119134,
+    "sortino_ratio": 5.953347264866514,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.5696427658869674,
+    "annualized_volatility": 0.21744350306636698
+  },
+  "sma_metrics": {
+    "cumulative_return": 0.5696427658869674,
+    "sharpe_ratio": 2.389782902496584,
+    "max_drawdown": -0.062010567555119134,
+    "sortino_ratio": 5.953347264866514,
+    "win_rate": 0.6666666666666666,
+    "num_periods": 12,
+    "annualized_return": 0.5696427658869674,
+    "annualized_volatility": 0.21744350306636698
+  },
+  "decisions": [
+    {
+      "date": "2024-01-01",
+      "close": 166.01446533203125,
+      "decision": "BUY",
+      "reasoning": "Strong upward momentum with SMA10 above SMA20, RSI near overbought but healthy, and recent positive returns indicate a bullish long-term trend.",
+      "position": "LONG",
+      "period_return": 0.07368259190045823,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-02-01",
+      "close": 178.24684143066406,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20 indicating an uptrend, the RSI above 70 suggests overbought conditions, warranting caution and maintaining the current position.",
+      "position": "LONG",
+      "period_return": 0.07653439152306807,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-03-01",
+      "close": 191.88885498046875,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is very high indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": -0.042735917442850546,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-04-01",
+      "close": 183.6883087158203,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, recent price pullback and RSI dropping from overbought levels suggest caution before adding to the position.",
+      "position": "LONG",
+      "period_return": 0.06296009277801318,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-05-01",
+      "close": 195.2533416748047,
+      "decision": "BUY",
+      "reasoning": "Strong upward momentum with SMA10 well above SMA20, RSI indicating strong bullish momentum despite being high, and recent positive returns suggest continued upside potential.",
+      "position": "LONG",
+      "period_return": -0.0018260218348948865,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-06-01",
+      "close": 194.8968048095703,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, the very high RSI near 78 and recent slight price pullback suggest caution and potential short-term overbought conditions.",
+      "position": "LONG",
+      "period_return": 0.05211114562032293,
+      "tokens": 1120
+    },
+    {
+      "date": "2024-07-01",
+      "close": 205.0531005859375,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is very high indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.0622445744867679,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-08-01",
+      "close": 217.8165435791016,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 well above SMA20, the RSI is extremely overbought above 80, suggesting caution for potential near-term pullback.",
+      "position": "LONG",
+      "period_return": -0.06201056755511902,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-09-01",
+      "close": 204.3096160888672,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term SMA uptrend and high RSI indicating overbought conditions, recent price pullback and volume increase suggest caution before adding to the position.",
+      "position": "LONG",
+      "period_return": 0.05245169117754145,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-10-01",
+      "close": 215.0260009765625,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term SMA uptrends and recent price recovery, the very high RSI levels and recent volatility suggest caution rather than immediate buying or selling.",
+      "position": "LONG",
+      "period_return": 0.13216608013770137,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-11-01",
+      "close": 243.4451446533203,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20, the RSI is very high indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": -0.040084814108891864,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-12-01",
+      "close": 233.6866912841797,
+      "decision": "HOLD",
+      "reasoning": "Despite strong long-term uptrend and SMA10 above SMA20, the recent price pullback and high RSI above 80 suggest overbought conditions and potential short-term consolidation.",
+      "position": "LONG",
+      "period_return": 0.11509732586408883,
+      "tokens": 1113
+    }
+  ],
+  "decision_counts": {
+    "BUY": 2,
+    "HOLD": 10,
+    "SELL": 0
+  },
+  "turnover_rate": 0.2727272727272727,
+  "total_tokens": 13356,
+  "num_decisions": 12,
+  "timestamp": "2026-02-22T02:23:17.280452"
+}

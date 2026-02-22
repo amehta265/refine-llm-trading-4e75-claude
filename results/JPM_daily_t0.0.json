@@ -1,0 +1,2317 @@
+{
+  "ticker": "JPM",
+  "frequency": "daily",
+  "model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "start_date": "2024-01-01",
+  "end_date": "2024-12-31",
+  "llm_metrics": {
+    "cumulative_return": 0.12760269233832444,
+    "sharpe_ratio": 0.6012576493120854,
+    "max_drawdown": -0.07928733966787549,
+    "sortino_ratio": 0.5345142058984266,
+    "win_rate": 0.2698412698412698,
+    "num_periods": 252,
+    "annualized_return": 0.12760269233832444,
+    "annualized_volatility": 0.1290672849270387
+  },
+  "bh_metrics": {
+    "cumulative_return": 0.42800461143603985,
+    "sharpe_ratio": 1.6104661096361685,
+    "max_drawdown": -0.10130496315880788,
+    "sortino_ratio": 2.146999253937329,
+    "win_rate": 0.5753968253968254,
+    "num_periods": 252,
+    "annualized_return": 0.42800461143603985,
+    "annualized_volatility": 0.23471752008580762
+  },
+  "sma_metrics": {
+    "cumulative_return": 0.14303440746937346,
+    "sharpe_ratio": 0.4336705653351887,
+    "max_drawdown": -0.14308586931030376,
+    "sortino_ratio": 0.49264723013270034,
+    "win_rate": 0.38492063492063494,
+    "num_periods": 252,
+    "annualized_return": 0.14303440746937346,
+    "annualized_volatility": 0.21452783496492583
+  },
+  "decisions": [
+    {
+      "date": "2024-01-02",
+      "close": 163.8435821533203,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains, the RSI is extremely overbought above 85 with weakening short-term returns, indicating a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-01-03",
+      "close": 163.12948608398438,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is extremely overbought above 80, suggesting caution before entering a new long position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-01-04",
+      "close": 164.21202087402344,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is extremely high indicating overbought conditions, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-01-05",
+      "close": 165.03591918945312,
+      "decision": "SELL",
+      "reasoning": "Despite recent gains, the RSI is extremely overbought above 80 with weakening momentum and volume declining, indicating a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-01-08",
+      "close": 164.79641723632812,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is extremely high indicating overbought conditions, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-01-09",
+      "close": 163.49351501464844,
+      "decision": "SELL",
+      "reasoning": "Despite recent gains, the RSI is extremely overbought and has started declining with negative short-term returns, indicating weakening momentum and a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-01-10",
+      "close": 163.83840942382812,
+      "decision": "BUY",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20, RSI recovering from overbought levels, and recent positive returns indicating a continuation of the bullish trend.",
+      "position": "LONG",
+      "period_return": -0.004210084570498762,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-01-11",
+      "close": 163.1486358642578,
+      "decision": "HOLD",
+      "reasoning": "The stock remains above both SMA10 and SMA20 with RSI moderating from overbought levels, but recent slight price declines and weakening short-term returns suggest caution without a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": -0.0073399925122349385,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-01-12",
+      "close": 161.9511260986328,
+      "decision": "SELL",
+      "reasoning": "Despite a strong uptrend earlier, recent price weakness, declining RSI from overbought levels, and a negative 1-day return with high volume suggest momentum is fading and a pullback is likely.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-01-16",
+      "close": 160.93565368652344,
+      "decision": "SELL",
+      "reasoning": "Despite earlier strong momentum, recent price declines, falling RSI from overbought levels, and negative short-term returns suggest weakening momentum and a potential downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-01-17",
+      "close": 160.0734405517578,
+      "decision": "SELL",
+      "reasoning": "RSI has dropped from overbought levels to neutral and volume increased on recent declines with negative short-term returns, indicating weakening momentum and a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-01-18",
+      "close": 160.38955688476562,
+      "decision": "SELL",
+      "reasoning": "The stock shows weakening momentum with declining RSI from overbought levels to neutral, negative recent returns, and the SMA10 approaching SMA20 from above indicating potential trend reversal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-01-19",
+      "close": 163.15821838378906,
+      "decision": "BUY",
+      "reasoning": "Price recently bounced off support with a positive 1-day return and SMA10 remains above SMA20, indicating potential upward momentum after a short-term pullback.",
+      "position": "LONG",
+      "period_return": -0.001174442053517244,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-01-22",
+      "close": 162.9665985107422,
+      "decision": "HOLD",
+      "reasoning": "Price is near SMA10 and SMA20 with RSI moderate and recent mixed returns, indicating no strong momentum to buy or sell.",
+      "position": "LONG",
+      "period_return": -0.00658387841626995,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-01-23",
+      "close": 161.89364624023438,
+      "decision": "SELL",
+      "reasoning": "Price is below both SMAs with declining RSI and negative recent returns, indicating weakening momentum and a potential downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1104
+    },
+    {
+      "date": "2024-01-24",
+      "close": 163.34024047851562,
+      "decision": "HOLD",
+      "reasoning": "The price is near the SMA10 and SMA20 with RSI recovering from oversold levels, showing mixed momentum without a clear buy signal while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-01-25",
+      "close": 165.6777801513672,
+      "decision": "BUY",
+      "reasoning": "Price recently crossed above both SMA10 and SMA20 with improving RSI and positive short-term returns, indicating bullish momentum suitable for entering a long position.",
+      "position": "LONG",
+      "period_return": -0.0038164061625777235,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-01-26",
+      "close": 165.0454864501953,
+      "decision": "HOLD",
+      "reasoning": "Price shows recent recovery with SMA10 close to SMA20 but RSI is moderate and volume is declining, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": 0.002612046997800821,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-01-29",
+      "close": 165.47659301757812,
+      "decision": "HOLD",
+      "reasoning": "The stock shows mixed signals with a recent slight recovery in price and RSI around neutral, but the SMA10 remains below SMA20 and momentum is weak, suggesting no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.02049448420487332,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-01-30",
+      "close": 168.86795043945312,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with rising RSI and strong recent returns, indicating bullish momentum and a positive short-term trend.",
+      "position": "LONG",
+      "period_return": -0.010835615658543074,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-01-31",
+      "close": 167.0381622314453,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with a recent pullback and RSI moderate, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": -0.0036133144265015904,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-02-01",
+      "close": 166.43460083007812,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent strength with SMA10 above SMA20 and RSI moderate, but short-term momentum is mixed with some pullbacks, suggesting no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.005756153266874842,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-02-02",
+      "close": 167.3926239013672,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with RSI moderate and recent mixed returns, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": -0.0013163792269688113,
+      "tokens": 1106
+    },
+    {
+      "date": "2024-02-05",
+      "close": 167.17227172851562,
+      "decision": "HOLD",
+      "reasoning": "JPM shows recent strength with price above both SMAs and RSI near 68, but slight pullback and volume decline suggest cautious continuation rather than aggressive buying.",
+      "position": "LONG",
+      "period_return": 0.003438269512355152,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-02-06",
+      "close": 167.74705505371094,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with a recent bullish crossover and RSI is high but not overbought, indicating cautious continuation without strong buy or sell signals.",
+      "position": "LONG",
+      "period_return": 0.0018847550514300426,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-02-07",
+      "close": 168.06321716308594,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong price above both SMAs with RSI near overbought but momentum is slowing, suggesting to maintain the current long position without adding or exiting.",
+      "position": "LONG",
+      "period_return": -0.0035911852264047806,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-02-08",
+      "close": 167.4596710205078,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong SMA10 above SMA20 and RSI near overbought levels, but recent slight pullback and volume decline suggest caution without a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": 0.0012013153601344584,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-02-09",
+      "close": 167.6608428955078,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong SMA10 above SMA20 and RSI near overbought levels with mixed short-term returns, suggesting maintaining the current long position without adding or selling.",
+      "position": "LONG",
+      "period_return": 0.004456934636994925,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-02-12",
+      "close": 168.40809631347656,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and RSI near overbought levels with mixed short-term returns, suggesting maintaining the current long position without adding or selling.",
+      "position": "LONG",
+      "period_return": -0.00870361526215091,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-02-13",
+      "close": 166.9423370361328,
+      "decision": "HOLD",
+      "reasoning": "Price shows slight recent weakness after a strong uptrend with RSI dropping from overbought levels, suggesting consolidation rather than a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": 0.010157271912220045,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-02-14",
+      "close": 168.6380157470703,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and RSI near overbought but recent mixed returns and volume suggest cautious continuation rather than new buying or selling.",
+      "position": "LONG",
+      "period_return": 0.021814425642884938,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-02-15",
+      "close": 172.31675720214844,
+      "decision": "BUY",
+      "reasoning": "The stock shows strong upward momentum with SMA10 above SMA20, RSI near overbought but not extreme, and recent positive returns indicating continued bullish trend.",
+      "position": "LONG",
+      "period_return": -0.004669992812330492,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-02-16",
+      "close": 171.5120391845703,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and RSI near overbought levels with mixed short-term returns, suggesting cautious continuation of the current long position without adding more.",
+      "position": "LONG",
+      "period_return": 0.003909979285979803,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-02-20",
+      "close": 172.18264770507812,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and RSI near overbought but recent small pullbacks and mixed short-term returns suggest maintaining the current long position without adding exposure.",
+      "position": "LONG",
+      "period_return": 0.0065096548596164094,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-02-21",
+      "close": 173.30349731445312,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong SMA10 above SMA20 and RSI near overbought levels with mixed short-term returns, suggesting maintaining the current long position without adding or exiting.",
+      "position": "LONG",
+      "period_return": 0.01199573713431823,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-02-22",
+      "close": 175.3824005126953,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20, the RSI is very high near 80 indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.005025378330223429,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-02-23",
+      "close": 176.26376342773438,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and high RSI near overbought levels, but the RSI above 79 suggests caution against new buys, favoring holding the current long position.",
+      "position": "LONG",
+      "period_return": -0.003424194455116325,
+      "tokens": 1123
+    },
+    {
+      "date": "2024-02-26",
+      "close": 175.6602020263672,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and recent price gains, the RSI is very high near overbought levels, suggesting limited upside and potential for a pullback.",
+      "position": "LONG",
+      "period_return": 0.0004908762257898047,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-02-27",
+      "close": 175.74642944335938,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and high RSI near overbought levels, but recent slight price pullback and volume decrease suggest caution rather than immediate buying or selling.",
+      "position": "LONG",
+      "period_return": 0.005069667446277126,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-02-28",
+      "close": 176.6374053955078,
+      "decision": "HOLD",
+      "reasoning": "Strong uptrend with SMA10 above SMA20 and high RSI suggests momentum, but RSI near overbought and recent small retracements advise caution before adding more.",
+      "position": "LONG",
+      "period_return": 0.009111351664017775,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-02-29",
+      "close": 178.24681091308594,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and high RSI, but RSI above 80 signals potential overbought conditions suggesting caution before buying more.",
+      "position": "LONG",
+      "period_return": -0.004138480204266881,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-03-01",
+      "close": 177.50914001464844,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and high RSI near overbought levels, but recent slight pullback and very high RSI suggest caution rather than new buying.",
+      "position": "LONG",
+      "period_return": 0.007501865989343104,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-03-04",
+      "close": 178.84078979492188,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and high RSI near overbought levels, suggesting caution despite recent gains.",
+      "position": "LONG",
+      "period_return": 0.010017226212852615,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-03-05",
+      "close": 180.6322784423828,
+      "decision": "SELL",
+      "reasoning": "JPM shows strong overbought RSI above 80 and slowing momentum with minor recent pullbacks, indicating a likely near-term correction despite the uptrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-03-06",
+      "close": 181.5711212158203,
+      "decision": "SELL",
+      "reasoning": "Despite strong price momentum and SMA10 above SMA20, the RSI is extremely overbought above 87, indicating a high risk of a near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-03-07",
+      "close": 179.9808349609375,
+      "decision": "SELL",
+      "reasoning": "RSI is extremely overbought above 75 with recent negative returns and slowing momentum despite price near highs, indicating a likely pullback or sideways movement.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-03-08",
+      "close": 180.31613159179688,
+      "decision": "SELL",
+      "reasoning": "Despite recent gains, the RSI is extremely overbought above 80 and price momentum is weakening with a recent negative return, suggesting a potential pullback or sideways movement.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-03-11",
+      "close": 180.38319396972656,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and high RSI indicating momentum, the RSI above 80 and recent slight price pullback suggest caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-03-12",
+      "close": 181.8680877685547,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is very high indicating overbought conditions, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-03-13",
+      "close": 183.34344482421875,
+      "decision": "SELL",
+      "reasoning": "Despite recent gains, the RSI is extremely overbought above 78 with weakening short-term returns and a slight recent price pullback, indicating a likely near-term correction.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-03-14",
+      "close": 180.07659912109375,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the sharp drop on 3/14 with high volume and RSI falling to 61.8 signals weakening momentum and potential reversal, suggesting to stay out.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1123
+    },
+    {
+      "date": "2024-03-15",
+      "close": 182.30877685546875,
+      "decision": "BUY",
+      "reasoning": "The stock shows strong upward momentum with SMA10 above SMA20, RSI recovering from a dip, and recent positive returns indicating potential continued gains.",
+      "position": "LONG",
+      "period_return": 0.012401542444509417,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-03-18",
+      "close": 184.56968688964844,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and recent price gains, the RSI is high but has pulled back from extreme overbought levels, and the latest volume spike with a price drop suggests caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.005865264589603791,
+      "tokens": 1127
+    },
+    {
+      "date": "2024-03-19",
+      "close": 185.65223693847656,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and positive momentum, the RSI is high but has slightly decreased recently, indicating potential overbought conditions and suggesting caution before adding to the position.",
+      "position": "LONG",
+      "period_return": 0.013106948726894885,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-03-20",
+      "close": 188.0855712890625,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is high but has recently moderated, suggesting caution amid overbought conditions and a slight recent pullback.",
+      "position": "LONG",
+      "period_return": 0.013905141300249113,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-03-21",
+      "close": 190.700927734375,
+      "decision": "BUY",
+      "reasoning": "Strong upward momentum with price above both SMA10 and SMA20, RSI near but not overbought, and consistent positive returns indicate continued bullish trend.",
+      "position": "LONG",
+      "period_return": -0.012257620875906206,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-03-22",
+      "close": 188.36338806152344,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and recent price strength, the RSI is high but has pulled back from overbought levels and the latest price drop with volume suggests caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": -0.009154703727132785,
+      "tokens": 1123
+    },
+    {
+      "date": "2024-03-25",
+      "close": 186.63897705078125,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI has dropped from overbought levels and recent returns show some weakening momentum, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.004670944993824033,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-03-26",
+      "close": 187.51075744628903,
+      "decision": "HOLD",
+      "reasoning": "Despite recent gains and SMA10 above SMA20 indicating an uptrend, the RSI has dropped from overbought levels and recent returns show some weakening momentum, suggesting caution before increasing exposure.",
+      "position": "LONG",
+      "period_return": 0.019363391016384623,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-03-27",
+      "close": 191.1416015625,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with a recent strong upward momentum and RSI recovering from a dip, indicating bullish continuation.",
+      "position": "LONG",
+      "period_return": 0.0039095030629083816,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-03-28",
+      "close": 191.8888702392578,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and RSI in a healthy range, but recent slight pullbacks and high RSI suggest caution before adding more.",
+      "position": "LONG",
+      "period_return": -0.006789879058932469,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-04-01",
+      "close": 190.58596801757807,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20 indicating an uptrend, the RSI has pulled back from overbought levels and the last two days show slight price declines, suggesting caution and no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": -0.0004020738749493935,
+      "tokens": 1128
+    },
+    {
+      "date": "2024-04-02",
+      "close": 190.50933837890625,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong SMA10 above SMA20 and RSI in a moderate range with recent slight pullback, indicating no urgent need to sell but also no strong buy signal currently.",
+      "position": "LONG",
+      "period_return": -0.002816049697161871,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-04-03",
+      "close": 189.9728546142578,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent slight pullback with RSI moderating from overbought levels and SMA10 still above SMA20, indicating no strong reversal or continuation signal yet.",
+      "position": "LONG",
+      "period_return": -0.007608476777744344,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-04-04",
+      "close": 188.52745056152344,
+      "decision": "HOLD",
+      "reasoning": "JPM shows a recent pullback after a strong uptrend with SMA10 still above SMA20 and RSI moderating, suggesting consolidation rather than a clear reversal or continuation signal.",
+      "position": "LONG",
+      "period_return": 0.00920007429988745,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-04-05",
+      "close": 190.2619171142578,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent weakness with declining RSI and price below the 10-day SMA, indicating a pause after a strong run, so holding is prudent until clearer momentum resumes.",
+      "position": "LONG",
+      "period_return": 0.0052165349199873035,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-04-08",
+      "close": 191.25442504882807,
+      "decision": "HOLD",
+      "reasoning": "JPM shows a recent pullback after a strong rally with RSI moderating from overbought levels and SMA10 still above SMA20, indicating cautious consolidation rather than a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": -0.006700866838730946,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-04-09",
+      "close": 189.9728546142578,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs indicating an uptrend, but recent RSI decline and negative short-term returns suggest caution without a strong buy signal.",
+      "position": "LONG",
+      "period_return": -0.00852148435256661,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-04-10",
+      "close": 188.35400390625,
+      "decision": "SELL",
+      "reasoning": "Recent price is below the SMA10 and SMA20 with declining RSI and negative short-term returns, indicating weakening momentum and a potential downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-04-11",
+      "close": 188.3154296875,
+      "decision": "SELL",
+      "reasoning": "Recent price is below the 10-day and 20-day SMAs with declining RSI and negative short-term returns, indicating weakening momentum and a potential downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-04-12",
+      "close": 176.1355743408203,
+      "decision": "SELL",
+      "reasoning": "The sharp price drop on 2024-04-12 with heavy volume, RSI falling to oversold levels, and the price breaking below both SMAs indicate strong bearish momentum, suggesting to stay out or sell.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1124
+    },
+    {
+      "date": "2024-04-15",
+      "close": 176.23196411132812,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price drop with high volume, RSI near oversold, and SMA10 crossing below SMA20 indicate bearish momentum and high risk for a rebound.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-04-16",
+      "close": 174.2180633544922,
+      "decision": "SELL",
+      "reasoning": "The stock shows a sharp recent decline with a large volume spike, RSI dropping below 30 indicating oversold conditions, and the SMA10 crossing below SMA20, signaling bearish momentum.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-04-17",
+      "close": 173.52426147460938,
+      "decision": "SELL",
+      "reasoning": "The stock shows a sharp recent decline with a strong volume spike, RSI is oversold, and price is below both SMA10 and SMA20, indicating bearish momentum and no current buy signal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-04-18",
+      "close": 174.6516571044922,
+      "decision": "SELL",
+      "reasoning": "The stock shows a sharp recent decline with a strong volume spike, RSI is oversold but no clear reversal, and price is below both SMA10 and SMA20 indicating continued downward momentum.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-04-19",
+      "close": 179.03602600097656,
+      "decision": "HOLD",
+      "reasoning": "Despite recent heavy selling and low RSI indicating oversold conditions, the slight rebound in price and volume on 2024-04-19 suggests cautious optimism but no clear buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-04-22",
+      "close": 182.5146026611328,
+      "decision": "HOLD",
+      "reasoning": "Recent sharp drop with oversold RSI followed by modest recovery and SMA still trending down suggests caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1105
+    },
+    {
+      "date": "2024-04-23",
+      "close": 185.14520263671875,
+      "decision": "BUY",
+      "reasoning": "Recent price shows a rebound with rising close above the 10-day SMA and improving RSI from oversold levels, indicating potential upward momentum after a sharp decline.",
+      "position": "LONG",
+      "period_return": 0.004892416774603392,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-04-24",
+      "close": 186.05101013183597,
+      "decision": "BUY",
+      "reasoning": "The stock price has recently rebounded above the 10-day SMA with improving RSI from oversold levels and positive short-term returns, indicating a potential upward momentum.",
+      "position": "LONG",
+      "period_return": 0.0015019225313721574,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-04-25",
+      "close": 186.3304443359375,
+      "decision": "HOLD",
+      "reasoning": "After a sharp drop and oversold RSI, JPM is showing signs of recovery with rising prices and improving RSI, but SMA10 remains below SMA20 indicating cautious momentum.",
+      "position": "LONG",
+      "period_return": 0.0006206519966012181,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-04-26",
+      "close": 186.4460906982422,
+      "decision": "HOLD",
+      "reasoning": "Recent strong volume and price recovery with RSI rising from oversold levels suggest stabilization, but SMA20 remains above SMA10 indicating no clear bullish crossover yet.",
+      "position": "LONG",
+      "period_return": -0.0010854468365522063,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-04-29",
+      "close": 186.24371337890625,
+      "decision": "HOLD",
+      "reasoning": "The stock shows a recent recovery with SMA10 below SMA20 but rising, RSI improving from oversold levels, and modest positive returns, suggesting cautious optimism without a strong buy signal yet.",
+      "position": "LONG",
+      "period_return": -0.007967527873116054,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-04-30",
+      "close": 184.7598114013672,
+      "decision": "SELL",
+      "reasoning": "Recent sharp decline with RSI near oversold followed by weak recovery and price below both SMAs suggests bearish momentum and risk of further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-05-01",
+      "close": 184.87542724609372,
+      "decision": "HOLD",
+      "reasoning": "Price is near the SMA10 and SMA20 with RSI in a neutral range and recent small positive returns, indicating no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-05-02",
+      "close": 184.6826934814453,
+      "decision": "HOLD",
+      "reasoning": "JPM shows a recent strong RSI spike indicating overbought conditions and the price is near the SMA10 with a slight downward return momentum, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-05-03",
+      "close": 183.57455444335935,
+      "decision": "SELL",
+      "reasoning": "Recent price shows weakness with a drop below SMA10 and SMA20, RSI is very high indicating overbought conditions, and short-term returns are negative, suggesting a likely pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-05-06",
+      "close": 185.01031494140625,
+      "decision": "HOLD",
+      "reasoning": "Although the SMA10 has crossed above SMA20 indicating short-term bullishness, the RSI is very high near 80 suggesting overbought conditions and recent returns have weakened, so it is prudent to hold rather than buy now.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1127
+    },
+    {
+      "date": "2024-05-07",
+      "close": 184.76942443847656,
+      "decision": "HOLD",
+      "reasoning": "Despite recent price strength and SMA10 crossing above SMA20 earlier, the RSI is overbought above 80 and short-term returns are weakening, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-05-08",
+      "close": 188.52745056152344,
+      "decision": "BUY",
+      "reasoning": "Price has recently crossed above both SMA10 and SMA20 with strong positive momentum and RSI above 80 indicating strong bullish momentum.",
+      "position": "LONG",
+      "period_return": 0.009455591450980183,
+      "tokens": 1106
+    },
+    {
+      "date": "2024-05-09",
+      "close": 190.31008911132807,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and RSI above 80 indicating overbought conditions, the price is above both SMAs suggesting bullish momentum but caution is warranted due to potential short-term pullback.",
+      "position": "LONG",
+      "period_return": 0.0064304007597082435,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-05-10",
+      "close": 191.5338592529297,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong upward momentum with SMA10 above SMA20 and RSI near overbought levels, suggesting caution despite recent gains.",
+      "position": "LONG",
+      "period_return": -0.0002012370101150962,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-05-13",
+      "close": 191.4953155517578,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong price above both SMAs with high RSI indicating overbought conditions, suggesting caution despite recent gains, so maintaining the current long position is prudent.",
+      "position": "LONG",
+      "period_return": 0.013988946629346577,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-05-14",
+      "close": 194.17413330078125,
+      "decision": "BUY",
+      "reasoning": "Strong recent price gains with SMA10 above SMA20 and RSI consistently high indicate bullish momentum supporting a buy decision.",
+      "position": "LONG",
+      "period_return": 0.0029774319007440653,
+      "tokens": 1103
+    },
+    {
+      "date": "2024-05-15",
+      "close": 194.7522735595703,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 crossing above SMA20, the RSI is very high indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.0017812028799795154,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-05-16",
+      "close": 195.0991668701172,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20 indicating upward momentum, the RSI is very high suggesting overbought conditions, so it is prudent to hold rather than buy more or sell now.",
+      "position": "LONG",
+      "period_return": 0.011458453174518324,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-05-17",
+      "close": 197.33470153808597,
+      "decision": "HOLD",
+      "reasoning": "Despite strong upward momentum and SMA10 above SMA20, the RSI is overbought above 80, suggesting caution and potential short-term pullback risk.",
+      "position": "LONG",
+      "period_return": -0.044972958494500226,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-05-20",
+      "close": 188.45997619628903,
+      "decision": "SELL",
+      "reasoning": "After a strong rally with high RSI indicating overbought conditions, the sharp drop on 2024-05-20 with heavy volume and a break below SMA10 suggests a potential reversal or correction.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-05-21",
+      "close": 192.25656127929688,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the sharp drop on 2024-05-20 and RSI normalization suggest caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-05-22",
+      "close": 191.09060668945312,
+      "decision": "HOLD",
+      "reasoning": "Recent strong uptrend with SMA10 above SMA20 and RSI cooling from overbought levels suggests caution before entering a new position after a sharp pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-05-23",
+      "close": 189.75120544433597,
+      "decision": "SELL",
+      "reasoning": "Recent sharp drop in price with high volume and RSI falling from overbought levels indicates weakening momentum and potential further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1105
+    },
+    {
+      "date": "2024-05-24",
+      "close": 193.4032440185547,
+      "decision": "HOLD",
+      "reasoning": "Recent strong uptrend has paused with a sharp drop and RSI normalization, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1104
+    },
+    {
+      "date": "2024-05-28",
+      "close": 192.23727416992188,
+      "decision": "HOLD",
+      "reasoning": "Recent strong gains have been followed by a pullback with RSI moderating from overbought levels, and price is near SMA10 but above SMA20, indicating no clear buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1120
+    },
+    {
+      "date": "2024-05-29",
+      "close": 190.89788818359372,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows a pullback with RSI moderating from overbought levels and SMA10 still above SMA20, indicating no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-05-30",
+      "close": 192.07347106933597,
+      "decision": "HOLD",
+      "reasoning": "Price is near SMA10 and SMA20 with moderate RSI and mixed short-term returns, indicating no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-05-31",
+      "close": 195.2533416748047,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with rising momentum and RSI recovering from mid-levels, indicating a bullish trend suitable for entry.",
+      "position": "LONG",
+      "period_return": -0.003997382644727598,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-06-03",
+      "close": 194.47283935546875,
+      "decision": "HOLD",
+      "reasoning": "The stock shows a recent pullback with RSI moderating around 55 and SMA10 slightly above SMA20, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": -0.013180178034129963,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-06-04",
+      "close": 191.9096527099609,
+      "decision": "SELL",
+      "reasoning": "Recent sharp drop in price with RSI falling below 50 and weakening momentum suggests a potential downtrend, signaling to exit the long position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-06-05",
+      "close": 190.0788116455078,
+      "decision": "SELL",
+      "reasoning": "Recent price decline with SMA10 crossing below SMA20 and RSI dropping below 50 indicates weakening momentum and potential further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1105
+    },
+    {
+      "date": "2024-06-06",
+      "close": 189.7415771484375,
+      "decision": "SELL",
+      "reasoning": "Recent price is below both SMA10 and SMA20 with declining RSI and negative short-term returns, indicating weakening momentum and a bearish trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-06-07",
+      "close": 192.6708984375,
+      "decision": "HOLD",
+      "reasoning": "JPM shows a recent slight recovery with SMA10 close to SMA20 but RSI is low and momentum is mixed, suggesting no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-06-10",
+      "close": 192.3433074951172,
+      "decision": "HOLD",
+      "reasoning": "JPM shows mixed signals with the short-term SMA10 below SMA20, RSI recovering from oversold but still moderate, and recent price momentum weak, suggesting no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-06-11",
+      "close": 187.28440856933597,
+      "decision": "SELL",
+      "reasoning": "The price is below both SMA10 and SMA20 with a downward trend, RSI is low and falling, and recent returns show negative momentum, indicating bearish conditions not suitable for buying.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-06-12",
+      "close": 184.55743408203125,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with a downward trend, RSI is low and falling, and recent returns show negative momentum, indicating bearish conditions.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-06-13",
+      "close": 186.6099090576172,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with declining RSI and recent negative returns, indicating bearish momentum and no strong buy signals while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-06-14",
+      "close": 186.7254943847656,
+      "decision": "SELL",
+      "reasoning": "Price is below both SMA10 and SMA20 with declining RSI and negative recent returns, indicating bearish momentum and no strong buy signals while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-06-17",
+      "close": 187.88185119628903,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with a declining RSI and recent negative returns, indicating weak momentum and a bearish trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-06-18",
+      "close": 189.82830810546875,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent short-term recovery with RSI rising and a positive daily return, but SMA10 remains below SMA20 indicating no clear bullish crossover yet, suggesting caution before buying.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-06-20",
+      "close": 191.4374847412109,
+      "decision": "BUY",
+      "reasoning": "Price is recovering with recent gains above the 10-day SMA and improving RSI, indicating a potential upward momentum after a prior downtrend.",
+      "position": "LONG",
+      "period_return": -0.011929175779430756,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-06-21",
+      "close": 189.1537933349609,
+      "decision": "SELL",
+      "reasoning": "Recent price is below both SMA10 and SMA20 with declining RSI and negative short-term returns, indicating bearish momentum and a likely downtrend continuation.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-06-24",
+      "close": 191.63986206054688,
+      "decision": "BUY",
+      "reasoning": "The price has recently rebounded above the 10-day SMA with improving RSI and positive short-term returns, indicating a potential upward momentum suitable for entry.",
+      "position": "LONG",
+      "period_return": -0.004072755589280108,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-06-25",
+      "close": 190.8593597412109,
+      "decision": "HOLD",
+      "reasoning": "The stock shows mixed signals with price below SMA20 but near SMA10, RSI in neutral range, and recent small positive returns, suggesting no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": -0.003231250897913762,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-06-26",
+      "close": 190.24264526367188,
+      "decision": "HOLD",
+      "reasoning": "The stock shows mixed signals with the short-term SMA10 below SMA20, RSI near neutral, and recent small positive returns, suggesting no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": 0.008813143550772784,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-06-27",
+      "close": 191.91928100585935,
+      "decision": "HOLD",
+      "reasoning": "Price is slightly below the SMA20 with RSI moderate and mixed short-term returns, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": 0.015514379427208347,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-06-28",
+      "close": 194.89678955078125,
+      "decision": "BUY",
+      "reasoning": "Price recently crossed above the 10-day SMA with rising RSI and positive short-term returns, indicating bullish momentum.",
+      "position": "LONG",
+      "period_return": 0.015771850648364394,
+      "tokens": 1103
+    },
+    {
+      "date": "2024-07-01",
+      "close": 197.97067260742188,
+      "decision": "BUY",
+      "reasoning": "Price has recently broken above both SMA10 and SMA20 with rising RSI near 60 and positive short-term returns, indicating bullish momentum.",
+      "position": "LONG",
+      "period_return": 0.01645164258992038,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-07-02",
+      "close": 201.2276153564453,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 crossing above SMA20, the RSI is overbought at 76.1 and volume is declining, indicating a potential short-term pullback risk.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-07-03",
+      "close": 201.0927276611328,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 crossing above SMA20, the RSI is overbought above 80 and volume is declining, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-07-05",
+      "close": 198.42816162109372,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains and SMA10 crossing above SMA20, the RSI is overbought above 70 and price has started to decline, indicating a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-07-08",
+      "close": 198.7963714599609,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong recent gains with SMA10 crossing above SMA20 and high RSI indicating overbought conditions, suggesting caution before entering a new position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-07-09",
+      "close": 201.1799468994141,
+      "decision": "BUY",
+      "reasoning": "Price has recently crossed above both SMA10 and SMA20 with strong volume and RSI above 70 indicating strong upward momentum after a sustained uptrend.",
+      "position": "LONG",
+      "period_return": 0.0008187626573536999,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-07-10",
+      "close": 201.34466552734372,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong price momentum with SMA10 above SMA20 and RSI elevated but slightly declining from overbought levels, suggesting caution despite recent gains.",
+      "position": "LONG",
+      "period_return": -0.0016843845592572348,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-07-11",
+      "close": 201.00552368164065,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong price momentum with SMA10 above SMA20 and RSI elevated but slightly declining, indicating caution amid overbought conditions and recent minor pullbacks.",
+      "position": "LONG",
+      "period_return": -0.012099355823512625,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-07-12",
+      "close": 198.573486328125,
+      "decision": "SELL",
+      "reasoning": "Price has declined below the rising SMA10 with weakening momentum and RSI dropping from overbought levels, indicating a potential short-term reversal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-07-15",
+      "close": 203.5247802734375,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with a recent bullish crossover, RSI is healthy below overbought extremes, and momentum shows strong recent gains indicating upward trend continuation.",
+      "position": "LONG",
+      "period_return": 0.016995846516021595,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-07-16",
+      "close": 206.98385620117188,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20, the RSI is overbought above 70 and volume is mixed, suggesting caution and potential short-term consolidation.",
+      "position": "LONG",
+      "period_return": 0.015213978081952018,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-07-17",
+      "close": 210.1329040527344,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20, the RSI is very high indicating overbought conditions and recent volume has not confirmed further upside momentum, suggesting caution.",
+      "position": "LONG",
+      "period_return": -0.03177027245853159,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-07-18",
+      "close": 203.45692443847656,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains, the sharp drop on 2024-07-18 with high volume and RSI falling from overbought levels signals a potential reversal or correction, suggesting to exit the long position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-07-19",
+      "close": 203.2631378173828,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI has dropped from overbought levels and recent returns show weakening momentum, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-07-22",
+      "close": 203.74761962890625,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent strong gains but RSI is high and price has flattened with mixed short-term returns, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-07-23",
+      "close": 203.7960662841797,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong SMA10 above SMA20 and recent price stability, but RSI has declined from overbought levels indicating reduced momentum, suggesting to wait for clearer signals before buying.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-07-24",
+      "close": 202.110107421875,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows weakening momentum with RSI declining from overbought levels and price flattening near SMA10 and SMA20, suggesting no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-07-25",
+      "close": 202.1876220703125,
+      "decision": "HOLD",
+      "reasoning": "Price is near SMA10 and SMA20 with RSI moderate and recent mixed returns, indicating no strong momentum to buy or sell currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-07-26",
+      "close": 205.6467437744141,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with rising momentum and RSI recovering from a dip, indicating a bullish trend suitable for entry.",
+      "position": "LONG",
+      "period_return": -0.006549251647125831,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-07-29",
+      "close": 204.29991149902344,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with no bearish crossover, RSI is moderate, but recent momentum shows slight weakening and volume is lower, suggesting consolidation rather than strong continuation.",
+      "position": "LONG",
+      "period_return": 0.020583316198619528,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-07-30",
+      "close": 208.5050811767578,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI is moderate and volume has decreased, indicating cautious momentum without a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": -0.011106517729878251,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-07-31",
+      "close": 206.18931579589844,
+      "decision": "HOLD",
+      "reasoning": "The stock shows mixed signals with recent price weakness and RSI cooling from overbought levels, while SMA10 remains above SMA20 indicating some underlying strength, suggesting no strong directional conviction currently.",
+      "position": "LONG",
+      "period_return": -0.02274424818559384,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-08-01",
+      "close": 201.49969482421875,
+      "decision": "SELL",
+      "reasoning": "Recent price shows a clear downtrend with declining RSI and negative short-term returns, despite SMA10 still above SMA20, indicating weakening momentum and potential further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-08-02",
+      "close": 192.9536590576172,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price decline with RSI dropping to oversold levels and SMA10 crossing below SMA20 indicates bearish momentum and risk of further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-08-05",
+      "close": 188.84539794921875,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price decline with RSI dropping below 30 and negative returns indicate strong downward momentum, suggesting to stay out or sell.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1106
+    },
+    {
+      "date": "2024-08-06",
+      "close": 194.1163787841797,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price decline with RSI dropping below 30 and SMA10 below SMA20 indicates bearish momentum, suggesting to stay out or sell.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-08-07",
+      "close": 194.1745147705078,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows a slight rebound but remains below both SMAs with low RSI, indicating uncertain short-term momentum and no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-08-08",
+      "close": 197.7208251953125,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows a rebound from oversold RSI levels with SMA10 still below SMA20, indicating cautious recovery but no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-08-09",
+      "close": 199.4067840576172,
+      "decision": "HOLD",
+      "reasoning": "Recent strong downtrend with low RSI is showing some recovery but price remains below SMA20 and volume is declining, suggesting cautious wait for clearer upward momentum before buying.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-08-12",
+      "close": 199.78469848632807,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows a recovery from a sharp decline with RSI rising from oversold levels, but SMA10 remains below SMA20 and momentum is mixed, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-08-13",
+      "close": 201.4803009033203,
+      "decision": "HOLD",
+      "reasoning": "The stock shows signs of recovery with rising RSI and positive short-term returns, but the price remains below the SMA20 and volume is moderate, suggesting cautious optimism without a strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1120
+    },
+    {
+      "date": "2024-08-14",
+      "close": 203.7088623046875,
+      "decision": "BUY",
+      "reasoning": "Price is recovering with SMA10 above SMA20 and RSI rising from oversold levels, indicating positive short-term momentum after a recent dip.",
+      "position": "LONG",
+      "period_return": 0.006230888018394332,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-08-15",
+      "close": 204.9781494140625,
+      "decision": "HOLD",
+      "reasoning": "The stock shows a recent recovery with price above the 10-day SMA and improving RSI, but the 10-day SMA remains below the 20-day SMA indicating cautious momentum; thus, holding is prudent.",
+      "position": "LONG",
+      "period_return": 0.011439430889225388,
+      "tokens": 1123
+    },
+    {
+      "date": "2024-08-16",
+      "close": 207.32298278808597,
+      "decision": "BUY",
+      "reasoning": "The stock shows a recent recovery with the price above both SMA10 and SMA20, RSI rising from oversold levels, and positive short-term returns indicating upward momentum.",
+      "position": "LONG",
+      "period_return": 0.00691677168647753,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-08-19",
+      "close": 208.75698852539065,
+      "decision": "HOLD",
+      "reasoning": "JPM shows a recent recovery with price above SMA10 but still below SMA20, RSI is moderate around 50, and momentum is positive but not strongly bullish, suggesting to maintain the current long position without adding or exiting.",
+      "position": "LONG",
+      "period_return": -0.004316393318723577,
+      "tokens": 1127
+    },
+    {
+      "date": "2024-08-20",
+      "close": 207.8559112548828,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with a recent slight pullback and RSI in a neutral range, indicating no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.00037285150651023,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-08-21",
+      "close": 207.93341064453125,
+      "decision": "HOLD",
+      "reasoning": "The stock shows a recent recovery with price above SMA10 and SMA20, RSI is moderate, but volume is declining and momentum is mixed, suggesting no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.009459369416466634,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-08-22",
+      "close": 209.90032958984372,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains, the RSI is extremely overbought at 81.4 and the price remains below the SMA10 and SMA20, indicating potential for a near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-08-23",
+      "close": 211.5281524658203,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 crossing above SMA20, the RSI is extremely overbought at 96.3, indicating a likely near-term pullback and weakening momentum.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-08-26",
+      "close": 212.36143493652344,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 crossing above SMA20, the RSI is extremely overbought above 95, indicating a high risk of a near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-08-27",
+      "close": 213.34007263183597,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 crossing above SMA20, the RSI is extremely overbought above 95, indicating a high risk of a near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-08-28",
+      "close": 214.4155731201172,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains, the RSI is extremely overbought above 95 and the price is well above both SMAs, indicating a likely short-term pullback or consolidation.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-08-29",
+      "close": 215.30702209472656,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 above SMA20, the RSI is extremely overbought above 90, indicating a likely near-term pullback, so entering a long position now is risky.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1120
+    },
+    {
+      "date": "2024-08-30",
+      "close": 217.8165435791016,
+      "decision": "SELL",
+      "reasoning": "Despite strong price gains and SMA10 above SMA20, the RSI is extremely overbought above 95, indicating a high risk of a near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-09-03",
+      "close": 213.4563446044922,
+      "decision": "SELL",
+      "reasoning": "Despite a recent strong uptrend and SMA10 above SMA20, the RSI is extremely overbought and the latest price shows a sharp decline with high volume, indicating a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-09-04",
+      "close": 212.51646423339844,
+      "decision": "SELL",
+      "reasoning": "Despite a strong uptrend and SMA10 above SMA20, the RSI is extremely overbought and recent returns show a sharp pullback, indicating a likely near-term correction.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-09-05",
+      "close": 210.86929321289065,
+      "decision": "SELL",
+      "reasoning": "Despite a strong uptrend and SMA10 above SMA20, the RSI is extremely overbought and recent returns show a clear downward momentum, indicating a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-09-06",
+      "close": 205.85989379882807,
+      "decision": "SELL",
+      "reasoning": "The stock shows a recent sharp decline with RSI dropping from overbought levels and price falling below the SMA10 and SMA20, indicating weakening momentum and a potential downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-09-09",
+      "close": 210.0747528076172,
+      "decision": "HOLD",
+      "reasoning": "Recent strong uptrend has reversed with declining RSI and negative returns, suggesting caution before entering a position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1102
+    },
+    {
+      "date": "2024-09-10",
+      "close": 199.1742401123047,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price decline with high volume, RSI dropping below 40, and SMA10 approaching SMA20 from above indicate weakening momentum and potential further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-09-11",
+      "close": 200.79234313964844,
+      "decision": "SELL",
+      "reasoning": "Recent sharp decline with high volume, RSI dropping below 50, and price below both SMA10 and SMA20 indicate bearish momentum and no strong buy signal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-09-12",
+      "close": 200.18194580078125,
+      "decision": "SELL",
+      "reasoning": "Recent sharp price decline with high volume, RSI dropping below 40, and SMA10 crossing below SMA20 indicate bearish momentum and no current buy signal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-09-13",
+      "close": 197.97276306152344,
+      "decision": "SELL",
+      "reasoning": "Price is below both SMA10 and SMA20 with declining RSI and negative returns, indicating bearish momentum and no buy signal while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-09-16",
+      "close": 201.40280151367188,
+      "decision": "SELL",
+      "reasoning": "The stock shows a clear downtrend with price below both SMA10 and SMA20, declining RSI near oversold levels, and negative recent returns, indicating weak momentum and a bearish outlook.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-09-17",
+      "close": 202.74961853027344,
+      "decision": "HOLD",
+      "reasoning": "Despite recent recovery attempts, the price remains below both SMAs with weak RSI and volatile returns, indicating no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-09-18",
+      "close": 201.08302307128903,
+      "decision": "SELL",
+      "reasoning": "The stock shows a clear downtrend with the 10-day SMA below the 20-day SMA, RSI in a neutral to low range without oversold bounce, and recent negative returns despite a brief rebound, indicating weak momentum and a likely continuation of the decline.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1133
+    },
+    {
+      "date": "2024-09-19",
+      "close": 203.9413909912109,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with a declining RSI near oversold levels and recent negative momentum, indicating weak short-term trend and no strong buy signal.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-09-20",
+      "close": 204.53244018554688,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with a declining RSI and negative recent returns, indicating weak momentum and a bearish trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-09-23",
+      "close": 204.87159729003903,
+      "decision": "HOLD",
+      "reasoning": "Price is below both SMAs with no clear upward momentum and RSI remains low, indicating weak short-term strength but some stabilization after recent declines.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-09-24",
+      "close": 205.0169219970703,
+      "decision": "HOLD",
+      "reasoning": "The stock shows a recent slight recovery with price near the 10-day SMA but remains below the 20-day SMA and RSI is low, indicating no strong buy signal yet after a downtrend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1121
+    },
+    {
+      "date": "2024-09-25",
+      "close": 203.660400390625,
+      "decision": "HOLD",
+      "reasoning": "Price remains below the 20-day SMA with weak momentum and RSI near oversold levels, showing no clear bullish reversal while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-09-26",
+      "close": 203.2631378173828,
+      "decision": "HOLD",
+      "reasoning": "Price is below both SMAs with no clear upward momentum and RSI remains low, indicating weak short-term strength but some stabilization after recent declines.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-09-27",
+      "close": 203.9607696533203,
+      "decision": "HOLD",
+      "reasoning": "Price remains below the declining SMA20 with RSI below 50 and mixed short-term returns, indicating no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-09-30",
+      "close": 204.30958557128903,
+      "decision": "BUY",
+      "reasoning": "The short-term SMA10 is crossing above SMA20 with RSI rising to 64.6, indicating improving momentum and a potential upward trend after recent consolidation.",
+      "position": "LONG",
+      "period_return": -0.018116329252638952,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-10-01",
+      "close": 200.60824584960935,
+      "decision": "SELL",
+      "reasoning": "Price is below both SMAs with a recent bearish crossover, RSI dropped from overbought to neutral, and negative short-term returns indicate weakening momentum.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-10-02",
+      "close": 200.8505096435547,
+      "decision": "HOLD",
+      "reasoning": "Price is near SMA10 and SMA20 with no clear bullish crossover, RSI is neutral, and recent returns show mixed momentum, suggesting no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-10-03",
+      "close": 198.8544769287109,
+      "decision": "SELL",
+      "reasoning": "Price is below both SMA10 and SMA20 with recent negative returns and weakening momentum, indicating a bearish trend and no strong buy signals.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-10-04",
+      "close": 205.91256713867188,
+      "decision": "BUY",
+      "reasoning": "The recent price closed above both SMA10 and SMA20 with a strong 3.55% gain and RSI rising toward neutral, indicating positive momentum and a potential bullish crossover.",
+      "position": "LONG",
+      "period_return": -0.0013730589952222205,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-10-07",
+      "close": 205.6298370361328,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows recovery with SMA10 crossing above SMA20 and RSI near neutral, but volume is moderate and momentum mixed, suggesting no strong buy or sell signal yet.",
+      "position": "LONG",
+      "period_return": -0.0008532106000249673,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-10-08",
+      "close": 205.4543914794922,
+      "decision": "HOLD",
+      "reasoning": "Price recently crossed above SMA20 with RSI near neutral and mixed short-term returns, indicating no strong momentum to buy or sell currently.",
+      "position": "LONG",
+      "period_return": 0.012668943194179771,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-10-09",
+      "close": 208.05728149414065,
+      "decision": "BUY",
+      "reasoning": "Price recently crossed above both SMA10 and SMA20 with rising RSI around 60 and positive short-term returns, indicating bullish momentum.",
+      "position": "LONG",
+      "period_return": -0.00271766353688474,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-10-10",
+      "close": 207.49185180664065,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows recovery with SMA10 crossing above SMA20 and RSI near neutral, but momentum is mixed, suggesting no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.04439952505429745,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-10-11",
+      "close": 216.7043914794922,
+      "decision": "BUY",
+      "reasoning": "Strong recent price surge with SMA10 crossing above SMA20 and RSI rising above 70 indicates bullish momentum supporting a buy decision.",
+      "position": "LONG",
+      "period_return": -0.003643798216567462,
+      "tokens": 1106
+    },
+    {
+      "date": "2024-10-14",
+      "close": 215.91476440429688,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong recent gains with SMA10 above SMA20 and RSI near overbought levels, but the large volume spike and slight pullback suggest caution before adding more.",
+      "position": "LONG",
+      "period_return": 0.004108637410522364,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-10-15",
+      "close": 216.8018798828125,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 crossing above SMA20, the RSI is over 70 indicating potential overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.005620788033609658,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-10-16",
+      "close": 218.02047729492188,
+      "decision": "BUY",
+      "reasoning": "Strong recent price gains with SMA10 crossing above SMA20 and RSI near overbought but momentum remains positive, supporting continued upside potential.",
+      "position": "LONG",
+      "period_return": 0.0034877755684938894,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-10-17",
+      "close": 218.7808837890625,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and RSI near overbought levels, suggesting caution despite recent gains.",
+      "position": "LONG",
+      "period_return": 0.004233079816298169,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-10-18",
+      "close": 219.70700073242188,
+      "decision": "HOLD",
+      "reasoning": "JPM shows strong upward momentum with SMA10 above SMA20 and RSI above 70 indicating overbought conditions, suggesting caution despite recent gains.",
+      "position": "LONG",
+      "period_return": -0.010516005661059591,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-10-21",
+      "close": 217.3965606689453,
+      "decision": "SELL",
+      "reasoning": "JPM shows overbought RSI above 75 with recent price decline and negative short-term returns, indicating weakening momentum and potential pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-10-22",
+      "close": 218.4884185791016,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains, the RSI is extremely overbought above 79 and price is flattening near resistance with a slight pullback, indicating a likely short-term correction.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-10-23",
+      "close": 217.7962646484375,
+      "decision": "SELL",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI is extremely overbought above 80 with negative short-term returns, indicating a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-10-24",
+      "close": 219.3267974853516,
+      "decision": "SELL",
+      "reasoning": "Despite recent price gains and SMA10 above SMA20, the RSI is extremely overbought above 79, volume is declining, and short-term returns are weakening, indicating a likely near-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-10-25",
+      "close": 216.72390747070312,
+      "decision": "SELL",
+      "reasoning": "Despite recent gains, the RSI is extremely overbought above 70 with weakening momentum and a recent price decline, indicating a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-10-28",
+      "close": 219.8337554931641,
+      "decision": "BUY",
+      "reasoning": "Price is above both SMA10 and SMA20 with recent positive momentum and RSI slightly cooling from overbought levels, indicating potential for continued upside.",
+      "position": "LONG",
+      "period_return": -0.011530000121468653,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-10-29",
+      "close": 217.299072265625,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong SMA10 above SMA20 and high RSI indicating overbought conditions, the latest price drop and weakening momentum suggest caution before increasing exposure.",
+      "position": "LONG",
+      "period_return": 0.006774425682849694,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-10-30",
+      "close": 218.77114868164065,
+      "decision": "HOLD",
+      "reasoning": "Despite recent price strength and SMA10 above SMA20, the RSI is elevated near overbought levels and short-term returns show mixed momentum, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": -0.011095955706291405,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-10-31",
+      "close": 216.3436737060547,
+      "decision": "SELL",
+      "reasoning": "The stock shows weakening momentum with a recent drop below the 10-day SMA, RSI falling sharply to neutral, and negative short-term returns indicating potential downside risk.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-11-01",
+      "close": 217.3380584716797,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows mixed momentum with RSI dropping from overbought levels and SMA10 flattening near SMA20, indicating no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-11-04",
+      "close": 214.25747680664065,
+      "decision": "SELL",
+      "reasoning": "The stock shows weakening momentum with RSI dropping from overbought levels to neutral and recent price declines below SMA10 and SMA20, indicating a potential downtrend or sideways movement.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-11-05",
+      "close": 215.92453002929688,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows mixed momentum with RSI dropping from overbought to neutral and SMA10 slightly above SMA20, indicating no strong buy or sell signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-11-06",
+      "close": 240.85198974609372,
+      "decision": "BUY",
+      "reasoning": "Strong bullish momentum with a large price jump and volume surge on 2024-11-06, SMA10 crossing above SMA20, and RSI recovering from oversold levels indicating potential upward continuation.",
+      "position": "LONG",
+      "period_return": -0.043228359306954345,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-11-07",
+      "close": 230.4403533935547,
+      "decision": "HOLD",
+      "reasoning": "Despite a strong recent spike on 2024-11-06, the subsequent drop and declining RSI suggest caution; SMA10 remains above SMA20 but momentum is weakening, so maintaining the current position is prudent.",
+      "position": "LONG",
+      "period_return": 0.002538183498377311,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-11-08",
+      "close": 231.02525329589844,
+      "decision": "HOLD",
+      "reasoning": "Despite a strong jump on 2024-11-06, recent price pullback and RSI moderation suggest cautious momentum; SMA10 remains above SMA20 but volume and returns show mixed signals, so maintaining the current position is prudent.",
+      "position": "LONG",
+      "period_return": 0.009747781294254354,
+      "tokens": 1126
+    },
+    {
+      "date": "2024-11-11",
+      "close": 233.27723693847656,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI is moderate and recent volatility suggests waiting for clearer momentum before increasing exposure.",
+      "position": "LONG",
+      "period_return": 0.0011283317428760764,
+      "tokens": 1107
+    },
+    {
+      "date": "2024-11-12",
+      "close": 233.5404510498047,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 crossing above SMA20, the RSI is moderate and volume has decreased, suggesting cautious continuation rather than aggressive buying or selling.",
+      "position": "LONG",
+      "period_return": 0.006678925159750326,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-11-13",
+      "close": 235.10025024414065,
+      "decision": "HOLD",
+      "reasoning": "Despite a strong recent price surge and SMA10 above SMA20, the RSI is moderate and recent returns show mixed momentum, suggesting caution before increasing exposure.",
+      "position": "LONG",
+      "period_return": 0.0029440799401330153,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-11-14",
+      "close": 235.7924041748047,
+      "decision": "HOLD",
+      "reasoning": "Price is above both SMAs with moderate RSI and mixed recent returns, indicating no strong momentum to buy or sell immediately.",
+      "position": "LONG",
+      "period_return": 0.014222516679888608,
+      "tokens": 1104
+    },
+    {
+      "date": "2024-11-15",
+      "close": 239.14596557617188,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20 indicating upward momentum, the RSI is approaching overbought levels and recent volatility suggests caution before adding to the position.",
+      "position": "LONG",
+      "period_return": -0.0011414774891580493,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-11-18",
+      "close": 238.87298583984372,
+      "decision": "HOLD",
+      "reasoning": "Despite strong recent gains and SMA10 above SMA20 indicating upward momentum, the slight pullback and RSI near overbought levels suggest caution and maintaining the current long position.",
+      "position": "LONG",
+      "period_return": -0.007917390087883613,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-11-19",
+      "close": 236.9817352294922,
+      "decision": "HOLD",
+      "reasoning": "Recent strong gains have slowed with slight pullbacks and RSI near overbought levels, suggesting consolidation rather than clear upward momentum.",
+      "position": "LONG",
+      "period_return": -0.009502515479689277,
+      "tokens": 1105
+    },
+    {
+      "date": "2024-11-20",
+      "close": 234.7298126220703,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the last three days show declining price and RSI near overbought levels, indicating potential short-term weakness but no clear sell signal yet.",
+      "position": "LONG",
+      "period_return": 0.01652946876710648,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-11-21",
+      "close": 238.6097717285156,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong recent gains with SMA10 above SMA20 and RSI near overbought levels, but recent slight pullbacks and volume decline suggest cautious continuation rather than new buying.",
+      "position": "LONG",
+      "period_return": 0.015484606584287963,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-11-22",
+      "close": 242.30455017089844,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI is over 70 indicating overbought conditions, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": 0.007000522869774928,
+      "tokens": 1112
+    },
+    {
+      "date": "2024-11-25",
+      "close": 244.0008087158203,
+      "decision": "HOLD",
+      "reasoning": "The stock shows strong recent gains with SMA10 above SMA20 and RSI above 70 indicating overbought conditions, suggesting caution despite upward momentum.",
+      "position": "LONG",
+      "period_return": -0.0012783570991311555,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-11-26",
+      "close": 243.6888885498047,
+      "decision": "HOLD",
+      "reasoning": "Despite recent strong gains and SMA10 above SMA20, the RSI dropped sharply from overbought levels indicating cooling momentum, suggesting to maintain the current long position without adding.",
+      "position": "LONG",
+      "period_return": -0.0007201449932828785,
+      "tokens": 1114
+    },
+    {
+      "date": "2024-11-27",
+      "close": 243.51339721679688,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and recent price strength, the high RSI near 78.6 signals overbought conditions and weakening short-term momentum, suggesting caution before adding to the long position.",
+      "position": "LONG",
+      "period_return": -0.0002802825809858911,
+      "tokens": 1120
+    },
+    {
+      "date": "2024-11-29",
+      "close": 243.4451446533203,
+      "decision": "HOLD",
+      "reasoning": "Despite strong SMA10 above SMA20 and recent price strength, the RSI is very high indicating overbought conditions and recent returns have flattened, suggesting caution before adding to the position.",
+      "position": "LONG",
+      "period_return": -0.013895521498398566,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-12-02",
+      "close": 240.06234741210935,
+      "decision": "SELL",
+      "reasoning": "Recent price shows a downward move with declining volume and RSI dropping from overbought levels, indicating weakening momentum and a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1110
+    },
+    {
+      "date": "2024-12-03",
+      "close": 238.6682891845703,
+      "decision": "SELL",
+      "reasoning": "Recent price shows a downward trend with declining volume, RSI dropping from overbought levels, and the SMA10 nearing a potential crossover below SMA20, indicating weakening momentum and a likely short-term pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1122
+    },
+    {
+      "date": "2024-12-04",
+      "close": 237.2839508056641,
+      "decision": "SELL",
+      "reasoning": "Recent price has declined below the 10-day SMA with weakening RSI and negative short-term returns, indicating a loss of upward momentum and potential further downside.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-12-05",
+      "close": 239.3116912841797,
+      "decision": "HOLD",
+      "reasoning": "Recent price shows slight recovery but SMA10 is flattening and RSI is moderate, indicating no strong buy signal yet after recent pullback.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1109
+    },
+    {
+      "date": "2024-12-06",
+      "close": 241.14447021484372,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent weakness with declining price and RSI dropping from overbought levels, while SMA10 remains above SMA20 but momentum is fading, suggesting no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1118
+    },
+    {
+      "date": "2024-12-09",
+      "close": 237.6836395263672,
+      "decision": "SELL",
+      "reasoning": "Recent price is below both SMA10 and SMA20 with declining RSI and negative short-term returns, indicating weakening momentum and a bearish trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-12-10",
+      "close": 236.7575225830078,
+      "decision": "SELL",
+      "reasoning": "Recent price is below both SMA10 and SMA20 with declining RSI and negative short-term returns, indicating weakening momentum and a bearish trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1108
+    },
+    {
+      "date": "2024-12-11",
+      "close": 237.4106903076172,
+      "decision": "HOLD",
+      "reasoning": "The price is below the 10-day SMA and the 10-day SMA is close to crossing below the 20-day SMA, RSI is moderate, and recent returns show mixed momentum, indicating no strong buy signal currently.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1126
+    },
+    {
+      "date": "2024-12-12",
+      "close": 235.4609222412109,
+      "decision": "SELL",
+      "reasoning": "The stock shows weakening momentum with price below SMA10 and SMA20, declining RSI near neutral, and recent negative returns indicating a bearish short-term trend.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1111
+    },
+    {
+      "date": "2024-12-13",
+      "close": 233.9109039306641,
+      "decision": "SELL",
+      "reasoning": "The stock shows a recent downtrend with price below both SMA10 and SMA20, declining RSI nearing oversold, and negative short-term returns indicating weak momentum.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-12-16",
+      "close": 233.55995178222656,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with declining RSI and negative recent returns, indicating bearish momentum and no strong buy signals while currently out of position.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-12-17",
+      "close": 232.37060546875,
+      "decision": "SELL",
+      "reasoning": "The stock is below both SMA10 and SMA20 with a declining trend, RSI is oversold indicating weak momentum, and recent returns are negative, suggesting further downside risk.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-12-18",
+      "close": 224.58135986328125,
+      "decision": "SELL",
+      "reasoning": "The stock shows a clear downtrend with the price below both SMA10 and SMA20, RSI in oversold territory, and consistent negative returns indicating weak momentum and potential further decline.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1117
+    },
+    {
+      "date": "2024-12-19",
+      "close": 227.1062774658203,
+      "decision": "SELL",
+      "reasoning": "The stock is in a clear downtrend with SMA10 below SMA20, RSI in oversold territory, and recent negative returns indicating weak momentum, so entering a long position is not advisable.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-12-20",
+      "close": 231.62969970703125,
+      "decision": "HOLD",
+      "reasoning": "Despite recent oversold RSI and a slight rebound in price, the stock remains below both SMA10 and SMA20 with weak momentum, suggesting no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-12-23",
+      "close": 232.39984130859372,
+      "decision": "HOLD",
+      "reasoning": "Despite recent oversold RSI levels and a slight rebound in price, the stock remains below both SMA10 and SMA20 with weak momentum, suggesting no strong buy signal yet.",
+      "position": "OUT",
+      "period_return": 0.0,
+      "tokens": 1116
+    },
+    {
+      "date": "2024-12-24",
+      "close": 236.22134399414065,
+      "decision": "BUY",
+      "reasoning": "Recent price shows a rebound with rising RSI from oversold levels and the close approaching the 10-day SMA, indicating potential short-term upward momentum after a strong selloff.",
+      "position": "LONG",
+      "period_return": 0.0034254242716331706,
+      "tokens": 1115
+    },
+    {
+      "date": "2024-12-26",
+      "close": 237.03050231933597,
+      "decision": "HOLD",
+      "reasoning": "Despite recent recovery and positive short-term returns, the price remains below the SMA20 with a low RSI indicating weak momentum, suggesting no strong buy signal yet.",
+      "position": "LONG",
+      "period_return": -0.00810233995284293,
+      "tokens": 1113
+    },
+    {
+      "date": "2024-12-27",
+      "close": 235.1100006103516,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent short-term recovery with RSI rising from oversold levels and price near SMA10 but still below SMA20, indicating cautious consolidation rather than a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": -0.007670866019187761,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-12-30",
+      "close": 233.30650329589844,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent short-term recovery with RSI rising from oversold levels and price near SMA10 but still below SMA20, indicating cautious consolidation rather than a clear buy or sell signal.",
+      "position": "LONG",
+      "period_return": 0.0016296298718605495,
+      "tokens": 1119
+    },
+    {
+      "date": "2024-12-31",
+      "close": 233.68670654296875,
+      "decision": "HOLD",
+      "reasoning": "The stock shows recent recovery with RSI rising from oversold levels and price stabilizing near SMA10, but the SMA10 remains below SMA20 and momentum is mixed, suggesting no strong buy or sell signal currently.",
+      "position": "LONG",
+      "period_return": 0.0012096722588708086,
+      "tokens": 1124
+    }
+  ],
+  "decision_counts": {
+    "BUY": 30,
+    "HOLD": 141,
+    "SELL": 81
+  },
+  "turnover_rate": 0.4262948207171315,
+  "total_tokens": 280719,
+  "num_decisions": 252,
+  "timestamp": "2026-02-22T02:22:22.434525"
+}

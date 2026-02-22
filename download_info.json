@@ -1,0 +1,66 @@
+[
+  {
+    "title": "FinCon: A Synthesized LLM Multi-Agent System with Conceptual Verbal Reinforcement for Enhanced Financial Decision Making",
+    "arxiv_id": "2407.06567",
+    "year": 2024,
+    "citations": 97,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2407.06567.pdf"
+  },
+  {
+    "title": "INVESTORBENCH: A Benchmark for Financial Decision-Making Tasks with LLM-based Agent",
+    "arxiv_id": "2412.18174",
+    "year": 2024,
+    "citations": 26,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2412.18174.pdf"
+  },
+  {
+    "title": "FinVision: A Multi-Agent Framework for Stock Market Prediction",
+    "arxiv_id": "2411.08899",
+    "year": 2024,
+    "citations": 19,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2411.08899.pdf"
+  },
+  {
+    "title": "FLAG-Trader: Fusion LLM-Agent with Gradient-based Reinforcement Learning for Financial Trading",
+    "arxiv_id": "2502.11433",
+    "year": 2025,
+    "citations": 17,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2502.11433.pdf"
+  },
+  {
+    "title": "From Deep Learning to LLMs: A survey of AI in Quantitative Investment",
+    "arxiv_id": "2503.21422",
+    "year": 2025,
+    "citations": 12,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2503.21422.pdf"
+  },
+  {
+    "title": "MarketSenseAI 2.0: Enhancing Stock Analysis through LLM Agents",
+    "arxiv_id": "2502.00415",
+    "year": 2025,
+    "citations": 11,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2502.00415.pdf"
+  },
+  {
+    "title": "TradExpert: Revolutionizing Trading with Mixture of Expert LLMs",
+    "arxiv_id": "2411.00782",
+    "year": 2024,
+    "citations": 10,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2411.00782.pdf"
+  },
+  {
+    "title": "MASS: Multi-Agent Simulation Scaling for Portfolio Construction",
+    "arxiv_id": "2505.10278",
+    "year": 2025,
+    "citations": 8,
+    "relevance": 3,
+    "url": "https://arxiv.org/pdf/2505.10278.pdf"
+  }
+]
