@@ -20,6 +20,19 @@ We are the first to systematically test whether LLM trading agents perform bette
 - **Experiment 2 (Market regime analysis):** Splits results by bull/bear periods to test whether longer horizons reduce regime miscalibration (the key failure mode identified by FINSABER).
 - **Experiment 3 (Cost-adjusted analysis):** Computes transaction costs and API costs at each frequency, testing practical viability.
 
+<!-- 
+     REVIEW (Note): Experiments 2 & 3 Not Implemented:
+     The planning document describes three experiments, but only Experiment 1 was
+     actually implemented. The regime analysis from experiment 2 is particularly important
+     because 2024 was already bullish (SPY +25%), and the monthly LLM's strong
+     performance could be explained entirely by a persistent uptrend. Testing in a
+     bear market would determine whether monthly decisions are favored which is the most valuable practical application.
+     
+     The cost-adjusted analysis was acknowledged as a limitation in
+     REPORT.md but not quantified. A simple transaction cost model in backtester.py
+     would likely make the monthly advantage statistically significant.
+-->
+
 ---
 
 ## Research Question

@@ -119,3 +119,13 @@ Deep-reading notes for core papers are in `notes/` directory:
 - `notes/investorbench_notes.md`
 - `notes/can_llms_trade_notes.md`
 - `notes/compiled_summary.json` (structured summary of all deep-read papers)
+
+<!--
+    REVIEW (Note):
+        Seems as though the literature review covers a breadth of knowledge in the "LLM for trading" space. There is
+        inclusion of both survey papers (LLM Finance Survey, LLM Trading survey) and benchmarking papers (InvestorBench, StockBench). This to some degree demonstrates the agent's awareness of the broader field instead of just implementation specific papers.
+
+    REVIEW (Improvement):
+        1. Bias towards LLM and Agent based trading. There is no inclusion of quantitative finance or financial economics literature around trading frequency effects and strategies by "humans". The absence of such literature means that this experimental design is informed entirely by the ML/NLP community's conventions rather than by established financial knowledge.
+        2. Recency bias: 21/23 papers are from 2024-2025. This may not be entirely significant given this is a new avenue of research. However, exclusion of older literature can reduce generalizability. 
+-->

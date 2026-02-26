@@ -3,6 +3,15 @@ Analysis and visualization for multi-frequency LLM trading experiment.
 Computes comparative statistics and generates publication-quality plots.
 """
 
+"""
+REVIEW (Note): 
+    The statistical rigor is significant as the testing pipeline is well reasoned.
+    Shapiro-Wilk determines if the data is normally distributed guiding either a paired t-test or a 
+    Wilcoxon signed-rank to determine statistical significance in comparisons.
+    Bonferroni correction reduces false positives and Cohen's d gives the effect size making this
+    flow methodologically sound
+"""
+
 import json
 from pathlib import Path
 
@@ -103,7 +112,7 @@ def statistical_tests(summary: pd.DataFrame) -> dict:
             results[f"{f1}_vs_{f2}"] = {"note": "Insufficient data for test"}
             continue
 
-        # Check normality (Shapiro-Wilk)
+        # Check normality (Shapiro-Wilk) # This makes a lot of sense to determine which statistical test is safe to use
         diff = s2 - s1
         if len(diff) >= 3:
             _, p_normal = stats.shapiro(diff)
@@ -122,6 +131,14 @@ def statistical_tests(summary: pd.DataFrame) -> dict:
             except ValueError:
                 t_stat, p_value = 0, 1.0
                 test_name = "N/A (identical values)"
+        
+        """
+            REVIEW (Improvement): Need a larger sample size.
+                Cohen's d (effect size) is large for daily-vs-weekly (d=1.31) and weekly-vs-monthly (d=0.92) trading, both above the 0.8 threshold.
+                Yet the paired t-tests show p > 0.05. These combined express a "large effect but NOT significant." The reason for this is likely the
+                sample size: with only 5 stocks. There's too much uncertainty to rule out chance leading to the p > 0.05.
+                Expanding to 15-20 stocks would likely achieve significance while preserving similar effect sizes.
+        """
 
         # Effect size (Cohen's d for paired samples)
         if diff.std() > 0:
@@ -130,7 +147,7 @@ def statistical_tests(summary: pd.DataFrame) -> dict:
             cohens_d = 0.0
 
         # Bonferroni correction (3 comparisons)
-        p_adjusted = min(p_value * 3, 1.0)
+        p_adjusted = min(p_value * 3, 1.0) # Without this, the combined false positive risk rises to roughly 14%.
 
         results[f"{f1}_vs_{f2}"] = {
             "test": test_name,
@@ -145,7 +162,20 @@ def statistical_tests(summary: pd.DataFrame) -> dict:
             "significant_005": p_adjusted < 0.05,
         }
 
-    # Also compare cumulative returns
+    """
+        REVIEW (Improvement): Cumulative Return (CR) differences are not formally tested.
+            Cumulative Return is the total percentage gain or loss over the full experiment period.
+            The code above runs a full statistical pipeline on Sharpe ratios (Shapiro-Wilk -> paired t-test/Wilcoxon -> Bonferroni),
+            but for CR it only computes averages (line 192-200). Based on `results/statistical_tests.json`, the CR means are:
+                - Daily:   34.2%
+                - Weekly:  18.3%
+                - Monthly: 39.7%
+            These are meaningful differences — monthly outperformed daily by 5.5% and weekly by 21.4%. Yet no test tells us
+            whether these gaps are statistically significant or just noise from the small 5-stock sample.
+            The same pipeline used for Sharpe ratios in the first half of this function should be applied to CR as well. Without it,
+            we're presenting the most investor-relevant metric without any measure of confidence, while the less intuitive
+            Sharpe ratio gets full statistical treatment.
+    """
     freq_crs = {}
     for freq in ["daily", "weekly", "monthly"]:
         mask = summary["Frequency"] == freq
@@ -154,6 +184,52 @@ def statistical_tests(summary: pd.DataFrame) -> dict:
     results["cr_means"] = {
         freq: float(vals.mean()) for freq, vals in freq_crs.items()
     }
+
+    for f1, f2 in comparisons:
+        c1 = freq_crs[f1]
+        c2 = freq_crs[f2]
+
+        if len(c1) < 3 or len(c2) < 3:
+            results[f"cr_{f1}_vs_{f2}"] = {"note": "Insufficient data for CR test"}
+            continue
+
+        diff_cr = c2 - c1
+        if len(diff_cr) >= 3:
+            _, p_normal_cr = stats.shapiro(diff_cr)
+        else:
+            p_normal_cr = 0.0
+
+        if p_normal_cr > 0.05 and len(diff_cr) >= 3:
+            t_stat_cr, p_value_cr = stats.ttest_rel(c1, c2)
+            test_name_cr = "paired t-test"
+        else:
+            try:
+                stat_cr, p_value_cr = stats.wilcoxon(c1, c2)
+                t_stat_cr = stat_cr
+                test_name_cr = "Wilcoxon signed-rank"
+            except ValueError:
+                t_stat_cr, p_value_cr = 0, 1.0
+                test_name_cr = "N/A (identical values)"
+
+        if diff_cr.std() > 0:
+            cohens_d_cr = diff_cr.mean() / diff_cr.std()
+        else:
+            cohens_d_cr = 0.0
+
+        p_adjusted_cr = min(p_value_cr * 3, 1.0)
+
+        results[f"cr_{f1}_vs_{f2}"] = {
+            "test": test_name_cr,
+            "statistic": float(t_stat_cr),
+            "p_value": float(p_value_cr),
+            "p_adjusted_bonferroni": float(p_adjusted_cr),
+            "mean_diff": float(diff_cr.mean()),
+            "cohens_d": float(cohens_d_cr),
+            f"{f1}_mean_CR": float(c1.mean()),
+            f"{f2}_mean_CR": float(c2.mean()),
+            "normality_p": float(p_normal_cr),
+            "significant_005": p_adjusted_cr < 0.05,
+        }
 
     return results
 

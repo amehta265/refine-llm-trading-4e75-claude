@@ -82,3 +82,16 @@ Code repositories cloned for the research project: "Refining LLM Trading."
 3. **Use FinMem architecture:** Adapt its layered memory for different decision frequencies
 4. **Compare against FinRL baselines:** Use FinRL's DRL agents (PPO, A2C) as traditional baselines
 5. **Reference TradingAgents/DeepFund:** For multi-agent design patterns and live evaluation insights
+
+<!--
+REVIEW (Improvement): Significant gap between Literature to code.
+  Despite cloning 6 repos in this folder, the actual implementation in `/src` does not use any of them.
+  The `backtester.py` is written as a simple loop from scratch, with no memory architecture to guide decisions 
+  (shown by FinMeM), and the data pipeline does not use FINSABER's multi-source data integration despite it being
+  listed as "MOST IMPORTANT"
+
+  This is in no way logically wrong, however, poses several questions:
+  - Why did the agent not explore these paths despite identifying them?
+  - Would there have been a difference if the architecture was updated to match the literature review?
+  - Did the agent consider using these references cumbersome and therefore chose its own approach?
+-->
