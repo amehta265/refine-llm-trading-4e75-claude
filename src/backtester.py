@@ -17,84 +17,14 @@ from data_loader import (
     compute_indicators, EXPERIMENT_TICKERS
 )
 from trading_agent import get_llm_decision
+from metrics import compute_metrics
 
 logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).parent.parent
 RESULTS_DIR = BASE_DIR / "results"
 
-
-def compute_metrics(returns: pd.Series, risk_free_rate: float = 0.05) -> dict:
-    """Compute trading performance metrics from a return series.
-
-    Args:
-        returns: Series of period returns (as fractions, not percentages)
-        risk_free_rate: Annual risk-free rate (default 5% for 2024)
-
-    Returns:
-        Dict with CR, SR, MDD, Sortino, Win Rate, etc.
-    """
-    if len(returns) == 0 or returns.std() == 0:
-        return {
-            "cumulative_return": 0.0,
-            "sharpe_ratio": 0.0,
-            "max_drawdown": 0.0,
-            "sortino_ratio": 0.0,
-            "win_rate": 0.0,
-            "num_trades": 0,
-            "annualized_return": 0.0,
-            "annualized_volatility": 0.0,
-        }
-
-    # Cumulative return
-    cum_return = (1 + returns).prod() - 1
-
-    # Determine annualization factor based on data frequency
-    n_periods = len(returns)
-    # Estimate periods per year from the data
-    if n_periods > 200:  # daily
-        periods_per_year = 252
-    elif n_periods > 40:  # weekly
-        periods_per_year = 52
-    else:  # monthly
-        periods_per_year = 12
-
-    # Annualized return
-    years = n_periods / periods_per_year
-    ann_return = (1 + cum_return) ** (1 / max(years, 0.01)) - 1
-
-    # Annualized volatility
-    ann_vol = returns.std() * np.sqrt(periods_per_year)
-
-    # Sharpe ratio (annualized)
-    excess_return = ann_return - risk_free_rate
-    sharpe = excess_return / ann_vol if ann_vol > 0 else 0.0
-
-    # Maximum drawdown
-    cum_returns = (1 + returns).cumprod()
-    rolling_max = cum_returns.cummax()
-    drawdowns = cum_returns / rolling_max - 1
-    max_drawdown = drawdowns.min()
-
-    # Sortino ratio (downside deviation)
-    downside_returns = returns[returns < 0]
-    downside_std = downside_returns.std() * np.sqrt(periods_per_year) if len(downside_returns) > 0 else ann_vol
-    sortino = excess_return / downside_std if downside_std > 0 else 0.0
-
-    # Win rate
-    win_rate = (returns > 0).sum() / len(returns) if len(returns) > 0 else 0.0
-
-    return {
-        "cumulative_return": float(cum_return),
-        "sharpe_ratio": float(sharpe),
-        "max_drawdown": float(max_drawdown),
-        "sortino_ratio": float(sortino),
-        "win_rate": float(win_rate),
-        "num_periods": int(n_periods),
-        "annualized_return": float(ann_return),
-        "annualized_volatility": float(ann_vol),
-    }
-
+# Moving compute_metrics to a separate metrics.py file so it can be used in multiple places
 
 def run_llm_backtest(ticker: str, frequency: str,
                      start_date: str = "2024-01-01",
@@ -133,13 +63,28 @@ def run_llm_backtest(ticker: str, frequency: str,
     portfolio_returns = []
     total_tokens = 0
     decision_log = []
-
+    """ 
+        REVIEW (Note): 
+            Most trading agents and platforms have a stop loss calculator where if a price falls below a threshold the system automatically
+            sells the stock to prevent further losses. This kind of a "force-exit" strategy could increase gains for all frequencies
+    """
     logger.info(f"Starting backtest: {ticker} {frequency} ({len(eval_indices)} periods)")
 
     for i, idx in enumerate(eval_indices):
         # Format price history for this decision point
         price_history = format_price_history(full_df, idx, lookback=lookback)
 
+        """
+        REVIEW (Improvement): 
+            get_llm_decision function is called to make a BUY/HOLD/SELL decisions based on price data and technical indicators.
+            However, this function is stateless. It does not receive any information about its prior decisions and their outcomes. 
+            This is a weakness as it limits the model's ability to learn from its own decisions and improve over time.
+                - This improvement is grounded in the FinMem paper "A Performance-Enhanced LLM Trading Agent With Layered Memory and Character Design (2023) 
+                by Yu et al. Here, a memory-module framework stores reflections, observations, and summaries of prior decisions over different time horizons.
+                The decay rates (14-day, 90-day, 365-day) used in the paper maintain context across decisions, improving model performance, something we should strive to achieve.
+
+            Solution: Add a DecisionMemory module that injects recent decision history and outcomes thus enabling self-correction and regime adaptation.
+        """
         # Get LLM decision
         result = get_llm_decision(
             ticker=ticker,
@@ -159,7 +104,12 @@ def run_llm_backtest(ticker: str, frequency: str,
         else:
             next_return = 0.0
 
-        # Apply position logic
+        """
+            REVIEW (Note):
+                Most LLM trading literature (FinMem, InvestorBench, StockBench) share this binary implementation of all in or all out.
+                So it makes sense the AI agent followed in the same footsteps. But this prevents the model from expressing confidence. I expand on this
+                further on Line 18 in `trading_agent.py`
+        """
         if decision == "BUY":
             position = "LONG"
         elif decision == "SELL":
@@ -170,9 +120,24 @@ def run_llm_backtest(ticker: str, frequency: str,
         if position == "LONG":
             period_return = next_return
         else:
-            period_return = 0.0  # Cash (0% return)
+            period_return = 0.0
+            """
+                REVIEW (Note):
+                    This condition is met when position === "OUT" i.e. agent has cash and is not holding stock.
+                    Technically this isn't 0.0. It is the risk free rate (hard-coded to 5%) because if this cash sat in the market or a treasury account
+                    it would make 5% annualized risk free.
+                    This isn't a big issue unless this condition is met numerously. It would undermine how much money a trader makes if he is out of the market 
+                    e.g. a monthly trader that is out for 6 months during the year in reality would have earned 2.5% not 0.
+            """ 
 
         portfolio_returns.append(period_return)
+
+        """
+            REVIEW (Note):
+                It is common to decompose returns into alpha (trader's skill) and beta (market exposure).
+                This would answer whether the LLM adds value with proper timing or simply rides market beta
+                with varying exposure. (https://www.mdpi.com/2227-9091/6/4/124)
+        """
 
         decision_entry = {
             "date": full_df.index[idx].strftime("%Y-%m-%d"),
@@ -196,12 +161,26 @@ def run_llm_backtest(ticker: str, frequency: str,
 
     # Compute metrics
     returns_series = pd.Series(portfolio_returns)
-    metrics = compute_metrics(returns_series)
+    metrics = compute_metrics(returns_series, frequency=frequency)
 
     # Compute turnover (position changes)
     position_changes = sum(1 for j in range(1, len(decisions))
                           if decisions[j] != decisions[j-1])
     turnover_rate = position_changes / max(len(decisions) - 1, 1)
+
+    """
+        REVIEW (Improvement): No transaction costs are applied to any of the trades above.
+            Transaction costs are the fees you pay every time you buy or sell stocks, the bid-ask spread (the gap between what
+            buyers offer and sellers accept), and slippage (price moving against you while your order executes). These compound quickly.
+            This is a bias towards daily trading that incurs more of this variable cost due to a higher volume of transactions.
+            This alone would likely make the monthly advantage statistically significant. The omission actually understates the paper's core finding.
+    """
+
+    """
+        REVIEW (Note):
+            I like the use of two baselines.  It lets us interpret the  LLM's performance from two angles: 
+            vs. doing nothing, and vs. a simple rule-based strategy.
+    """
 
     # Buy-and-hold baseline for comparison
     bh_returns = []
@@ -210,7 +189,7 @@ def run_llm_backtest(ticker: str, frequency: str,
             bh_returns.append((full_df.iloc[idx + 1]["Close"] / full_df.iloc[idx]["Close"]) - 1)
         else:
             bh_returns.append(0.0)
-    bh_metrics = compute_metrics(pd.Series(bh_returns))
+    bh_metrics = compute_metrics(pd.Series(bh_returns), frequency=frequency)
 
     # SMA crossover baseline
     sma_returns = []
@@ -231,7 +210,7 @@ def run_llm_backtest(ticker: str, frequency: str,
             sma_returns.append(next_ret)
         else:
             sma_returns.append(0.0)
-    sma_metrics = compute_metrics(pd.Series(sma_returns))
+    sma_metrics = compute_metrics(pd.Series(sma_returns), frequency=frequency)
 
     result = {
         "ticker": ticker,

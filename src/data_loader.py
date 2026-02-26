@@ -12,8 +12,23 @@ DATA_DIR = BASE_DIR / "datasets"
 
 # Stocks available at all 3 frequencies
 TICKERS = ["AAPL", "AMZN", "BAC", "GOOGL", "JPM", "META", "MSFT", "NFLX", "NVDA", "TSLA"]
+"""
+    REVIEW (Improvement):
+        Choice of stocks: 
+            1. There seems to be a selection bias. 4/5 stocks below are technology companies. Only JP Morgan represents a different
+        sector (financials). Tech stocks tend to be highly correlated. They moved together, when AAPL rises, NVDA, TSLA,
+        and MSFT likely rises too. This skews the paired t-test and Wilcoxon tests in `analysis.py` because they assume each stock's result
+        is independent. But 4 correlated tech stocks are almost like one observation counted four times.
+        This makes p-values artificially low and overstates the confidence in the findings. Replacing 2-3 tech stocks with stocks from
+        different sectors (utilities, healthcare, energy) would give genuinely independent observations.
+            2. All 5 stocks represent companies with large market caps that performed well in 2024. The experiment does not include smaller companies or securities
+        that declined substantially, making it difficult to measure how well the LLM avoids losses vs captures gains.
+            3. The limited scope of data means only US companies were considered. Other equities such as cryptocurrency, forex, ETFs, and commodities were
+        not considered.
 
-# Subset for main experiment (diverse sectors + volatility)
+        This does make me wonder, considering the scarcity of data and innumerable types of stocks, it is perhaps better to create focused LLM trading agents
+        tasked to be good at trading specific types of equities.
+"""
 EXPERIMENT_TICKERS = ["AAPL", "JPM", "NVDA", "TSLA", "MSFT"]
 
 
@@ -50,7 +65,12 @@ def load_price_data(ticker: str, frequency: str) -> pd.DataFrame:
 
     return df
 
-
+"""
+    REVIEW (Improvement):
+        This methods focuses on 3 technical indicators. The research justifies this as most LLM trading papers
+        use a similar minimal set. However, the absence of volume-based indicators (significant number of "BUYS" would indicate bullish strategy),
+        volatility measures e.g. Bollinger Bands and momentum oscillators such as MACD could all be significant in helping the LLM make a decision.
+"""
 def compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     """Compute technical indicators: SMA-10, SMA-20, RSI-14.
 
@@ -67,11 +87,20 @@ def compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["SMA_20"] = df["Close"].rolling(window=20).mean()
 
     # RSI-14
+    """
+        REVIEW (Note):
+            The RSI calculation seems to be using a simple moving average (SMA) rather than an exponential moving average (EMA).
+            In practice (https://www.investopedia.com/ask/answers/difference-between-simple-exponential-moving-average/), both methods converge
+            over long periods, but they diverge on shorter windows.
+            Most professional charting platforms e.g. TradingView, Bloomberg, and Robinhood use the Wilder EMA variant:
+            avg_gain = gain.ewm(alpha=1/14, min_periods=14).mean()
+            avg_loss = loss.ewm(alpha=1/14, min_periods=14).mean()
+    """
     delta = df["Close"].diff()
     gain = delta.where(delta > 0, 0.0)
     loss = (-delta).where(delta < 0, 0.0)
-    avg_gain = gain.rolling(window=14).mean()
-    avg_loss = loss.rolling(window=14).mean()
+    avg_gain = gain.ewm(alpha=1/14, min_periods=14).mean()
+    avg_loss = loss.ewm(alpha=1/14, min_periods=14).mean()
     rs = avg_gain / avg_loss.replace(0, np.nan)
     df["RSI_14"] = 100 - (100 / (1 + rs))
 
@@ -108,7 +137,12 @@ def prepare_experiment_data(ticker: str, frequency: str,
 
     return df_eval
 
-
+"""
+    REVIEW (Note):
+        The FinAgent and Agent Trading Arena core paper shows the importance of how numerical data is presented
+        to LLMs significantly affects their reasoning quality. format_price_history() outputs an aligned and
+        consistently formatted table to the LLM which is awesome!
+"""
 def format_price_history(df: pd.DataFrame, current_idx: int, lookback: int = 15) -> str:
     """Format recent price history as a string for the LLM prompt.
 

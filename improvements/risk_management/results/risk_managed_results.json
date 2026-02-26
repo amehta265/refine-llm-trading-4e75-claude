@@ -1,0 +1,664 @@
+[
+  {
+    "ticker": "AAPL",
+    "frequency": "daily",
+    "original_metrics": {
+      "cumulative_return": 0.24352694300222666,
+      "sharpe_ratio": 1.3837311832038017,
+      "max_drawdown": -0.08948142643665247,
+      "sortino_ratio": 1.3213798467575903,
+      "win_rate": 0.24603174603174602,
+      "num_periods": 252,
+      "annualized_return": 0.24352694300222666,
+      "annualized_volatility": 0.13985877123484844
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.07254309526212288,
+      "sharpe_ratio": 0.31325839004795536,
+      "max_drawdown": -0.05356285946164141,
+      "sortino_ratio": 0.25842949052302294,
+      "win_rate": 0.24603174603174602,
+      "num_periods": 252,
+      "annualized_return": 0.07254309526212288,
+      "annualized_volatility": 0.07196326093188392
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.31999929574037633,
+      "sharpe_ratio": 1.1976574394180426,
+      "max_drawdown": -0.15354775323877534,
+      "sortino_ratio": 1.8989967972741182,
+      "win_rate": 0.5634920634920635,
+      "num_periods": 252,
+      "annualized_return": 0.31999929574037633,
+      "annualized_volatility": 0.2254395011912359
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.20832836125040113,
+    "num_decisions": 252
+  },
+  {
+    "ticker": "AAPL",
+    "frequency": "monthly",
+    "original_metrics": {
+      "cumulative_return": 0.23200995189123663,
+      "sharpe_ratio": 1.2438693428929746,
+      "max_drawdown": -0.057583332608356796,
+      "sortino_ratio": 2.7364044700087287,
+      "win_rate": 0.5,
+      "num_periods": 12,
+      "annualized_return": 0.23200995189123663,
+      "annualized_volatility": 0.14632561927116908
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.28212600614678074,
+      "sharpe_ratio": 1.9352166101544526,
+      "max_drawdown": -0.03042899467279181,
+      "sortino_ratio": 0.0,
+      "win_rate": 0.5,
+      "num_periods": 12,
+      "annualized_return": 0.28212600614678074,
+      "annualized_volatility": 0.1199483328784856
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.2860963501286642,
+      "sharpe_ratio": 1.1752383780163373,
+      "max_drawdown": -0.057583332608356574,
+      "sortino_ratio": 3.2415726157299174,
+      "win_rate": 0.5833333333333334,
+      "num_periods": 12,
+      "annualized_return": 0.2860963501286642,
+      "annualized_volatility": 0.2008923079308955
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.6,
+    "num_decisions": 12
+  },
+  {
+    "ticker": "AAPL",
+    "frequency": "weekly",
+    "original_metrics": {
+      "cumulative_return": 0.07050864060757966,
+      "sharpe_ratio": 0.10802288489359534,
+      "max_drawdown": -0.1290494102580113,
+      "sortino_ratio": 0.13733711951560298,
+      "win_rate": 0.3018867924528302,
+      "num_periods": 53,
+      "annualized_return": 0.06913333745920225,
+      "annualized_volatility": 0.1771230001684269
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.024166703207070483,
+      "sharpe_ratio": -0.21997084734681593,
+      "max_drawdown": -0.11673377537478147,
+      "sortino_ratio": -0.20217999647112478,
+      "win_rate": 0.3018867924528302,
+      "num_periods": 53,
+      "annualized_return": 0.023705365753687424,
+      "annualized_volatility": 0.11953690483746364
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.3136679717512201,
+      "sharpe_ratio": 1.1539561091412405,
+      "max_drawdown": -0.1414066956226535,
+      "sortino_ratio": 2.002211220115457,
+      "win_rate": 0.6037735849056604,
+      "num_periods": 53,
+      "annualized_return": 0.3069230993825849,
+      "annualized_volatility": 0.22264546922307454
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.35143995211557916,
+    "num_decisions": 53
+  },
+  {
+    "ticker": "JPM",
+    "frequency": "daily",
+    "original_metrics": {
+      "cumulative_return": 0.12760269233832444,
+      "sharpe_ratio": 0.6012576493120854,
+      "max_drawdown": -0.07928733966787549,
+      "sortino_ratio": 0.5345142058984266,
+      "win_rate": 0.2698412698412698,
+      "num_periods": 252,
+      "annualized_return": 0.12760269233832444,
+      "annualized_volatility": 0.1290672849270387
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.06675763788974098,
+      "sharpe_ratio": 0.23575016615573663,
+      "max_drawdown": -0.04878666151839173,
+      "sortino_ratio": 0.2185597659939051,
+      "win_rate": 0.26587301587301587,
+      "num_periods": 252,
+      "annualized_return": 0.06675763788974098,
+      "annualized_volatility": 0.07108218909449625
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.42800461143603985,
+      "sharpe_ratio": 1.6104661096361685,
+      "max_drawdown": -0.10130496315880788,
+      "sortino_ratio": 2.146999253937329,
+      "win_rate": 0.5753968253968254,
+      "num_periods": 252,
+      "annualized_return": 0.42800461143603985,
+      "annualized_volatility": 0.23471752008580762
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.26642668134173275,
+    "num_decisions": 252
+  },
+  {
+    "ticker": "JPM",
+    "frequency": "monthly",
+    "original_metrics": {
+      "cumulative_return": 0.5696427658869674,
+      "sharpe_ratio": 2.389782902496584,
+      "max_drawdown": -0.062010567555119134,
+      "sortino_ratio": 5.953347264866514,
+      "win_rate": 0.6666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.5696427658869674,
+      "annualized_volatility": 0.21744350306636698
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.26840423859656126,
+      "sharpe_ratio": 1.6473347756495813,
+      "max_drawdown": -0.03720634053307137,
+      "sortino_ratio": 4.265063913964612,
+      "win_rate": 0.5833333333333334,
+      "num_periods": 12,
+      "annualized_return": 0.26840423859656126,
+      "annualized_volatility": 0.13258036060729644
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.5696427658869674,
+      "sharpe_ratio": 2.389782902496584,
+      "max_drawdown": -0.062010567555119134,
+      "sortino_ratio": 5.953347264866514,
+      "win_rate": 0.6666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.5696427658869674,
+      "annualized_volatility": 0.21744350306636698
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.6666666666666665,
+    "num_decisions": 12
+  },
+  {
+    "ticker": "JPM",
+    "frequency": "weekly",
+    "original_metrics": {
+      "cumulative_return": 0.1011515586665872,
+      "sharpe_ratio": 0.3083711333042691,
+      "max_drawdown": -0.09364348632881092,
+      "sortino_ratio": 0.36903097184129885,
+      "win_rate": 0.37735849056603776,
+      "num_periods": 53,
+      "annualized_return": 0.09915143182774888,
+      "annualized_volatility": 0.15939050877129693
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.03891123879200031,
+      "sharpe_ratio": -0.1280346002461294,
+      "max_drawdown": -0.06018940067014389,
+      "sortino_ratio": -0.14632726039741334,
+      "win_rate": 0.37735849056603776,
+      "num_periods": 53,
+      "annualized_return": 0.03816323181218384,
+      "annualized_volatility": 0.09244976096353298
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.42565693000489624,
+      "sharpe_ratio": 1.8575919271630175,
+      "max_drawdown": -0.09110317701946091,
+      "sortino_ratio": 2.509851569158438,
+      "win_rate": 0.6981132075471698,
+      "num_periods": 53,
+      "annualized_return": 0.41614944191291703,
+      "annualized_volatility": 0.19710972929997272
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 1,
+    "stop_trigger_dates": [
+      "2024-09-09"
+    ],
+    "avg_position_size": 0.36446125585998834,
+    "num_decisions": 53
+  },
+  {
+    "ticker": "MSFT",
+    "frequency": "daily",
+    "original_metrics": {
+      "cumulative_return": 0.14541168909333524,
+      "sharpe_ratio": 0.7021387065423141,
+      "max_drawdown": -0.08603136170396919,
+      "sortino_ratio": 0.584964154556377,
+      "win_rate": 0.28174603174603174,
+      "num_periods": 252,
+      "annualized_return": 0.14541168909333524,
+      "annualized_volatility": 0.13588723738531752
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.09741068881542447,
+      "sharpe_ratio": 0.584997444091556,
+      "max_drawdown": -0.054466951671512054,
+      "sortino_ratio": 0.4909462723982769,
+      "win_rate": 0.28174603174603174,
+      "num_periods": 252,
+      "annualized_return": 0.09741068881542447,
+      "annualized_volatility": 0.08104426659341846
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.13708338763627292,
+      "sharpe_ratio": 0.43707668313623466,
+      "max_drawdown": -0.1548678107362752,
+      "sortino_ratio": 0.5507267557273181,
+      "win_rate": 0.5357142857142857,
+      "num_periods": 252,
+      "annualized_return": 0.13708338763627292,
+      "annualized_volatility": 0.19924052459492436
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.2915803793413977,
+    "num_decisions": 252
+  },
+  {
+    "ticker": "MSFT",
+    "frequency": "monthly",
+    "original_metrics": {
+      "cumulative_return": -0.027055033024439124,
+      "sharpe_ratio": -0.5952949922626948,
+      "max_drawdown": -0.11864315340335363,
+      "sortino_ratio": -0.7524382469188914,
+      "win_rate": 0.16666666666666666,
+      "num_periods": 12,
+      "annualized_return": -0.027055033024439124,
+      "annualized_volatility": 0.12944008269170168
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.0008697800548651546,
+      "sharpe_ratio": -0.4407689405857343,
+      "max_drawdown": -0.09349137975353206,
+      "sortino_ratio": -0.5228657649157589,
+      "win_rate": 0.16666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.0008697800548651546,
+      "annualized_volatility": 0.11146479577223861
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.05177258559194531,
+      "sharpe_ratio": 0.010122566317412835,
+      "max_drawdown": -0.08919923425710541,
+      "sortino_ratio": 0.01571812022114094,
+      "win_rate": 0.5,
+      "num_periods": 12,
+      "annualized_return": 0.05177258559194531,
+      "annualized_volatility": 0.17511227255642714
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.4166666666666667,
+    "num_decisions": 12
+  },
+  {
+    "ticker": "MSFT",
+    "frequency": "weekly",
+    "original_metrics": {
+      "cumulative_return": -0.17401762342483085,
+      "sharpe_ratio": -1.4999397570156254,
+      "max_drawdown": -0.1834397068457455,
+      "sortino_ratio": -2.399329859482402,
+      "win_rate": 0.22641509433962265,
+      "num_periods": 53,
+      "annualized_return": -0.17103275575396903,
+      "annualized_volatility": 0.14736108881716004
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": -0.11225901862057919,
+      "sharpe_ratio": -1.5927875507915985,
+      "max_drawdown": -0.11655791180319441,
+      "sortino_ratio": -2.116522095527182,
+      "win_rate": 0.22641509433962265,
+      "num_periods": 53,
+      "annualized_return": -0.11026228598147758,
+      "annualized_volatility": 0.10061749032495194
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.14774371716556134,
+      "sharpe_ratio": 0.4738746580673639,
+      "max_drawdown": -0.13931043187495418,
+      "sortino_ratio": 0.953356373940206,
+      "win_rate": 0.5849056603773585,
+      "num_periods": 53,
+      "annualized_return": 0.14476350206350075,
+      "annualized_volatility": 0.19997588064738755
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 1,
+    "stop_trigger_dates": [
+      "2024-07-22"
+    ],
+    "avg_position_size": 0.3670844159576539,
+    "num_decisions": 53
+  },
+  {
+    "ticker": "NVDA",
+    "frequency": "daily",
+    "original_metrics": {
+      "cumulative_return": 0.8152577284111777,
+      "sharpe_ratio": 2.279368892290346,
+      "max_drawdown": -0.20513595044744382,
+      "sortino_ratio": 2.963608465504656,
+      "win_rate": 0.30158730158730157,
+      "num_periods": 252,
+      "annualized_return": 0.8152577284111777,
+      "annualized_volatility": 0.3357322858092683
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.31983128488037815,
+      "sharpe_ratio": 2.4515983471259,
+      "max_drawdown": -0.050756531769006186,
+      "sortino_ratio": 4.301321514035526,
+      "win_rate": 0.30158730158730157,
+      "num_periods": 252,
+      "annualized_return": 0.31983128488037815,
+      "annualized_volatility": 0.11006341442378251
+    },
+    "bh_metrics": {
+      "cumulative_return": 1.8722226448345203,
+      "sharpe_ratio": 3.4730923631109976,
+      "max_drawdown": -0.27046760876736875,
+      "sortino_ratio": 5.691617251085533,
+      "win_rate": 0.5595238095238095,
+      "num_periods": 252,
+      "annualized_return": 1.8722226448345203,
+      "annualized_volatility": 0.5246686394491039
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 1,
+    "stop_trigger_dates": [
+      "2024-07-17"
+    ],
+    "avg_position_size": 0.1470307962521312,
+    "num_decisions": 252
+  },
+  {
+    "ticker": "NVDA",
+    "frequency": "monthly",
+    "original_metrics": {
+      "cumulative_return": 0.16298430908619865,
+      "sharpe_ratio": 0.3560150632409812,
+      "max_drawdown": -0.13144109620016065,
+      "sortino_ratio": 0.5975998122864139,
+      "win_rate": 0.16666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.16298430908619865,
+      "annualized_volatility": 0.3173582265245931
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.3159694025986317,
+      "sharpe_ratio": 0.9256167866608237,
+      "max_drawdown": -0.017186274290068915,
+      "sortino_ratio": 0.0,
+      "win_rate": 0.16666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.3159694025986317,
+      "annualized_volatility": 0.28734289009398833
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.9520543267092647,
+      "sharpe_ratio": 2.0986878688411483,
+      "max_drawdown": -0.13144109620016065,
+      "sortino_ratio": 7.756514579314754,
+      "win_rate": 0.6666666666666666,
+      "num_periods": 12,
+      "annualized_return": 0.9520543267092647,
+      "annualized_volatility": 0.42981824029285515
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.26666666666666666,
+    "num_decisions": 12
+  },
+  {
+    "ticker": "NVDA",
+    "frequency": "weekly",
+    "original_metrics": {
+      "cumulative_return": 0.46130505626126395,
+      "sharpe_ratio": 1.256572693563926,
+      "max_drawdown": -0.2179412329533429,
+      "sortino_ratio": 2.1926201512211234,
+      "win_rate": 0.32075471698113206,
+      "num_periods": 53,
+      "annualized_return": 0.45088358887600277,
+      "annualized_volatility": 0.3190293652960146
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.4346838987523176,
+      "sharpe_ratio": 2.1569992615936955,
+      "max_drawdown": -0.036905393747901916,
+      "sortino_ratio": 10.546908583937013,
+      "win_rate": 0.32075471698113206,
+      "num_periods": 53,
+      "annualized_return": 0.4249465024722341,
+      "annualized_volatility": 0.1738278307036626
+    },
+    "bh_metrics": {
+      "cumulative_return": 1.7689783639821113,
+      "sharpe_ratio": 3.2970075473498617,
+      "max_drawdown": -0.22021192151722058,
+      "sortino_ratio": 6.221329967200588,
+      "win_rate": 0.660377358490566,
+      "num_periods": 53,
+      "annualized_return": 1.7162760863161095,
+      "annualized_volatility": 0.5053904373544622
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 2,
+    "stop_trigger_dates": [
+      "2024-07-15",
+      "2024-12-09"
+    ],
+    "avg_position_size": 0.19885350367487337,
+    "num_decisions": 53
+  },
+  {
+    "ticker": "TSLA",
+    "frequency": "daily",
+    "original_metrics": {
+      "cumulative_return": 0.3785851788736283,
+      "sharpe_ratio": 0.8613813456315251,
+      "max_drawdown": -0.24160610157212103,
+      "sortino_ratio": 1.1079633801702395,
+      "win_rate": 0.20238095238095238,
+      "num_periods": 252,
+      "annualized_return": 0.3785851788736283,
+      "annualized_volatility": 0.38146307734668294
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.0761163460068206,
+      "sharpe_ratio": 0.3333379306579148,
+      "max_drawdown": -0.05424916548426284,
+      "sortino_ratio": 0.3686324349410414,
+      "win_rate": 0.20238095238095238,
+      "num_periods": 252,
+      "annualized_return": 0.0761163460068206,
+      "annualized_volatility": 0.07834795744748975
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.5267691875649911,
+      "sharpe_ratio": 0.7471462049515646,
+      "max_drawdown": -0.4092326685188741,
+      "sortino_ratio": 1.3162192278646596,
+      "win_rate": 0.503968253968254,
+      "num_periods": 252,
+      "annualized_return": 0.5267691875649911,
+      "annualized_volatility": 0.6381203362946865
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 3,
+    "stop_trigger_dates": [
+      "2024-04-15",
+      "2024-05-07",
+      "2024-09-06"
+    ],
+    "avg_position_size": 0.08437740892346354,
+    "num_decisions": 252
+  },
+  {
+    "ticker": "TSLA",
+    "frequency": "monthly",
+    "original_metrics": {
+      "cumulative_return": 1.0446735199098351,
+      "sharpe_ratio": 2.104660957183991,
+      "max_drawdown": -0.0773904690267696,
+      "sortino_ratio": 12.546672313747015,
+      "win_rate": 0.4166666666666667,
+      "num_periods": 12,
+      "annualized_return": 1.0446735199098351,
+      "annualized_volatility": 0.47260510844497033
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": 0.7728247457530277,
+      "sharpe_ratio": 2.2046018233747313,
+      "max_drawdown": -0.04643428141606176,
+      "sortino_ratio": 15.196016655550165,
+      "win_rate": 0.3333333333333333,
+      "num_periods": 12,
+      "annualized_return": 0.7728247457530277,
+      "annualized_volatility": 0.3278708826642226
+    },
+    "bh_metrics": {
+      "cumulative_return": 1.1602862972256442,
+      "sharpe_ratio": 2.207718762124769,
+      "max_drawdown": -0.12923524353897475,
+      "sortino_ratio": 7.215090549658679,
+      "win_rate": 0.6666666666666666,
+      "num_periods": 12,
+      "annualized_return": 1.1602862972256442,
+      "annualized_volatility": 0.5029111118107609
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 0,
+    "stop_trigger_dates": [],
+    "avg_position_size": 0.45,
+    "num_decisions": 12
+  },
+  {
+    "ticker": "TSLA",
+    "frequency": "weekly",
+    "original_metrics": {
+      "cumulative_return": 0.4557416072372289,
+      "sharpe_ratio": 0.7539727599064647,
+      "max_drawdown": -0.23555982101505235,
+      "sortino_ratio": 1.3056752246609942,
+      "win_rate": 0.24528301886792453,
+      "num_periods": 53,
+      "annualized_return": 0.44546384345763435,
+      "annualized_volatility": 0.5245068051353662
+    },
+    "risk_managed_metrics": {
+      "cumulative_return": -0.036561826587787616,
+      "sharpe_ratio": -0.4586786584231093,
+      "max_drawdown": -0.19546643808239772,
+      "sortino_ratio": -0.3177888713438192,
+      "win_rate": 0.24528301886792453,
+      "num_periods": 53,
+      "annualized_return": -0.03588451040895679,
+      "annualized_volatility": 0.18724331039124217
+    },
+    "bh_metrics": {
+      "cumulative_return": 0.6621330628826705,
+      "sharpe_ratio": 0.9076056883272103,
+      "max_drawdown": -0.3282013638732184,
+      "sortino_ratio": 1.9869888310208406,
+      "win_rate": 0.5094339622641509,
+      "num_periods": 53,
+      "annualized_return": 0.6462746206554579,
+      "annualized_volatility": 0.6569754115957994
+    },
+    "config": {
+      "trailing_stop_pct": 0.08,
+      "hold_fraction": 0.6,
+      "vol_target": 0.15
+    },
+    "stop_trigger_count": 3,
+    "stop_trigger_dates": [
+      "2024-03-04",
+      "2024-07-22",
+      "2024-10-07"
+    ],
+    "avg_position_size": 0.14079495064481337,
+    "num_decisions": 53
+  }
+]
