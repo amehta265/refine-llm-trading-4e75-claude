@@ -1,0 +1,79 @@
+{
+  "daily_vs_weekly": {
+    "test": "paired t-test",
+    "statistic": -0.8532412091201823,
+    "p_value": 0.44160682981777344,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": 0.20963378806667268,
+    "cohens_d": 0.42662060456009115,
+    "daily_mean_SR": 0.8167808270547596,
+    "weekly_mean_SR": 1.0264146151214322,
+    "normality_p": 0.2792278524638716,
+    "significant_005": false
+  },
+  "daily_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": -0.623677549681936,
+    "p_value": 0.5666420730755861,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": 0.21870392352001647,
+    "cohens_d": 0.311838774840968,
+    "daily_mean_SR": 0.8167808270547596,
+    "monthly_mean_SR": 1.035484750574776,
+    "normality_p": 0.09707851647064733,
+    "significant_005": false
+  },
+  "weekly_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": -0.017302272615989215,
+    "p_value": 0.9870241048115654,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": 0.009070135453343741,
+    "cohens_d": 0.008651136307994607,
+    "weekly_mean_SR": 1.0264146151214322,
+    "monthly_mean_SR": 1.035484750574776,
+    "normality_p": 0.09420328822502314,
+    "significant_005": false
+  },
+  "cr_means": {
+    "daily": 0.27268056950173875,
+    "weekly": 0.3792289583820734,
+    "monthly": 0.3478160833664314
+  },
+  "cr_daily_vs_weekly": {
+    "test": "Wilcoxon signed-rank",
+    "statistic": 2.0,
+    "p_value": 0.1875,
+    "p_adjusted_bonferroni": 0.5625,
+    "mean_diff": 0.10654838888033465,
+    "cohens_d": 0.6257902475422178,
+    "daily_mean_CR": 0.27268056950173875,
+    "weekly_mean_CR": 0.3792289583820734,
+    "normality_p": 0.028920834989075852,
+    "significant_005": false
+  },
+  "cr_daily_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": -0.590354550225129,
+    "p_value": 0.5866924661126695,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": 0.07513551386469267,
+    "cohens_d": 0.2951772751125645,
+    "daily_mean_CR": 0.27268056950173875,
+    "monthly_mean_CR": 0.3478160833664314,
+    "normality_p": 0.8185725364222689,
+    "significant_005": false
+  },
+  "cr_weekly_vs_monthly": {
+    "test": "paired t-test",
+    "statistic": 0.15860780886486525,
+    "p_value": 0.8816634926391652,
+    "p_adjusted_bonferroni": 1.0,
+    "mean_diff": -0.03141287501564198,
+    "cohens_d": -0.07930390443243263,
+    "weekly_mean_CR": 0.3792289583820734,
+    "monthly_mean_CR": 0.3478160833664314,
+    "normality_p": 0.19992279880568514,
+    "significant_005": false
+  }
+}

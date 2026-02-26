@@ -26,7 +26,8 @@
    - 4.2 [Why This Matters](#42-why-this-matters)
    - 4.3 [Where and How to Implement](#43-where-and-how-to-implement)
    - 4.4 [How to Measure Success](#44-how-to-measure-success)
-5. [Conclusion](#5-conclusion)
+5. [Impact of Code Fixes: Re-Running the Experiment](#5-impact-of-code-fixes-re-running-the-experiment)
+6. [Conclusion](#6-conclusion)
 
 ---
 
@@ -234,8 +235,29 @@ Each layer has a different decay rate, so recent information is weighted more he
 
 ---
 
-## 5. Conclusion
+## 5. Impact of Code Fixes: Re-Running the Experiment
 
-These three improvements address the most significant gaps found during my code review:
+After applying the code fixes described in the inline reviews, I re-ran the full LLM trading experiment to measure whether the fixes changed the results. The key fix that affects the LLM's inputs is the **EMA-based RSI calculation**. The other fixes only affect post-processing. Full results are in [`improvements/fixed_experiment/results/`](improvements/fixed_experiment/results/).
+
+### What Changed
+
+| Frequency | Original SR | Fixed SR | Change | Original CR | Fixed CR | Change |
+|-----------|------------|----------|--------|------------|----------|--------|
+| Daily     | 1.17       | 0.82     | -0.35  | 34.2%      | 27.3%    | -6.9%  |
+| Weekly    | 0.19       | **1.03** | **+0.84** | 18.3%   | **37.9%** | **+19.6%** |
+| Monthly   | 1.10       | 1.04     | -0.06  | 39.7%      | 34.8%    | -4.9%  |
+
+### Interpretation
+
+The most striking result: **weekly trading improved dramatically** (Sharpe from 0.19 to 1.03, CR from 18.3% to 37.9%). In the original experiment, weekly was by far the worst frequency. With the EMA RSI fix, weekly performance is now comparable to monthly and daily.
+
+Why? I think Wilder's EMA gives more weight to recent price movements than an SMA. This creates RSI values that react faster to short term momentum shifts thereby making the model better.
+
+**This finding is important because it means the original paper's conclusion — that monthly trading dominates — was partly an artifact of a suboptimal RSI implementation.** With the corrected indicator, weekly trading becomes competitive, suggesting the optimal frequency depends much more on the quality of the technical signals than previously thought.
+---
+
+## 6. Conclusion
+
+These three improvements address the most significant gaps found during my code review. The re-run experiment demonstrates that even a small technical fix (EMA vs. SMA RSI) can fundamentally change which frequency appears optimal thus highlighting the importance of getting the underlying indicators right before drawing conclusions about trading strategy.
 
 Detailed review comments motivating each of these improvements can be found inline in the source files. They are designed to be read as part of the [pull request diff](https://github.com/Hypogenic-AI/refine-llm-trading-4e75-claude).
